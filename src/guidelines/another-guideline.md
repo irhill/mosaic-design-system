@@ -3,6 +3,7 @@ title: Another Guideline
 order: 1
 ---
 # A header
+some content under the header
 
 ## this is a guideline
 
