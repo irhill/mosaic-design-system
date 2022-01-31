@@ -29,26 +29,46 @@ tabs:
 
 
 
-      In Mosaic, there are six types of Buttons. Each Button Type has a different function, and the look of the button will signal a different usage to the user. For example, a Primary Button tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a Danger button tends to be something negative, like deleting something. 
+      In Mosaic, there are six types of **Buttons**. Each **Button Type** has a different function, and the look of the button will signal a different usage to the user. For example, a **Primary Button** tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a **Danger Button** tends to be something negative, like deleting something. 
 
 
-      •	Primary Buttons should be used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one Primary Button on the page, Form or Card.
 
 
-      •	Default Buttons are Buttons that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box.
+      •	**Primary Buttons** should be used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one **Primary Button** on the page, **Form** or **Card**.
 
 
-      •	Success Buttons are used for positive actions, like saving, confirming accepting or editing. Typically, like the Primary Button, there should only be one Success Button.
+      <button class="mcc-button--primary">Primary</button>
 
 
-      •	Warning Buttons are not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a Button to reload some data, for example, but want to warn the user not to do this too often.
+      •	**Secondary Buttons** are **Buttons** that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box.
 
 
-      •	Danger Buttons should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only Danger Button available to the user at that time.
+      <button class="mcc-button--secondary">Secondary</button>
 
 
-      •	Info Buttons are used when the user might require some more context, or for less important actions than the Primary Button. Some examples would be an Info Button that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines.
+      •	**Success Buttons** are used for positive actions, like saving, confirming accepting or editing. Typically, like the **Primary Button**, there should only be one **Success Button**.
 
+
+      <button class="mcc-button--success">Success</button>
+
+
+      •	**Warning Buttons** are not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often.
+
+
+      <button class="mcc-button--warning">Warning</button>
+
+
+      •	**Danger Buttons** should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only **Danger Button** available to the user at that time.
+
+
+      <button class="mcc-button--danger">Danger</button>
+
+
+      •	**Info Buttons** are used when the user might require some more context, or for less important actions than the **Primary Button**. Some examples would be an **Info Button** that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines.
+
+
+
+      <button class="mcc-button--info">Info</button>
 
 
       ## Button Variants
