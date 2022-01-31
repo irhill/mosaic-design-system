@@ -4,87 +4,184 @@ navigation: button
 tabs:
   - title: Usage
     body: >-
-      ## When and why
+      # What is a Button?
 
 
-      Buttons should be used for all **Calls To Action (CTA)** on a page, form or card. Buttons are used for this as they are the most recognised way to make something happen.
 
 
-      - - -
+      A **Button** should be used when a user is given a possible action – these are usually things like submissions, confirmations, cancellations, et cetera. They can serve many purposes, and are mostly used to initialise a certain process within the system.
 
 
-      ## Golden rules
 
 
-      There are many ways to implement buttons in a product and there are many views to support each of these.  After extensive research we have agreed on what we believe to be the best implementation of your CTA's.  These guidelines will give you an understanding of what our best practice is and why.
+      ## When, and why?
 
 
-      * Positive buttons are ***always*** furthest to the right - save or next for example, negative buttons on the left - delete being the most negative.  We follow this method as it gives users a positive feeling of 'moving forward' when using a positive button and a negative feeling of 'moving backward' when using a negative action.
 
 
-      Like this (positive on the right):
+      **Buttons** should be used when a **Call to Action (CTA)** is needed on a page, **Form** or **Card**. Users will recognise that a **Button** must be pressed in order to carry out a specific task. 
 
 
-      Delete Cancel Save
 
 
-      Not like this (positive on the left):
+      # Types of Buttons
 
 
-      Save Delete Cancel
 
 
-      * Buttons always have a label that is specific to it's action so that the user knows what will happen when they click it.  OK should be avoided as it is too generic. Always try to give more meaning to your actions:
+      In Mosaic, there are six types of Buttons. Each Button Type has a different function, and the look of the button will signal a different usage to the user. For example, a Primary Button tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a Danger button tends to be something negative, like deleting something. 
 
 
-      Like this (buttons with meaning):
+      •	Primary Buttons should be used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one Primary Button on the page, Form or Card.
 
 
-      Cancel Confirm Changes
+      •	Default Buttons are Buttons that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box.
 
 
-      Not like this (buttons without meaning):
+      •	Success Buttons are used for positive actions, like saving, confirming accepting or editing. Typically, like the Primary Button, there should only be one Success Button.
 
 
-      Cancel Ok
+      •	Warning Buttons are not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a Button to reload some data, for example, but want to warn the user not to do this too often.
 
 
-      * Buttons always have a text label.  We cannot assume our users will understand all the different icons we use.  This is also particularly important for accessibility so that we can give a text alternative to icons.  There may be instances where space is limited (such as on mobile), if that is the case please get in touch with the Mosaic team who can offer some additional guidance.  We have very special use-cases where icon only buttons can be implemented but this should only be done with guidance from the team.
-
-      * Icons can be used to give further visual meaning to your buttons.  The default for Mosaic is that all buttons have icons.  However, this isn't always practical with space limitations or icon suitability.  We therefore give you the option to use buttons without icons.
+      •	Danger Buttons should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only Danger Button available to the user at that time.
 
 
-      > It is a richer user experience to give a button with a label and no icon, than it is to give a button with an icon and no label.
+      •	Info Buttons are used when the user might require some more context, or for less important actions than the Primary Button. Some examples would be an Info Button that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines.
 
 
-      * Icons should always appear to the left of the label.  The purpose of an icon on a button is to give further meaning to the label.  The icon should describe the button label, not the other way around.  If the icon came after the label it would no longer serve any purpose.  Having icons to the left will also to make the scanning of buttons easier.  
 
-      * Colour is a common method of giving our users further meaning to a button - green is used to give a positive meaning, red is used to give a negative or danger meaning.  It is vital to remember however that colour only gives a visual cue and cannot be relied upon for users of assistive technology such as screen readers.
-
-
-      You can find details of each of our button colours and when to use them in the Usage section below.
+      ### Button Variants
 
 
-      * Be consistent.   If you use icons on buttons in your product then make sure you use them for ALL buttons.  If you use Close for some screens and Cancel in others to perform the same action, consider which one makes most sense and stick with it.
-
-      * Be consistent.  No that's not a typo - we say it again as it is so important for our users.  Giving inconsistent buttons can give a poor user experience and can cause some users to be confused or completely put off using the product.
-
-      * Never have a mix of regular buttons and pill-styled buttons in the same application. Although both function in the same way, for consistency, a design decision must be made to use one or the other.
 
 
-      - - -
+      In addition to the Button Type, each Button can also have a Button Variant. A Variant can be applied to a Button to give it some more context, or add some additional functionality to the Button.
 
 
-      ## Usage
+      •	Disabled Buttons can be added to limit when a Button can be used. A Disabled Button is always visible to the user, but it will not be interactable until the user has completed a specific task. Once the task in question has been performed, the Disabled Button will be set to active. 
 
 
-      We have many different styles and states for our buttons we thought it would be useful to give you some tips on when to use them.
+      Note: if a user will never be able to use the Button, for example if they lack the requisite permissions or security, then a Button should just not be visible to them. It is frustrating for a user to see a Button and never have the ability to use it. It should also be clear to the user what they need to do to enable this Button.
 
 
-      ### Lets start with button colour.
+      •	Spinner Buttons are Buttons that provide tactile feedback to the user that something is happening when they interact with it. This can be useful for situations where a Button's function is not immediately carried out, e.g. when the system needs a few moments to save the changes the user has made. This type of animation on the Button can have a positive impression on the user, letting them know that the system has not just timed out or is unresponsive.
 
 
-      Using the `color` attribute you can set the background colour of your button to one of the following:
+      •	Outline Buttons are not full-colour buttons – instead, they have an outline of the Button Type's colour. This is useful when the Button is on a page that has a coloured background.
+
+
+      •	Link Buttons are links that are styled to look like a Button. This is useful for adding emphasis to a link, and you want to encourage the user to interact with it as they would any other action.
+
+
+      •	Large Buttons are Buttons that are larger than others. Normally this is used when you have a single action on a page that you need to draw attention to, loke a login page or a button to register for something.
+
+
+      •	Small Buttons are the opposite – necessary Buttons that are small and unobtrusive. These can be used in situations where you have limited space, or for situations like a table with repeated actions all across it (such as editing and deleting).
+
+
+      •	Tooltip Buttons can include hover-text on them. This is useful for when a Button might require more context. However, do note that you should not rely on Tooltip Buttons to explain everything – ideally, a Button's usage should be clear from the Button Type and the Button Label.
+
+
+      •	Help Buttons can be included alongside your components to offer additional information, such as what the acceptable values are or what is expected of the user for this component. An example of this might be a Help Button that shows a list of criterion for a password.
+
+
+      •	Icon Only Buttons are Buttons without a label but containing an icon. These should use universally known icons and actions for common functionality, such as a save, delete or home icon. These are rare and should only be used in specific cases. There is a separate document for Icon Only Buttons which you can find [here](link), and you should read \[below](anchor link to the button labels section) for the limitations on using this button.
+
+
+      •	Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons.
+
+
+
+
+      # Usage
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      There are many ways to implement Buttons in a product, and there are many views to support each of those solutions. After carrying out extensive research, the UX Team have agreed on what we believe to be the best rules governing the usage of buttons across Advanced products. Use these following guidelines when implementing a Button into your product.
+
+
+
+
+      ### Ordering of Buttons
+
+
+
+
+      We have a set order for groups of Buttons in our products, to encourage user familiarity and build a familiarity around what a user can expect, and where. The ordering is simple: the least positive Button is the one furthest to the left, and the most positive Button is the one to the right. As an example, a form with 'Delete', 'Cancel' and 'Save' would be ordered as such – 'Delete' is the most negative, 'Save' is the most positive, and 'Cancel' is relatively neutral. 
+
+
+      This ordering of the Buttons provides a sense of 'moving forward' to the used when they see a Button on the right-hand side, whereas a Button on the left-hand side feels like 'moving backward'. 
+
+
+      ### Button Labels
+
+
+
+
+      A Button's Label is as important as the Button itself. A set Buttons that is simply a green and a red button might imply 'good' and 'bad' actions, but there is no context for the user. As such, there are a couple of things to keep in mind when labelling a Button:
+
+
+      •	Buttons require a Label in the vast majority of cases. We cannot assume that a user will instinctively know what an icon means on a button. An infamous example of this is the classic floppy disk icon for saving – think about how soon it will be until virtually all of our users will have never seen a floppy disk? 
+
+
+      Note: there are some very specific use cases for Icon-only Buttons, but these are few and far between. We have [guidance](link) on where a Button can forgo a label, but the UX Team should be contacted in advance of using an Icon Only Button to ensure that it is appropriate. 
+
+
+      •	Button Labels should be specific, rather than general. A user should feel confident that they know what a Button does. Generic Buttons like 'OK' when a user is actually changing something are not informative enough – the user needs to know that the Button will 'Confirm changes', which is a much better Label.
+
+
+      If you are unsure about Labels, please review the [product tone-of-voice document](link) or contact the UX Copywriter.
+
+
+
+
+      ### Button Icons
+
+
+
+
+      Icons can be used to give further meaning to your Buttons. By default, all Buttons should have an Icon, but occasionally this is not always practical when there is not an obvious Icon available for use, or there are space limitations for the Button. In cases like these, it is acceptable to forgo an icon.
+
+
+      When using an Icon, the Icon should always appear to the left of the Button's Label. The Icon is describing the Label, not the other way around! It also improves readability and is easier to quickly scan the functionality of each Button if the Icons all appear on the left-hand side.
+
+
+
+
+      ### Button Colours
+
+
+
+
+      The colour of your Button will be dictated by the Button Type. For example, a Primary Button is green, whereas a Danger Button is red. The rationale is simple: green is associated with positive actions (green for go), while red is associated with negative actions (red for stop). However, it should be noted that colour only gives a visual clue if that visual cue is perceptible to the user – screen readers and colourblind users will get no benefit from Button colours. This is why it is important to use a combination of Button Labels and Icons to properly delineate the usage of a Button.
+
+
+      Refer to the Button Types section \[above](anchor link to button type) to read about the different colours for Button Types.
+
+
+
+
+      ### Consistency
+
+
+
+
+      Consistency among your Buttons is vital for users. A user needs to feel comfortable, confident and at-home when using our products. Button consistency is a really easy way of achieving it – if a user can tell with a quick glance what the Buttons do in a new feature, based on their previous experience with the product, then they will adopt it much quicker, and user errors will be minimised. Inconsistent Buttons quickly lead to poor adoption of products and rampant confusion. 
+
+
+      A few ways you can achieve consistency is making sure your Labels are identical in all areas – do not switch between using 'close' and 'cancel' on your Buttons. Pick one, and stick with it. The same goes for Icons. Make sure you review your Buttons in comparison to others in the system when making them.
   - title: Style
     body: "## this is the content from the style tab"
   - title: Code
