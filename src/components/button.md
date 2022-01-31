@@ -51,7 +51,7 @@ tabs:
 
 
 
-      ### Button Variants
+      ## Button Variants
 
 
 
@@ -114,7 +114,7 @@ tabs:
 
 
 
-      ### Ordering of Buttons
+      ## Ordering of Buttons
 
 
 
@@ -125,7 +125,7 @@ tabs:
       This ordering of the Buttons provides a sense of 'moving forward' to the used when they see a Button on the right-hand side, whereas a Button on the left-hand side feels like 'moving backward'. 
 
 
-      ### Button Labels
+      ## Button Labels
 
 
 
@@ -147,7 +147,7 @@ tabs:
 
 
 
-      ### Button Icons
+      ## Button Icons
 
 
 
@@ -160,7 +160,7 @@ tabs:
 
 
 
-      ### Button Colours
+      ## Button Colours
 
 
 
@@ -173,7 +173,7 @@ tabs:
 
 
 
-      ### Consistency
+      ## Consistency
 
 
 
