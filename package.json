@@ -10,7 +10,7 @@
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "build": "rimraf _site && cross-env NODE_ENV=production eleventy",
-    "browsersync": "browser-sync start --server '_site' --files '_site' --no-notify --no-open",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port $PORT --no-notify --no-open",
     "local-backend": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
