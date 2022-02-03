@@ -2,7 +2,7 @@ backend:
   name: github
   branch: main
   repo: irhill/mosaic-design-system
-  base_url: https://design-system-oauth.herokuapp.com/
+  base_url: https://design-system-oauth.herokuapp.com
 
 media_folder: "src/assets/img"
 public_folder: "/assets/img"
