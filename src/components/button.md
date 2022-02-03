@@ -7,68 +7,58 @@ tabs:
       # What is a Button?
 
 
-
-
       A **Button** should be used when a user is given a possible action – these are usually things like submissions, confirmations, cancellations, et cetera. They can serve many purposes, and are mostly used to initialise a certain process within the system.
-
-
 
 
       ## When, and why?
 
 
-
-
       **Buttons** should be used when a **Call to Action (CTA)** is needed on a page, **Form** or **Card**. Users will recognise that a **Button** must be pressed in order to carry out a specific task. 
-
-
 
 
       # Types of Buttons
 
 
-
-
       In Mosaic, there are six types of **Buttons**. Each **Button Type** has a different function, and the look of the button will signal a different usage to the user. For example, a **Primary Button** tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a **Danger Button** tends to be something negative, like deleting something. 
-
-
 
 
       •	**Primary Buttons** should be used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one **Primary Button** on the page, **Form** or **Card**.
 
 
-
-
       •	**Secondary Buttons** are **Buttons** that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box.
-
-
 
 
       •	**Success Buttons** are used for positive actions, like saving, confirming accepting or editing. Typically, like the **Primary Button**, there should only be one **Success Button**.
 
 
-
-
       •	**Warning Buttons** are not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often.
-
-
 
 
       •	**Danger Buttons** should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only **Danger Button** available to the user at that time.
 
 
-
-
       •	**Info Buttons** are used when the user might require some more context, or for less important actions than the **Primary Button**. Some examples would be an **Info Button** that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines.
 
 
+      <button class="mcc-button mcc-button--primary"> <span class="mcc-button__label">Primary</span> </button>
 
-      <button class="mcc-button--primary">Primary</button><button class="mcc-button--secondary">Secondary</button><button class="mcc-button--success">Success</button><button class="mcc-button--warning">Warning</button><button class="mcc-button--danger">Danger</button><button class="mcc-button--info">Info</button>
+
+      <button class="mcc-button mcc-button--secondary"> <span class="mcc-button__label">Secondary</span></button> 
+
+
+      <button class="mcc-button mcc-button--success"> <span class="mcc-button__label">Success</span> </button> 
+
+
+      <button class="mcc-button mcc-button--danger"> <span class="mcc-button__label">Danger</span> </button> 
+
+
+      <button class="mcc-button mcc-button--warning"> <span class="mcc-button__label">Warning</span> </button> 
+
+
+      <button class="mcc-button mcc-button--info"> <span class="mcc-button__label">Info</span> </button>
 
 
       ## Button Variants
-
-
 
 
       In addition to the Button Type, each Button can also have a Button Variant. A Variant can be applied to a Button to give it some more context, or add some additional functionality to the Button.
@@ -107,31 +97,13 @@ tabs:
       •	Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons.
 
 
-
-
       # Usage
-
-
-
-
-
-
-
-
-
-
-
-
 
 
       There are many ways to implement Buttons in a product, and there are many views to support each of those solutions. After carrying out extensive research, the UX Team have agreed on what we believe to be the best rules governing the usage of buttons across Advanced products. Use these following guidelines when implementing a Button into your product.
 
 
-
-
       ## Ordering of Buttons
-
-
 
 
       We have a set order for groups of Buttons in our products, to encourage user familiarity and build a familiarity around what a user can expect, and where. The ordering is simple: the least positive Button is the one furthest to the left, and the most positive Button is the one to the right. As an example, a form with 'Delete', 'Cancel' and 'Save' would be ordered as such – 'Delete' is the most negative, 'Save' is the most positive, and 'Cancel' is relatively neutral. 
@@ -141,8 +113,6 @@ tabs:
 
 
       ## Button Labels
-
-
 
 
       A Button's Label is as important as the Button itself. A set Buttons that is simply a green and a red button might imply 'good' and 'bad' actions, but there is no context for the user. As such, there are a couple of things to keep in mind when labelling a Button:
@@ -160,11 +130,7 @@ tabs:
       If you are unsure about Labels, please review the [product tone-of-voice document](link) or contact the UX Copywriter.
 
 
-
-
       ## Button Icons
-
-
 
 
       Icons can be used to give further meaning to your Buttons. By default, all Buttons should have an Icon, but occasionally this is not always practical when there is not an obvious Icon available for use, or there are space limitations for the Button. In cases like these, it is acceptable to forgo an icon.
@@ -173,11 +139,7 @@ tabs:
       When using an Icon, the Icon should always appear to the left of the Button's Label. The Icon is describing the Label, not the other way around! It also improves readability and is easier to quickly scan the functionality of each Button if the Icons all appear on the left-hand side.
 
 
-
-
       ## Button Colours
-
-
 
 
       The colour of your Button will be dictated by the Button Type. For example, a Primary Button is green, whereas a Danger Button is red. The rationale is simple: green is associated with positive actions (green for go), while red is associated with negative actions (red for stop). However, it should be noted that colour only gives a visual clue if that visual cue is perceptible to the user – screen readers and colourblind users will get no benefit from Button colours. This is why it is important to use a combination of Button Labels and Icons to properly delineate the usage of a Button.
@@ -186,11 +148,7 @@ tabs:
       Refer to the Button Types section \[above](anchor link to button type) to read about the different colours for Button Types.
 
 
-
-
       ## Consistency
-
-
 
 
       Consistency among your Buttons is vital for users. A user needs to feel comfortable, confident and at-home when using our products. Button consistency is a really easy way of achieving it – if a user can tell with a quick glance what the Buttons do in a new feature, based on their previous experience with the product, then they will adopt it much quicker, and user errors will be minimised. Inconsistent Buttons quickly lead to poor adoption of products and rampant confusion. 
