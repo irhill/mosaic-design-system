@@ -13,7 +13,7 @@
     "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
     "local-backend": "npx netlify-cms-proxy-server"
   },
-  "devDependencies": {
+  "dependencies": {
     "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-plugin-syntaxhighlight": "^3.0.1",
     "browser-sync": "^2.26.14",
