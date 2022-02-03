@@ -1,4 +1,4 @@
 ---
 title: A pattern
 ---
-\# a pattern
+# a pattern
