@@ -3,6 +3,7 @@ backend:
   branch: main
   repo: irhill/mosaic-design-system
   base_url: https://design-system-oauth.herokuapp.com
+  auth_endpoint: auth
 
 media_folder: "src/assets/img"
 public_folder: "/assets/img"
