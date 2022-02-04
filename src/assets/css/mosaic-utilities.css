@@ -7337,6 +7337,14 @@
   white-space: nowrap;
 }
 
+.mu-visible {
+  visibility: visible !important;
+}
+
+.mu-invisible {
+  visibility: hidden !important;
+}
+
 .mu-visually-hidden,
 .mu-visually-hidden-focusable:not(:focus):not(:focus-within) {
   position: absolute !important;

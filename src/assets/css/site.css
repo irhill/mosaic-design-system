@@ -33,10 +33,3 @@ article ul > li {
   }
 }
 
-article > :not([class*="video"]):not(pre):not(table) {
-  max-width: 48rem;
-}
-
-/* body {
-  background-color: var(--ui-01, #eeeef1);
-} */
