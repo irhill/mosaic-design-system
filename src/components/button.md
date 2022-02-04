@@ -4,7 +4,7 @@ navigation: button
 tabs:
   - title: Usage
     body: >-
-      # What is a Button?
+      ## What is a Button?
 
 
       A **Button** should be used when a user is given a possible action – these are usually things like submissions, confirmations, cancellations, et cetera. They can serve many purposes, and are mostly used to initialise a certain process within the system.
@@ -16,7 +16,7 @@ tabs:
       **Buttons** should be used when a **Call to Action (CTA)** is needed on a page, **Form** or **Card**. Users will recognise that a **Button** must be pressed in order to carry out a specific task. 
 
 
-      # Types of Buttons
+      ## Types of Buttons
 
 
       In Mosaic, there are six types of **Buttons**. Each **Button Type** has a different function, and the look of the button will signal a different usage to the user. For example, a **Primary Button** tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a **Danger Button** tends to be something negative, like deleting something. 
@@ -97,13 +97,13 @@ tabs:
       •	Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons.
 
 
-      # Usage
+      ## Usage
 
 
       There are many ways to implement Buttons in a product, and there are many views to support each of those solutions. After carrying out extensive research, the UX Team have agreed on what we believe to be the best rules governing the usage of buttons across Advanced products. Use these following guidelines when implementing a Button into your product.
 
 
-      ## Ordering of Buttons
+      ### Ordering of Buttons
 
 
       We have a set order for groups of Buttons in our products, to encourage user familiarity and build a familiarity around what a user can expect, and where. The ordering is simple: the least positive Button is the one furthest to the left, and the most positive Button is the one to the right. As an example, a form with 'Delete', 'Cancel' and 'Save' would be ordered as such – 'Delete' is the most negative, 'Save' is the most positive, and 'Cancel' is relatively neutral. 
@@ -112,7 +112,7 @@ tabs:
       This ordering of the Buttons provides a sense of 'moving forward' to the used when they see a Button on the right-hand side, whereas a Button on the left-hand side feels like 'moving backward'. 
 
 
-      ## Button Labels
+      ### Button Labels
 
 
       A Button's Label is as important as the Button itself. A set Buttons that is simply a green and a red button might imply 'good' and 'bad' actions, but there is no context for the user. As such, there are a couple of things to keep in mind when labelling a Button:
@@ -130,7 +130,7 @@ tabs:
       If you are unsure about Labels, please review the [product tone-of-voice document](link) or contact the UX Copywriter.
 
 
-      ## Button Icons
+      ### Button Icons
 
 
       Icons can be used to give further meaning to your Buttons. By default, all Buttons should have an Icon, but occasionally this is not always practical when there is not an obvious Icon available for use, or there are space limitations for the Button. In cases like these, it is acceptable to forgo an icon.
@@ -139,7 +139,7 @@ tabs:
       When using an Icon, the Icon should always appear to the left of the Button's Label. The Icon is describing the Label, not the other way around! It also improves readability and is easier to quickly scan the functionality of each Button if the Icons all appear on the left-hand side.
 
 
-      ## Button Colours
+      ### Button Colours
 
 
       The colour of your Button will be dictated by the Button Type. For example, a Primary Button is green, whereas a Danger Button is red. The rationale is simple: green is associated with positive actions (green for go), while red is associated with negative actions (red for stop). However, it should be noted that colour only gives a visual clue if that visual cue is perceptible to the user – screen readers and colourblind users will get no benefit from Button colours. This is why it is important to use a combination of Button Labels and Icons to properly delineate the usage of a Button.
@@ -148,7 +148,7 @@ tabs:
       Refer to the Button Types section \[above](anchor link to button type) to read about the different colours for Button Types.
 
 
-      ## Consistency
+      ### Consistency
 
 
       Consistency among your Buttons is vital for users. A user needs to feel comfortable, confident and at-home when using our products. Button consistency is a really easy way of achieving it – if a user can tell with a quick glance what the Buttons do in a new feature, based on their previous experience with the product, then they will adopt it much quicker, and user errors will be minimised. Inconsistent Buttons quickly lead to poor adoption of products and rampant confusion. 
