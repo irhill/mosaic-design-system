@@ -10,7 +10,7 @@ tabs:
       A **Button** should be used when a user is given a possible action – these are usually things like submissions, confirmations, cancellations, et cetera. They can serve many purposes, and are mostly used to initialise a certain process within the system.
 
 
-      \---
+      ---
 
 
       ## When, and why?
