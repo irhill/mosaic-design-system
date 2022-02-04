@@ -74,32 +74,31 @@
               <h1>{{ title }}</h1>
               <div class="mu-d-flex" style="gap: 0.5rem;">
                 <span class="mcc-chip mcc-chip--primary mcc-chip--xs">HTML/CSS</span>
-                <span class="mcc-chip mcc-chip--primary mcc-chip--xs">Web Component</span>
+                {# <span class="mcc-chip mcc-chip--primary mcc-chip--xs">Web Component</span> #}
               </div>
-              
             </header>
-
             {% if tabs %}
               {% include "./partials/tab-layout.njk" %}
             {% else %}
-              {% from "./macros/table-of-contents.njk" import generateToc %}
-              {{ generateToc(content) }}
-              {{ content | safe }}
+              <div class="mu-d-flex">
+                <section>
+                  {{ content | safe }}
+                </section>
+                {% from "./macros/table-of-contents.njk" import generateToc %}
+                {{ generateToc(content) }}
+              </div>
             {% endif %}
-
             <footer>
               {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
               {% set next = collections.globalCollection | getNextCollectionItem(page) %}
               {% if previous %}<a href="{{ previous.url }}">{{ previous.data.title }}</a>{% endif %}
               {% if next %}<a href="{{ next.url }}">{{ next.data.title }}</a>{% endif %}
             </footer>
-
           </article>
-          
         </main>
         <footer>
-            {% include "./partials/theme-toggle.njk" %}
-          </footer>
+          {% include "./partials/theme-toggle.njk" %}
+        </footer>
       </div>
     </div>
       

@@ -63,7 +63,12 @@ module.exports = (eleventyConfig) => {
   }
   
   eleventyConfig.setLibrary('md', getMarkdownItLibrary())
-	eleventyConfig.addPlugin(pluginTOC, { tags: ['h1', 'h2', 'h3'], wrapperClass: 'toc__nav', ul: true })
+	eleventyConfig.addPlugin(pluginTOC, {
+    tags: ['h2'],
+    wrapper: 'div',
+    wrapperClass: 'toc',
+    ul: true 
+  })
 
   // add filters
   eleventyConfig.addFilter("stringify_filter", (content) => JSON.stringify(content))

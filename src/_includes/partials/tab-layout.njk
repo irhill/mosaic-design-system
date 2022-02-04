@@ -1,13 +1,13 @@
 {% from "../macros/table-of-contents.njk" import generateToc %}
 
-<div id="main-tab-layout" class="mu-p-05 mu-p-md-06 mu-p-lg-07 mu-p-xl-08">
+<div id="main-tab-layout" class="mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08">
   <div class="mcc-tabs mcc-tabs--bar">
 
     {% for tab in tabs %}
       <input type="radio" id="component-{{ tab.title.toLowerCase() }}" name="page-tabs">
     {% endfor %}
 
-    <ul role="tablist">
+    <ul class="mu-border-bottom mu-mb-08" role="tablist">
       {% for tab in tabs %}
         <li role="tab">
           <label for="component-{{ tab.title.toLowerCase() }}" tabindex="0">
@@ -21,15 +21,19 @@
     <!-- if the tab content has a 'hook' then use that to load the relevant partial -->
     <!-- otherwise render the tab body as markdown -->
     {% for tab in tabs %}
-      <div role="tabpanel" class="mu-p-05 mu-p-md-06">
-        <article>
-          {% if tab.hook %}
+      <div role="tabpanel">
+        {% if tab.hook %}
+          <article>
             {% include "./" + page.url.split('/')[1] + "/" + tab.hook + ".njk" %}
-          {% else %}
+          </article>
+        {% else %}
+          <article>
             {{ generateToc(tab.body) }}
-            {{ tab.body | markdownify | safe }}
-          {% endif %}
-        </article>
+            <div class="temp-content-chunk">
+              {{ tab.body | markdownify | safe }}
+            </div>
+          </article>
+        {% endif %}
       </div>
     {% endfor %}
 

@@ -2,13 +2,13 @@
   top: var(--navbar-height);
 }
 
-body {
+/* body {
   font-weight: 400;
-}
+} */
 
-article ul > li {
+/* article ul > li {
   margin-bottom: 1.25rem;
-}
+} */
 
 .page-content {
   flex: 1;
@@ -33,3 +33,47 @@ article ul > li {
   }
 }
 
+/* table of contents */
+.toc ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 64px;
+}
+
+/* content chunk width */
+.temp-content-chunk p,
+.temp-content-chunk ul,
+.temp-content-chunk ol,
+.temp-content-chunk hr {
+  max-width: 42rem;
+}
+
+/* content chunk spacing */
+.temp-content-chunk > * + * {
+  margin-top: var(--content-chunk-space, 1rem)
+}
+.temp-content-chunk h2:not(:first-of-type) {
+  --content-chunk-space: 48px;
+}
+.temp-content-chunk h3 {
+  --content-chunk-space: 48px;
+}
+.temp-content-chunk hr {
+  --content-chunk-space: 48px;
+  margin: var(--content-chunk-space) 0;
+}
+
+/* content chunk anchor links */
+.direct-link {
+  color: var(--ui-05);
+  visibility: hidden;
+}
+:focus > a[href].direct-link,
+:focus > a[href].direct-link:visited,
+:hover > a[href].direct-link,
+:hover > a[href].direct-link:visited,
+a[href].direct-link:focus,
+a[href].direct-link:focus:visited {
+  visibility: visible;
+}

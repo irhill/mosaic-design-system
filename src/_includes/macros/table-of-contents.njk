@@ -1,10 +1,6 @@
 {% macro generateToc(md = '') %}
   {% if md | markdownify | toc %}
-    <aside class="sticky-aside">
-      <div class="toc">
-        <span>Table of contents</span>
-          {{ md | markdownify | toc | safe }}
-      </div>
-    </aside>
+    <p class="mu-mb-05">Contents</p>
+    {{ md | markdownify | toc | safe }}
   {% endif %}
 {% endmacro %}
