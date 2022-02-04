@@ -19,6 +19,9 @@ tabs:
       **Buttons** should be used when a **Call to Action (CTA)** is needed on a page, **Form** or **Card**. Users will recognise that a **Button** must be pressed in order to carry out a specific task. 
 
 
+      ---
+
+
       ## Types of Buttons
 
 
@@ -59,6 +62,9 @@ tabs:
 
 
       <button class="mcc-button mcc-button--info"> <span class="mcc-button__label">Info</span> </button>
+
+
+      ---
 
 
       ## Button Variants
