@@ -209,8 +209,6 @@ code:
                 value: mcc-button--warning
               - name: Info
                 value: mcc-button--info
-              - name: Light
-                value: mcc-button--light
           - name: Size
             selector: button
             classes:
@@ -356,19 +354,17 @@ code:
             selector: button
             classes:
               - name: Primary
-                value: mcc-button--outline-primary
+                value: mcc-button--primary
               - name: Secondary
-                value: mcc-button--outline-secondary
+                value: mcc-button--secondary
               - name: Success
-                value: mcc-button--outline-success
+                value: mcc-button--success
               - name: Danger
-                value: mcc-button--outline-danger
+                value: mcc-button--danger
               - name: Warning
-                value: mcc-button--outline-warning
+                value: mcc-button--warning
               - name: Info
-                value: mcc-button--outline-info
-              - name: Light
-                value: mcc-button--outline-light
+                value: mcc-button--info
           - name: Size
             selector: button
             classes:
