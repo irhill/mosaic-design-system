@@ -327,29 +327,12 @@ code:
       - template:
           lang: html
           code: |-
-            <button class="mcc-button">
+            <button class="mcc-button mcc-button--text">
               <mcc-icon name="home" aria-hidden="true"></mcc-icon>
               <span class="mcc-button__label">Button</span>
             </button>
         name: As text
         modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--text-primary
-              - name: Secondary
-                value: mcc-button--text-secondary
-              - name: Success
-                value: mcc-button--text-success
-              - name: Danger
-                value: mcc-button--text-danger
-              - name: Warning
-                value: mcc-button--text-warning
-              - name: Info
-                value: mcc-button--text-info
-              - name: Light
-                value: mcc-button--text-light
           - name: Size
             selector: button
             classes:
@@ -389,45 +372,6 @@ code:
                 value: mcc-button--outline-info
               - name: Light
                 value: mcc-button--outline-light
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
-      - template:
-          lang: html
-          code: |-
-            <button class="mcc-button mcc-button--icon-only">
-              <mcc-icon name="home" aria-hidden="true"></mcc-icon>
-              <span class="mcc-button__label">Button</span>
-            </button>
-        name: As text and icon only
-        modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--text-primary
-              - name: Secondary
-                value: mcc-button--text-secondary
-              - name: Success
-                value: mcc-button--text-success
-              - name: Danger
-                value: mcc-button--text-danger
-              - name: Warning
-                value: mcc-button--text-warning
-              - name: Info
-                value: mcc-button--text-info
-              - name: Light
-                value: mcc-button--text-light
           - name: Size
             selector: button
             classes:
