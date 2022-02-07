@@ -77,3 +77,8 @@ a[href].direct-link:focus,
 a[href].direct-link:focus:visited {
   visibility: visible;
 }
+
+/* scroll position */
+html {
+  scroll-padding-top: calc(var(--navigation-header-height) + 2rem);
+}
