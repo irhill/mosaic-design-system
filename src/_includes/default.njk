@@ -83,13 +83,11 @@
             {% if tabs %}
               {% include "./partials/tab-layout.njk" %}
             {% else %}
-              <div class="mu-d-flex">
-                <section>
-                  {{ content | safe }}
-                </section>
+              <section class="mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 temp-content-chunk">
                 {% from "./macros/table-of-contents.njk" import generateToc %}
                 {{ generateToc(content) }}
-              </div>
+                {{ content | safe }}
+              </section>
             {% endif %}
             <footer>
               {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
