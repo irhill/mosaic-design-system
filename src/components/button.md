@@ -305,29 +305,12 @@ code:
       - template:
           lang: html
           code: |-
-            <button class="mcc-button">
+            <button class="mcc-button mcc-button--outline">
               <mcc-icon name="home" aria-hidden="true"></mcc-icon>
               <span class="mcc-button__label">Button</span>
             </button>
         name: As outline
         modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--outline-primary
-              - name: Secondary
-                value: mcc-button--outline-secondary
-              - name: Success
-                value: mcc-button--outline-success
-              - name: Danger
-                value: mcc-button--outline-danger
-              - name: Warning
-                value: mcc-button--outline-warning
-              - name: Info
-                value: mcc-button--outline-info
-              - name: Light
-                value: mcc-button--outline-light
           - name: Size
             selector: button
             classes:
