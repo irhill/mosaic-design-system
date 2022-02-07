@@ -318,7 +318,10 @@ code:
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes: []
+        attributes:
+          - name: Disabled
+            selector: button
+            attribute: disabled
       - template:
           lang: html
           code: |-
