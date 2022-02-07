@@ -183,7 +183,7 @@ code:
     <button class="mcc-button">Button text</button>
     ```
 
-    # Preview
+    # Live demo
   preview:
     variants:
       - template:
