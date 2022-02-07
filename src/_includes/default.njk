@@ -32,14 +32,6 @@
   </head>
   <body>
 
-    {# <div class="mcc-navbar mu-d-lg-none">
-      <button class="mcc-navbar__button" onclick="showSiteNav()">
-        <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
-        <span class="mu-visually-hidden">Show menu</span>
-      </button>
-      <span class="mu-fw-semi-bold">Mosaic Design System</span>
-    </div> #}
-
     <header class="[ mcc-navigation-header ] [ mu-position-sticky mu-top-0 ]" aria-label="Advanced Product" role="banner">
       <div class="mcc-navigation-header__name">
         <img class="mu-d-none mu-d-lg-block mu-mr-04" src="https://cdn.svc.oneadvanced.com/mosaic/2.0.0/img/logo.svg" width="24" height="24" alt="Advanced Logo">
@@ -71,9 +63,9 @@
         <main class="mu-h-100">
           <article>
             <header class="[ mcc-page-header ] [ mu-d-flex mu-flex-column mu-align-items-start ]">
-              <h1>{{ title }}</h1>
+              <h1 class="mu-mb-00">{{ title }}</h1>
               {% if chips %}
-                <div class="mu-d-flex" style="gap: 0.5rem;">
+                <div class="mu-d-flex mu-mt-03" style="gap: 0.5rem;">
                   {% for chip in chips %}
                     <span class="mcc-chip mcc-chip--primary mcc-chip--xs">{{ chip }}</span>
                   {% endfor %}
