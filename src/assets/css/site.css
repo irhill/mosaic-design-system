@@ -63,6 +63,9 @@
   --content-chunk-space: 48px;
   margin: var(--content-chunk-space) 0;
 }
+.temp-content-chunk .component-preview {
+  --content-chunk-space: 48px;
+}
 
 /* content chunk anchor links */
 .direct-link {
@@ -81,4 +84,11 @@ a[href].direct-link:focus:visited {
 /* scroll position */
 html {
   scroll-padding-top: calc(var(--navigation-header-height) + 2rem);
+}
+
+/* component preview */
+.component-preview {
+  max-width: 75rem;
+  min-height: 560px;
+  margin-top: 48px;
 }
