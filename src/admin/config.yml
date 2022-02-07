@@ -170,6 +170,11 @@ collections:
         name: "body"
         widget: "markdown"
         required: false
+      - label: "Chips"
+        name: "chips"
+        widget: "select"
+        multiple: true
+        options: ["HTML/CSS", "Web Component"]
       - label: "Tabs"
         name: "tabs"
         widget: "list"

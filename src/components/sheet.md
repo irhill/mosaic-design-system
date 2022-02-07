@@ -1,6 +1,12 @@
 ---
 title: Sheet
 navigation: /sheet
+tags:
+  - HTML/CSS
+  - Web Component
+chips:
+  - HTML/CSS
+  - Web Component
 tabs:
   - title: Usage
     body: "## this is the content from the usage tab"

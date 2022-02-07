@@ -1,6 +1,10 @@
 ---
 title: Button
 navigation: button
+tags:
+  - HTML/CSS
+chips:
+  - HTML/CSS
 tabs:
   - title: Usage
     body: >-
