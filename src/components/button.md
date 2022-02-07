@@ -183,7 +183,7 @@ code:
     <button class="mcc-button">Button text</button>
     ```
 
-    ## Live demo
+    # Live demo
   preview:
     variants:
       - template:
@@ -320,10 +320,7 @@ code:
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
+        attributes: []
       - template:
           lang: html
           code: |-
