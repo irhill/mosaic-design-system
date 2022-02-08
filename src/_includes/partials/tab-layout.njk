@@ -11,6 +11,9 @@
       {% for tab in tabs %}
         <li role="tab">
           <label for="component-{{ tab.title.toLowerCase() }}" tabindex="0">
+            {% if tab.icon %}
+              <mcc-icon class="mu-mr-05" name="{{ tab.icon }}" icon-set="fluency-outline"></mcc-icon>
+            {% endif %}
             <span>{{ tab.title }}</span>
           </label>
         </li>
