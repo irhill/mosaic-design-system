@@ -4,15 +4,11 @@ backend:
   repo: irhill/mosaic-design-system
   base_url: https://design-system-oauth.herokuapp.com
 
-# backend:
-#   name: git-gateway
-#   branch: main
 media_folder: "src/assets/img"
 public_folder: "/assets/img"
 
-# Please run "npx netlify-cms-proxy-server" for local backend
 local_backend: true
-# publish_mode: editorial_workflow
+publish_mode: editorial_workflow
 collections:
   - label: "Mosaic"
     name: "mosaic"
