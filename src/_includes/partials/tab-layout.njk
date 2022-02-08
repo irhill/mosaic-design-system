@@ -7,7 +7,7 @@
       <input type="radio" id="component-{{ tab.title.toLowerCase() }}" name="page-tabs">
     {% endfor %}
 
-    <ul class="mu-border-bottom mu-mb-08" role="tablist">
+    <ul class="[ md-sticky-tab-nav ] [ mu-border-bottom mu-mb-08 ]" role="tablist">
       {% for tab in tabs %}
         <li role="tab">
           <label for="component-{{ tab.title.toLowerCase() }}" tabindex="0">

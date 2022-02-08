@@ -133,10 +133,6 @@ html {
 .temp-header__text {
   padding: 32px 0;
 }
-.mcc-page-header  h1 {
-  font-size: 72px
-}
-
 
 .temp-container {
   width: 100%;
@@ -148,4 +144,29 @@ html {
   .temp-container {
     max-width: 1320px;
   }
+}
+
+.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav {
+  position: sticky;
+  top: var(--navigation-header-height);
+  padding-top: 1rem;
+  background-color: var(--ui-02, #eeeef1);
+}
+
+.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::before,
+.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::after {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0.5rem;
+  background-color: var(--ui-02, #eeeef1);
+  content: "";
+}
+
+.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::before {
+  left: -0.5rem;
+}
+
+.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::after {
+  right: -0.5rem;
 }

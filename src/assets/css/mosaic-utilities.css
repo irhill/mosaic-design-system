@@ -7256,6 +7256,66 @@
     text-align: center !important;
   }
 }
+.mu-display-heading-1 {
+  font-size: 4.25rem;
+  line-height: 1.147em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-1 {
+    font-size: calc(1.325rem + 3.65625vw);
+  }
+}
+
+.mu-display-heading-2 {
+  font-size: 3.75rem;
+  line-height: 1.167em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-2 {
+    font-size: calc(1.275rem + 3.09375vw);
+  }
+}
+
+.mu-display-heading-3 {
+  font-size: 3.25rem;
+  line-height: 1.192em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-3 {
+    font-size: calc(1.225rem + 2.53125vw);
+  }
+}
+
+.mu-display-heading-4 {
+  font-size: 2.75rem;
+  line-height: 1.227em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-4 {
+    font-size: calc(1.175rem + 1.96875vw);
+  }
+}
+
+.mu-display-heading-5 {
+  font-size: 2.25rem;
+  line-height: 1.278em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-5 {
+    font-size: calc(1.125rem + 1.40625vw);
+  }
+}
+
+.mu-display-heading-6 {
+  font-size: 1.75rem;
+  line-height: 1.357em;
+}
+@media (max-width: 1280px) {
+  .mu-display-heading-6 {
+    font-size: calc(1.075rem + 0.84375vw);
+  }
+}
+
 .mu-fs-1 {
   font-size: 1.75rem;
   line-height: 1.357em;
