@@ -17,7 +17,7 @@ tabs:
       ---
 
 
-      ## When, and why?
+      ### When, and why?
 
 
       **Buttons** should be used when a **Call to Action (CTA)** is needed on a page, **Form** or **Card**. Users will recognise that a **Button** must be pressed in order to carry out a specific task. 
@@ -58,37 +58,32 @@ tabs:
       In addition to the Button Type, each Button can also have a Button Variant. A Variant can be applied to a Button to give it some more context, or add some additional functionality to the Button.
 
 
-      •	Disabled Buttons can be added to limit when a Button can be used. A Disabled Button is always visible to the user, but it will not be interactable until the user has completed a specific task. Once the task in question has been performed, the Disabled Button will be set to active. 
+      | Variant | Description | Example |
+
+      |---|------|---|
+
+      | Disabled | This can be added to limit when a Button can be used. A Disabled Button is always visible to the user, but it will not be interactable until the user has completed a specific task. Once the task in question has been performed, the Disabled Button will be set to active.* |  |
+
+      | Spinner | Buttons that provide tactile feedback to the user that something is happening when they interact with it. This can be useful for situations where a Button's function is not immediately carried out, e.g. when the system needs a few moments to save the changes the user has made. This type of animation on the Button can have a positive impression on the user, letting them know that the system has not just timed out or is unresponsive. |  |
+
+      | Outline | Outline buttons are not full-colour buttons – instead, they have an outline of the Button Type's colour. This is useful when the Button is on a page that has a coloured background. |  |
+
+      | Link | Links that are styled to look like a Button. This is useful for adding emphasis to a link, and you want to encourage the user to interact with it as they would any other action. |  |
+
+      | Large | Buttons that are larger than others. Normally this is used when you have a single action on a page that you need to draw attention to, loke a login page or a button to register for something. |  |
+
+      | Small | Small Buttons are the opposite – necessary Buttons that are small and unobtrusive. These can be used in situations where you have limited space, or for situations like a table with repeated actions all across it (such as editing and deleting). |  |
+
+      | Tooltip | Tooltip Buttons can include hover-text on them. This is useful for when a Button might require more context. However, do note that you should not rely on Tooltip Buttons to explain everything – ideally, a Button's usage should be clear from the Button Type and the Button Label. |  |
+
+      | Help | Help Buttons can be included alongside your components to offer additional information, such as what the acceptable values are or what is expected of the user for this component. An example of this might be a Help Button that shows a list of criterion for a password. |  |
+
+      | Icon-Only | Icon Only Buttons are Buttons without a label but containing an icon. These should use universally known icons and actions for common functionality, such as a save, delete or home icon. These are rare and should only be used in specific cases. There is a separate document for Icon Only Buttons which you can find [here](link), and you should read \[below](https://mosaic-design-system.herokuapp.com/components/button/#button-labels) for the limitations on using this button. |  |
+
+      | Pill | Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons. |  |
 
 
-      Note: if a user will never be able to use the Button, for example if they lack the requisite permissions or security, then a Button should just not be visible to them. It is frustrating for a user to see a Button and never have the ability to use it. It should also be clear to the user what they need to do to enable this Button.
-
-
-      •	Spinner Buttons are Buttons that provide tactile feedback to the user that something is happening when they interact with it. This can be useful for situations where a Button's function is not immediately carried out, e.g. when the system needs a few moments to save the changes the user has made. This type of animation on the Button can have a positive impression on the user, letting them know that the system has not just timed out or is unresponsive.
-
-
-      •	Outline Buttons are not full-colour buttons – instead, they have an outline of the Button Type's colour. This is useful when the Button is on a page that has a coloured background.
-
-
-      •	Link Buttons are links that are styled to look like a Button. This is useful for adding emphasis to a link, and you want to encourage the user to interact with it as they would any other action.
-
-
-      •	Large Buttons are Buttons that are larger than others. Normally this is used when you have a single action on a page that you need to draw attention to, loke a login page or a button to register for something.
-
-
-      •	Small Buttons are the opposite – necessary Buttons that are small and unobtrusive. These can be used in situations where you have limited space, or for situations like a table with repeated actions all across it (such as editing and deleting).
-
-
-      •	Tooltip Buttons can include hover-text on them. This is useful for when a Button might require more context. However, do note that you should not rely on Tooltip Buttons to explain everything – ideally, a Button's usage should be clear from the Button Type and the Button Label.
-
-
-      •	Help Buttons can be included alongside your components to offer additional information, such as what the acceptable values are or what is expected of the user for this component. An example of this might be a Help Button that shows a list of criterion for a password.
-
-
-      •	Icon Only Buttons are Buttons without a label but containing an icon. These should use universally known icons and actions for common functionality, such as a save, delete or home icon. These are rare and should only be used in specific cases. There is a separate document for Icon Only Buttons which you can find [here](link), and you should read \[below](anchor link to the button labels section) for the limitations on using this button.
-
-
-      •	Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons.
+      > *if a user will never be able to use the Button, for example if they lack the requisite permissions or security, then a Button should just not be visible to them. It is frustrating for a user to see a Button and never have the ability to use it. It should also be clear to the user what they need to do to enable this Button. 	
 
 
       ## Using a Button
