@@ -29,7 +29,7 @@ toggleSwitch.addEventListener('click', e => {
   }
 })
 
-// TODO: thi sneeds to be moved
+// TODO: this needs to be moved
 function showSiteNav() {
   const sheet = document.getElementById('site-nav-sheet')
   sheet.show()
