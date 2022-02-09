@@ -21,6 +21,7 @@
 
 :root {
   --mcc-drawer-width: 280px;
+  --mcc-drawer-offset: 160px;
   --navbar-height: 4rem
 }
 
@@ -96,44 +97,7 @@ html {
   margin-top: 48px;
 }
 
-/* site padding */
-.main-content {
-  width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  padding: 16px
-}
-.main-content__aside {
-  width: 25%;
-  padding-top: 48px;
-}
-/* .main-content__article {
-  width: 100%;
-  padding-left: 16px;
-  padding-right: 16px;
-} */
-
-.temp-header {
-  background-color: var(--ui-01, #fff);
-  border-bottom: 1px solid var(--border-color)
-}
-.temp-header__inner {
-  padding-top: 60px;
-  margin-bottom: 48px !important;
-  margin: 0 auto;
-  margin-bottom: 0px;
-  width: 100%;
-  max-width: 1300px;
-
-}
-.temp-header__extra {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-.temp-header__text {
-  padding: 32px 0;
-}
-
+/* container */
 .temp-container {
   width: 100%;
   max-width: 1120px;
@@ -142,7 +106,8 @@ html {
 
 @media (min-width: 1920px) {
   .temp-container {
-    max-width: 1320px;
+    max-width: 1300px;
+    margin: 0 0 0 var(--mcc-drawer-offset);
   }
 }
 
