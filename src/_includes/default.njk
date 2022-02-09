@@ -93,13 +93,25 @@
         {% endif %}
 
         <footer>
+  
           {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
           {% set next = collections.globalCollection | getNextCollectionItem(page) %}
-          {% if previous %}<a href="{{ previous.url }}">{{ previous.data.title }}</a>{% endif %}
-          {% if next %}<a href="{{ next.url }}">{{ next.data.title }}</a>{% endif %}
 
-          
-          
+          <div class="[ temp-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+            <div class="mcc-button-group mcc-button-group--lg" role="group" aria-label="Outline example">
+              <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
+                <mcc-icon name="left_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+                <span class="mcc-button__label">
+                  {{ previous.data.title }}
+                </span>
+              </a>
+              <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
+                <span class="mcc-button__label">{{ next.data.title }}</span>
+                <mcc-icon name="right_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+              </a>
+            </div>
+          </div>
+        
         </footer>
 
       </article>
