@@ -1309,11 +1309,11 @@ button.mcc-card {
   font-size: 0.875rem;
   line-height: 1.714;
 }
-.mcc-tabs.mcc-tabs--pill ul[role=tablist] > li label svg {
-  fill: currentColor;
-}
 .mcc-tabs.mcc-tabs--pill ul[role=tablist] > li label .mcc-icon {
   margin-right: 0.5rem;
+}
+.mcc-tabs.mcc-tabs--pill ul[role=tablist] > li label .mcc-icon svg {
+  fill: currentColor;
 }
 .mcc-tabs.mcc-tabs--pill ul[role=tablist] > li label .mcc-button__label + .mcc-icon {
   margin-right: 0;
@@ -3854,11 +3854,11 @@ a.mcc-badge--dark:focus {
   font-size: 0.875rem;
   line-height: 1.714;
 }
-.mcc-button svg {
-  fill: currentColor;
-}
 .mcc-button .mcc-icon {
   margin-right: 0.5rem;
+}
+.mcc-button .mcc-icon svg {
+  fill: currentColor;
 }
 .mcc-button .mcc-button__label + .mcc-icon {
   margin-right: 0;
@@ -4732,6 +4732,13 @@ a.mcc-chip:focus {
   -webkit-box-shadow: unset;
           box-shadow: unset;
 }
+button.mcc-chip {
+  cursor: pointer;
+}
+button.mcc-chip:focus {
+  outline: 0.125rem solid var(--ui-07, #161616);
+  outline-offset: -0.125rem;
+}
 
 .mcc-chip--primary {
   background-color: var(--primary, #1078cf);
@@ -5099,6 +5106,22 @@ a.mcc-chip--dark:focus {
     max-width: 1320px;
   }
 }
+.mcc-footer {
+  border-top: 0.0625rem solid var(--divider-color, #d5d6e0);
+  padding: 1rem;
+  background: var(--ui-01, #fff);
+}
+@media (min-width: 768px) {
+  .mcc-footer {
+    padding: calc(1rem * 1.5);
+  }
+}
+@media (min-width: 1280px) {
+  .mcc-footer {
+    padding: calc(1rem * 1.5) calc(1rem * 2);
+  }
+}
+
 .mcc-row {
   --mcc-gutter-x: 1.5rem;
   --mcc-gutter-y: 0;
@@ -7395,9 +7418,28 @@ details summary.mcc-menu__subtitle + div {
   height: 100%;
 }
 .mcc-nav a {
-  text-decoration: none;
+  text-decoration: underline;
   padding: calc(1.5rem / 3);
 }
+.mcc-nav--vertical {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.mcc-nav--simple a {
+  padding: 0;
+}
+.mcc-nav--simple a:not(:first-child) {
+  margin-left: calc(1.5rem / 1.5);
+}
+.mcc-nav--vertical.mcc-nav--simple a {
+  margin-left: 0;
+}
+.mcc-nav--vertical.mcc-nav--simple a:not(:first-child) {
+  margin-top: calc(1.5rem / 1.5);
+}
+
 :root {
   --navigation-bar-height: 5rem;
 }
@@ -8368,13 +8410,13 @@ table:not([class]) td button:not(.mcc-button):not(.mcc-table__header-action):not
   border-radius: 3px;
   font-size: 0.875rem;
 }
-table:not([class]) th button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) svg,
-table:not([class]) td button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) svg {
-  fill: currentColor;
-}
 table:not([class]) th button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-icon,
 table:not([class]) td button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-icon {
   margin-right: 0.5rem;
+}
+table:not([class]) th button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-icon svg,
+table:not([class]) td button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-icon svg {
+  fill: currentColor;
 }
 table:not([class]) th button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-button__label + .mcc-icon,
 table:not([class]) td button:not(.mcc-button):not(.mcc-table__header-action):not(.mcc-dropdown__menu > * button) .mcc-button__label + .mcc-icon {

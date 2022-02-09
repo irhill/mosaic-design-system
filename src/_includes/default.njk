@@ -96,16 +96,17 @@
           {% set next = collections.globalCollection | getNextCollectionItem(page) %}
           {% if previous %}<a href="{{ previous.url }}">{{ previous.data.title }}</a>{% endif %}
           {% if next %}<a href="{{ next.url }}">{{ next.data.title }}</a>{% endif %}
+
+          
+          {% include "./partials/theme-toggle.njk" %}
         </footer>
 
       </article>
 
     </main>
 
-    <footer class="mcc-sheet--offset">
-      {% include "./partials/theme-toggle.njk" %}
-    </footer>
-      
+    {% include "./partials/footer.njk" %}
+
     <script src="{% js "web-components.js" %}" type="module"></script>
     <script src="{% js "default.js" %}"></script>
 
