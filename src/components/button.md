@@ -156,11 +156,8 @@ tabs:
       name=\"arrows_long_right\" aria-hidden=\"true\"></mcc-icon></button> |
 
       | Soft | Soft buttons are medium-emphasis buttons. They contain
-      actions that are important, but aren’t the primary action in an app.\r
-
-      \r
-
-      \ | <button class=\"mcc-button mcc-button--soft-primary\"><mcc-icon
+      actions that are important, but aren’t the primary action in an app.\r |
+      <button class=\"mcc-button mcc-button--soft-primary\"><mcc-icon
       name=\"does-not-exist\" aria-hidden=\"true\"></mcc-icon><span
       class=\"mcc-button__label\">Outline</span> </button> |
 
