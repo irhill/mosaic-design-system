@@ -64,13 +64,15 @@ tabs:
 
       | Disabled | This can be added to limit when a Button can be used. A Disabled Button is always visible to the user, but it will not be interactable until the user has completed a specific task. Once the task in question has been performed, the Disabled Button will be set to active.* |  |
 
+      | Icon | Buttons can (and should) be given an icon to provide further context. Read below in the [Button Icons](link) section.| <button class="mcc-button mcc-button--primary"><mcc-icon name="does-not-exist" aria-hidden="true"></mcc-icon><span class="mcc-button__label">Primary</span> |
+
       | Spinner | Buttons that provide tactile feedback to the user that something is happening when they interact with it. This can be useful for situations where a Button's function is not immediately carried out, e.g. when the system needs a few moments to save the changes the user has made. This type of animation on the Button can have a positive impression on the user, letting them know that the system has not just timed out or is unresponsive. |  |
 
       | Outline | Outline buttons are not full-colour buttons – instead, they have an outline of the Button Type's colour. This is useful when the Button is on a page that has a coloured background. |  |
 
       | Link | Links that are styled to look like a Button. This is useful for adding emphasis to a link, and you want to encourage the user to interact with it as they would any other action. |  |
 
-      | Large | Buttons that are larger than others. Normally this is used when you have a single action on a page that you need to draw attention to, loke a login page or a button to register for something. |  |
+      | Large | Buttons that are larger than others. Normally this is used when you have a single action on a page that you need to draw attention to, like a login page or a button to register for something. |  |
 
       | Small | Small Buttons are the opposite – necessary Buttons that are small and unobtrusive. These can be used in situations where you have limited space, or for situations like a table with repeated actions all across it (such as editing and deleting). |  |
 
