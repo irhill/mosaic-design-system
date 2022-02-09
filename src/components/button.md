@@ -42,10 +42,10 @@ tabs:
 
       | Success | used for positive actions, like saving, confirming accepting or editing. Typically, like the **Primary Button**, there should only be one **Success Button**. | <button class="mcc-button mcc-button--success"> <span class="mcc-button__label">Success</span> </button>   |
 
-      | Warning | Not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often. |  <button class="mcc-button mcc-button--danger"> <span class="mcc-button__label">Danger</span> </button>  |
+      | Warning | Not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often. | <button class="mcc-button mcc-button--warning"> <span class="mcc-button__label">Warning</span> </button> |
 
       | Danger | Should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only **Danger Button** available to the user at that time.
-       | <button class="mcc-button mcc-button--warning"> <span class="mcc-button__label">Warning</span> </button> |
+       | <button class="mcc-button mcc-button--danger"> <span class="mcc-button__label">Danger</span> </button> |
       | Info | used when the user might require some more context, or for less important actions than the **Primary Button**. Some examples would be an **Info Button** that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines. | <button class="mcc-button mcc-button--info"> <span class="mcc-button__label">Info</span> </button>  |
 
 
