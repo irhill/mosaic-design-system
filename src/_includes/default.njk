@@ -39,6 +39,7 @@
         <span class="mu-fw-semi-bold">Mosaic Design System</span></span>
       </div>
       <nav class="mcc-navigation-header__global">
+      {% include "./partials/theme-toggle.njk" %}
         <details class="mcc-dropdown mcc-dropdown--sw">
           <summary class="mcc-navigation-header__button" aria-haspopup="true">
             <mcc-icon name="thumbnails" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
@@ -98,7 +99,7 @@
           {% if next %}<a href="{{ next.url }}">{{ next.data.title }}</a>{% endif %}
 
           
-          {% include "./partials/theme-toggle.njk" %}
+          
         </footer>
 
       </article>
