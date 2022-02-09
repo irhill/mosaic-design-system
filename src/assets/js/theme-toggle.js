@@ -18,15 +18,13 @@ if (currentTheme) {
 }
 
 toggleSwitch.addEventListener('click', e => {
-  if (e.target.closest('.mcc-navigation-header__button.light-theme-set')) {
+  if (e.target.closest('.mcc-navigation-header__button:not(.dark-theme-set)')) {
     document.documentElement.setAttribute('data-color-theme', 'dark')
     window.localStorage.setItem('theme', 'dark')
-    toggleSwitch.classList.remove('light-theme-set')
     toggleSwitch.classList.add('dark-theme-set')
   } else {
     document.documentElement.setAttribute('data-color-theme', 'light')
     window.localStorage.setItem('theme', 'light')
-    toggleSwitch.classList.add('light-theme-set')
     toggleSwitch.classList.remove('dark-theme-set')
   }
 })
