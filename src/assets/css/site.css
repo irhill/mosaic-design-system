@@ -111,6 +111,7 @@ html {
   }
 }
 
+/* stickey tabs */
 .mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav {
   position: sticky;
   top: var(--navigation-header-height);
@@ -134,4 +135,12 @@ html {
 
 .mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::after {
   right: -0.5rem;
+}
+
+/* theme toggle */
+#theme-toggle.light-theme-set mcc-icon:nth-child(1) {
+  display: none;
+}
+#theme-toggle:not(.light-theme-set) mcc-icon:nth-child(2) {
+  display: none;
 }

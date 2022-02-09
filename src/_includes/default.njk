@@ -39,7 +39,8 @@
         <span class="mu-fw-semi-bold">Mosaic Design System</span></span>
       </div>
       <nav class="mcc-navigation-header__global">
-      {% include "./partials/theme-toggle.njk" %}
+        {% include "./partials/theme-toggle.njk" %}
+        
         <details class="mcc-dropdown mcc-dropdown--sw">
           <summary class="mcc-navigation-header__button" aria-haspopup="true">
             <mcc-icon name="thumbnails" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
@@ -122,6 +123,8 @@
 
     <script src="{% js "web-components.js" %}" type="module"></script>
     <script src="{% js "default.js" %}"></script>
+    <script src="{% js "theme-toggle.js" %}"></script>
+    
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->
