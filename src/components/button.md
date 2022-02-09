@@ -32,40 +32,21 @@ tabs:
       In Mosaic, there are six types of **Buttons**. Each **Button Type** has a different function, and the look of the button will signal a different usage to the user. For example, a **Primary Button** tends to be the most positive outcome for an action, things like submitting a form or saving a sheet. Conversely, a **Danger Button** tends to be something negative, like deleting something. 
 
 
-      •	**Primary Buttons** should be used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one **Primary Button** on the page, **Form** or **Card**.
+      |Button Type| Description | Example |
 
+      |---|------|---|
 
-      •	**Secondary Buttons** are **Buttons** that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box.
+      | Primary | Used for the main CTA on the screen. This is reserved for actions such as add, import or save. There should only ever be one **Primary Button** on the page, **Form** or **Card** | <button class="mcc-button mcc-button--primary"> <span class="mcc-button__label">Primary</span> </button> |
 
+      | Secondary | Buttons that do not fall into one of the other categories. This can be used for things that are largely inconsequential but necessary, like closing a dialogue box. | <button class="mcc-button mcc-button--secondary"> <span class="mcc-button__label">Secondary</span></button> |
 
-      •	**Success Buttons** are used for positive actions, like saving, confirming accepting or editing. Typically, like the **Primary Button**, there should only be one **Success Button**.
+      | Success | used for positive actions, like saving, confirming accepting or editing. Typically, like the **Primary Button**, there should only be one **Success Button**. | <button class="mcc-button mcc-button--success"> <span class="mcc-button__label">Success</span> </button> |
 
+      | Warning | Not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often. | <button class="mcc-button mcc-button--warning"> <span class="mcc-button__label">Warning</span> </button> |
 
-      •	**Warning Buttons** are not used very often, but they can be useful when you want the user to take caution with a particular action. You might want to include a **Button** to reload some data, for example, but want to warn the user not to do this too often.
+      | Danger | Should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only **Danger Button** available to the user at that time. | <button class="mcc-button mcc-button--danger"> <span class="mcc-button__label">Danger</span> </button> |
 
-
-      •	**Danger Buttons** should be used for dangerous or destructive activity, like deleting or removing something from the system. Typically this should be the only **Danger Button** available to the user at that time.
-
-
-      •	**Info Buttons** are used when the user might require some more context, or for less important actions than the **Primary Button**. Some examples would be an **Info Button** that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines.
-
-
-      <button class="mcc-button mcc-button--primary"> <span class="mcc-button__label">Primary</span> </button>
-
-
-      <button class="mcc-button mcc-button--secondary"> <span class="mcc-button__label">Secondary</span></button> 
-
-
-      <button class="mcc-button mcc-button--success"> <span class="mcc-button__label">Success</span> </button> 
-
-
-      <button class="mcc-button mcc-button--danger"> <span class="mcc-button__label">Danger</span> </button> 
-
-
-      <button class="mcc-button mcc-button--warning"> <span class="mcc-button__label">Warning</span> </button> 
-
-
-      <button class="mcc-button mcc-button--info"> <span class="mcc-button__label">Info</span> </button>
+      | Info | used when the user might require some more context, or for less important actions than the **Primary Button**. Some examples would be an **Info Button** that opens a new dialogue box with some additional information, or perform an action that does not leave the page or make any change to data, i.e. print or view guidelines. | <button class="mcc-button mcc-button--info"> <span class="mcc-button__label">Info</span> </button>  |
 
 
       ---
@@ -110,7 +91,7 @@ tabs:
       •	Pill Buttons are buttons with rounded corners, making it adopt a pill-like shape. This does not affect the functionality of the button in any way, but for consistency it is not recommended that you mix Pill Buttons and normal Buttons.
 
 
-      ## Usage
+      ## Using a Button
 
 
       There are many ways to implement Buttons in a product, and there are many views to support each of those solutions. After carrying out extensive research, the UX Team have agreed on what we believe to be the best rules governing the usage of buttons across Advanced products. Use these following guidelines when implementing a Button into your product.
