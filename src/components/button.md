@@ -156,14 +156,22 @@ tabs:
     icon: web_accessibility_1
 code:
   example: <button class="mcc-button">Button text</button>
-  body: |-
-    ## This is the code section and here's a code block
+  body: >-
+    ### Below you can find a live demo for a Button component. Use the drop-down
+    menus and radio buttons to view the different Button Types and Variants.
+
+
+
+    #### Code block for a Button
 
     ```html
+
     <button class="mcc-button">Button text</button>
+
     ```
 
-    ## Live demo
+
+    ### Live demo
   preview:
     variants:
       - template:
