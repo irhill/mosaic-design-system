@@ -104,46 +104,46 @@ tabs:
       ### Button Labels
 
 
-      A Button's Label is as important as the Button itself. A set Buttons that is simply a green and a red button might imply 'good' and 'bad' actions, but there is no context for the user. As such, there are a couple of things to keep in mind when labelling a Button:
+      A B**utton's Label** is as important as the **Button** itself. A set of **Buttons** that are simply a green and a red **Button** might imply 'good' and 'bad' actions, but there is no context for the user. As such, there are a couple of things to keep in mind when labelling a **Button**:
 
 
-      •	Buttons require a Label in the vast majority of cases. We cannot assume that a user will instinctively know what an icon means on a button. An infamous example of this is the classic floppy disk icon for saving – think about how soon it will be until virtually all of our users will have never seen a floppy disk? 
+      •	**Buttons** require a **Label** in the vast majority of cases. We cannot assume that a user will instinctively know what an icon means on a **Button**. An infamous example of this is the classic floppy disk icon for saving – think about how soon it will be until virtually all of our users will have never seen a floppy disk? 
 
 
-      Note: there are some very specific use cases for Icon-only Buttons, but these are few and far between. We have [guidance](link) on where a Button can forgo a label, but the UX Team should be contacted in advance of using an Icon Only Button to ensure that it is appropriate. 
+      \>**Note**: there are some very specific use cases for Icon-only Buttons, but these are few and far between. We have [guidance](link) on where a **Button** can forgo a label, but the UX Team should be contacted in advance of using an **Icon Only Button** to ensure that it is appropriate. 
 
 
-      •	Button Labels should be specific, rather than general. A user should feel confident that they know what a Button does. Generic Buttons like 'OK' when a user is actually changing something are not informative enough – the user needs to know that the Button will 'Confirm changes', which is a much better Label.
+      •	**Button Labels** should be specific, rather than general. A user should feel confident that they know what a **Button** does. Generic **Buttons** like 'OK' when a user is actually changing something are not informative enough – the user needs to know that the **Button** will 'Confirm changes', which is a much better **Label**.
 
 
-      If you are unsure about Labels, please review the [product tone-of-voice document](link) or contact the UX Copywriter.
+      If you are unsure about **Labels**, please review the [product tone-of-voice document](link) or contact the UX Copywriter.
 
 
       ### Button Icons
 
 
-      Icons can be used to give further meaning to your Buttons. By default, all Buttons should have an Icon, but occasionally this is not always practical when there is not an obvious Icon available for use, or there are space limitations for the Button. In cases like these, it is acceptable to forgo an icon.
+      **Icons** can be used to give further meaning to your **Buttons**. By default, all **Buttons** should have an **Icon**, but occasionally this is not always practical when there is not an obvious **Icon** available for use, or there are space limitations for the **Button**. In cases like these, it is acceptable to forgo an icon.
 
 
-      When using an Icon, the Icon should always appear to the left of the Button's Label. The Icon is describing the Label, not the other way around! It also improves readability and is easier to quickly scan the functionality of each Button if the Icons all appear on the left-hand side.
+      When using an **Icon**, the **Icon** should always appear to the left of the **Button's Label**. The **Icon** is describing the **Label**, not the other way around! It also improves readability and is easier to quickly scan the functionality of each **Button** if the **Icons** all appear on the left-hand side.
 
 
       ### Button Colours
 
 
-      The colour of your Button will be dictated by the Button Type. For example, a Primary Button is green, whereas a Danger Button is red. The rationale is simple: green is associated with positive actions (green for go), while red is associated with negative actions (red for stop). However, it should be noted that colour only gives a visual clue if that visual cue is perceptible to the user – screen readers and colourblind users will get no benefit from Button colours. This is why it is important to use a combination of Button Labels and Icons to properly delineate the usage of a Button.
+      The colour of your **Button** will be dictated by the **Button Type**. For example, a **Primary Button** is green, whereas a **Danger Button** is red. The rationale is simple: green is associated with positive actions (green for go), while red is associated with negative actions (red for stop). However, it should be noted that colour only gives a visual clue if that visual cue is perceptible to the user – screen readers and colour-blind users will get no benefit from **Button Colours**. This is why it is important to use a combination of **Button Labels** and **Icons** to properly delineate the usage of a **Button**.
 
 
-      Refer to the Button Types section \[above](anchor link to button type) to read about the different colours for Button Types.
+      Refer to the [**Button Types]**(https://mosaic-design-system.herokuapp.com/components/button/#types-of-buttons) section to read about the different colours for **Button Types**.
 
 
       ### Consistency
 
 
-      Consistency among your Buttons is vital for users. A user needs to feel comfortable, confident and at-home when using our products. Button consistency is a really easy way of achieving it – if a user can tell with a quick glance what the Buttons do in a new feature, based on their previous experience with the product, then they will adopt it much quicker, and user errors will be minimised. Inconsistent Buttons quickly lead to poor adoption of products and rampant confusion. 
+      Consistency among your **Buttons** is vital for users. A user needs to feel comfortable, confident and at-home when using our products. **Button** consistency is a really easy way of achieving it – if a user can tell with a quick glance what the **Buttons** do in a new feature, based on their previous experience with the product, then they will adopt it much quicker, and user errors will be minimised. Inconsistent **Buttons** quickly lead to poor adoption of products and rampant confusion. 
 
 
-      A few ways you can achieve consistency is making sure your Labels are identical in all areas – do not switch between using 'close' and 'cancel' on your Buttons. Pick one, and stick with it. The same goes for Icons. Make sure you review your Buttons in comparison to others in the system when making them.
+      A few ways you can achieve consistency is making sure your **Labels** are identical in all areas – do not switch between using 'close' and 'cancel' on your **Buttons**. Pick one, and stick with it. The same goes for **Icons**. Make sure you review your **Buttons** in comparison to others in the system when making them.
     icon: file_invoice
   - title: Style
     body: "## this is the content from the style tab"
