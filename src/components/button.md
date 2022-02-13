@@ -157,11 +157,6 @@ tabs:
 code:
   example: <button class="mcc-button">Button text</button>
   body: >-
-    ### Below you can find a live demo for a Button component. Use the drop-down
-    menus and radio buttons to view the different Button Types and Variants.
-
-
-
     #### Code block for a Button
 
     ```html
@@ -169,6 +164,10 @@ code:
     <button class="mcc-button">Button text</button>
 
     ```
+
+
+    Below you can find a live demo for a Button component. Use the drop-down menus and radio buttons to view the different Button Types and Variants.
+
 
 
     ### Live demo
