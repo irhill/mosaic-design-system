@@ -4,8 +4,9 @@ const markdownIt = require('markdown-it')({ html: true, linkify: true })
 let markdownItAnchor = require("markdown-it-anchor")
 let markdownItToc = require("markdown-it-table-of-contents")
 const { minify } = require('terser')
-const slugify = require("slugify")
+const slugify = require('./scripts/slugify-string')
 const pluginTOC = require('eleventy-plugin-toc')
+const buildCustomTableOfContents = require('./scripts/custom-table-of-contents')
 
 module.exports = (eleventyConfig) => {
   // disable automatic use of your .gitignore
@@ -25,50 +26,13 @@ module.exports = (eleventyConfig) => {
     return `/assets/js/${path}`
   })
 
-  // markdownIt table of contents configuration
-  function removeExtraText(s) {
-		let newStr = String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, "")
-		newStr = newStr.replace(/Coming\ soon\ in\ v\d+\.\d+\.\d+/, "")
-		newStr = newStr.replace(/⚠️/g, "")
-		newStr = newStr.replace(/[?!]/g, "")
-		newStr = newStr.replace(/<[^>]*>/g, "")
-		return newStr;
-	}
-
-  function markdownItSlugify(s) {
-		return slugify(removeExtraText(s), { lower: true, remove: /[:’'`,]/g })
-	}
-
-  function getMarkdownItLibrary () {
+  function markdownItLib () {
     return markdownIt
-    .use(markdownItAnchor, {
-      permalink: true,
-      slugify: markdownItSlugify,
-      permalinkBefore: false,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "#",
-      level: [1,2,3,4]
-    })
-    .use(markdownItToc, {
-      includeLevel: [2, 3],
-      slugify: markdownItSlugify,
-      format: function(heading) {
-        return removeExtraText(heading)
-      },
-      transformLink: function(link) {
-        // remove backticks from markdown code
-        return link.replace(/\%60/g, "")
-      }
-    })
+      .use(markdownItAnchor, { slugify })
   }
-  
-  eleventyConfig.setLibrary('md', getMarkdownItLibrary())
-	eleventyConfig.addPlugin(pluginTOC, {
-    tags: ['h2'],
-    wrapper: 'div',
-    wrapperClass: 'toc',
-    ul: true 
-  })
+
+  eleventyConfig.setLibrary('md', markdownItLib())
+  eleventyConfig.addFilter('custom_toc', buildCustomTableOfContents)
 
   // add filters
   eleventyConfig.addFilter("stringify_filter", (content) => JSON.stringify(content))
@@ -80,10 +44,12 @@ module.exports = (eleventyConfig) => {
   const orderSort = (a, b) => a.data.order - b.data.order
   const titleSort = (a, b) => a.data.title.toLowerCase() === 'overview' ? -1 : a.data.title.localeCompare(b.data.title)
 
+  // IMPORTANT: the order of the collections in this array must match the display order
+  // on the site otherwise the forward/backward navigation will not work properly
   const collections = [
     { name: 'sortedMosaic', collection: 'mosaic', sortFunc: orderSort },
-    { name: 'sortedDeveloping', collection: 'developing', sortFunc: orderSort },
     { name: 'sortedDesigning', collection: 'designing', sortFunc: orderSort },
+    { name: 'sortedDeveloping', collection: 'developing', sortFunc: orderSort },
     { name: 'sortedGuidelines', collection: 'guidelines', sortFunc: orderSort },
     { name: 'sortedComponents', collection: 'components', sortFunc: titleSort },
     { name: 'sortedPatterns', collection: 'patterns', sortFunc: titleSort },

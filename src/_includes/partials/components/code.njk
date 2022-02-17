@@ -9,7 +9,6 @@
 {% from "../../macros/table-of-contents.njk" import generateToc %}
 {{ generateToc(code.body) }}
 
-
 <!-- code content -->
 <div class="temp-content-chunk">{{ code.body | markdownify | safe }}</div>
 

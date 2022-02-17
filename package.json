@@ -10,7 +10,8 @@
     "eleventy": "eleventy --watch",
     "debug": "set DEBUG=* & eleventy",
     "build": "rimraf _site && cross-env NODE_ENV=production eleventy",
-    "browsersync": "browser-sync start --server '_site' --files '_site' --port $PORT --no-notify --no-open",
+    "postbuild": "node ./scripts/build-search-index.js",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
     "local-backend": "npx netlify-cms-proxy-server"
   },
   "dependencies": {
@@ -28,5 +29,11 @@
     "rimraf": "^3.0.2",
     "slugify": "1.6.5",
     "terser": "^5.10.0"
+  },
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.10",
+    "glob-all": "^3.2.1",
+    "lunr": "^2.3.9",
+    "node-html-parser": "^5.2.0"
   }
 }
