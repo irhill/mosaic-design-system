@@ -9,6 +9,23 @@ tabs: []
 
 | Team member | Role                 |
 | ----------- | -------------------- |
-| <img src="src/assets/img/me.jpg"/> Adam Ridges | Associate UX Designer |
+| <img src="/assets/img/me.jpg" width="100px"/> Adam Ridges | Associate UX Designer |
+| Aditya Dhomne | Front End Engineer |
 | Alex Smith | UX Designer |
+| Amie Wilson | UX Designer |
+| Anagha Bhat | Front End Engineer |
+| Binay Sahu | Senior Front End Engineer |
+| Christian Baverstock | UX/UI Director |
+| Daniel Hitchins | Senior Front End Engineer |
+| Dixita Shah | Test Engineer |
+| Ian Hill | Principal Front End Engineer |
+| Geoff Faiers | Senior Front End Engineer |
+| James Cavanagh | Senior Front End Engineer |
+| Jonathan Smith | Senior UX Designer |
+| Louise Foster | Head of Experience Design |
+| Nagamallesha Venkate Gowda | Front End Engineer |
+| Samuel Bright | UX Copywriter |
+| Sindhu Pindi | Senior Development Manager |
+| Zoe Coultan | UX Designer |
+
 
