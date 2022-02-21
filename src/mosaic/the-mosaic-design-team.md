@@ -18,7 +18,7 @@ tabs: []
 | Christian Baverstock | UX/UI Director |
 | Daniel Hitchins | Senior Front End Engineer, Accessibility Advocate |
 | Dixita Shah | Test Engineer |
-| Ian Hill | Principal Front End Engineer |
+| Ian Hill | Principal Front End Engineer, Legend |
 | Geoff Faiers | Senior Front End Engineer |
 | James Cavanagh | Senior Front End Engineer |
 | Jonathan Smith | Senior UX Designer |
