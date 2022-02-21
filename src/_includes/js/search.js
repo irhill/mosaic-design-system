@@ -36,7 +36,9 @@ const clearResults = () => {
 const showResults = str => {
   const listGroup = document.getElementById('search-results')
 
-  const results = window.design_system_search_index.search(`*${str}*`).map(result => {
+  const terms = str.split(' ').filter(Boolean)
+
+  const results = window.design_system_search_index.search(terms.map(t => `${t}*`).join(' ')).map(result => {
     const { collection, title, tab } = window.design_system_search_data[result.ref]
     return {
       ...result,
