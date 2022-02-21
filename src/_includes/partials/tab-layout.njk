@@ -1,30 +1,17 @@
+{% set tab_layout_js %}
+  {% include "js/tab-layout.js" %}
+{% endset %}
+
+<script>
+  {{ tab_layout_js | jsmin | safe }}
+</script>
+
 {% from "../macros/table-of-contents.njk" import generateToc %}
 
 <div id="main-tab-layout" class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-  <div class="mcc-tabs mcc-tabs--bar">
-
+  <mcc-tabs class="mcc-tabs--bar">
     {% for tab in tabs %}
-      <input type="radio" id="component-{{ tab.title.toLowerCase() }}" name="page-tabs">
-    {% endfor %}
-
-    <ul class="[ md-sticky-tab-nav ] [ mu-border-bottom mu-mb-08 ]" role="tablist">
-      {% for tab in tabs %}
-        <li role="tab">
-          <label for="component-{{ tab.title.toLowerCase() }}" tabindex="0">
-            {% if tab.icon %}
-              <mcc-icon class="mu-mr-05" name="{{ tab.icon }}" icon-set="fluency-outline"></mcc-icon>
-            {% endif %}
-            <span>{{ tab.title }}</span>
-          </label>
-        </li>
-      {% endfor %}
-    </ul>
-
-    <!-- tab panes -->
-    <!-- if the tab content has a 'hook' then use that to load the relevant partial -->
-    <!-- otherwise render the tab body as markdown -->
-    {% for tab in tabs %}
-      <div role="tabpanel">
+      <mcc-tab-pane class="mu-mt-05" label="{{ tab.title.toLowerCase() }}">
         {% if tab.hook %}
           <article>
             {% include "./" + page.url.split('/')[1] + "/" + tab.hook + ".njk" %}
@@ -37,8 +24,7 @@
             </div>
           </article>
         {% endif %}
-      </div>
+      </mcc-tab-pane>
     {% endfor %}
-
-  </div>
+  </mcc-tabs>
 </div>

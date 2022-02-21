@@ -1,13 +1,11 @@
 const HTMLParser = require('node-html-parser')
-const slugify = require('./slugify-string')
-
 
 module.exports = content => {
   const contents = []
 
-  const root = HTMLParser.parse(content)
-  root.querySelectorAll('h2').forEach(x => {
-    const id = slugify(x.innerText)
+  const html = HTMLParser.parse(content)
+  html.querySelectorAll('h2').forEach(x => {
+    const id = x.id
     const text = x.innerText
     contents.push({ id, text })
   })

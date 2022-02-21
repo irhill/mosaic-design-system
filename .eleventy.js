@@ -2,10 +2,8 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 const htmlmin = require("html-minifier")
 const markdownIt = require('markdown-it')({ html: true, linkify: true })
 let markdownItAnchor = require("markdown-it-anchor")
-let markdownItToc = require("markdown-it-table-of-contents")
-const { minify } = require('terser')
+const { minify } = require('uglify-js')
 const slugify = require('./scripts/slugify-string')
-const pluginTOC = require('eleventy-plugin-toc')
 const buildCustomTableOfContents = require('./scripts/custom-table-of-contents')
 
 module.exports = (eleventyConfig) => {
@@ -39,6 +37,17 @@ module.exports = (eleventyConfig) => {
   eleventyConfig.addFilter("snake_case_filter", (name) => name.toLowerCase().replace(/\s+/g, '_'))
   eleventyConfig.addFilter("null_filter", (value) => value ? value : "")
   eleventyConfig.addFilter('markdownify', (markdownString) => markdownIt.render(markdownString))
+  
+  eleventyConfig.addFilter('jsmin', (js) => {
+    const result = minify(js)
+  
+    if (result.error) {
+      console.log('UglifyJS Error: ', result.error)
+      return js
+    }
+
+    return result.code
+  })
 
   // sort collections for navigation
   const orderSort = (a, b) => a.data.order - b.data.order
@@ -71,18 +80,6 @@ module.exports = (eleventyConfig) => {
 
   // add global collection for footer nav
   eleventyConfig.addCollection('globalCollection', _ => globalCollection.flat())
-
-  // minify inline js
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
-    try {
-      const minified = await minify(code)
-      callback(null, minified.code)
-    } catch (err) {
-      console.error("Terser error: ", err)
-      // Fail gracefully.
-      callback(null, code)
-    }
-  })
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight)

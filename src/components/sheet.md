@@ -1,9 +1,6 @@
 ---
 title: Sheet
 navigation: /sheet
-tags:
-  - HTML/CSS
-  - Web Component
 chips:
   - HTML/CSS
   - Web Component
