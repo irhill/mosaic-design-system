@@ -9,14 +9,6 @@ tabs: []
 
 | Team member | Role                 |
 | ----------- | -------------------- |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
-| Adam Ridges | Assocate UX Designer |
+| <img src="src/assets/img/me.jpg"/> Adam Ridges | Associate UX Designer |
+| Alex Smith | UX Designer |
 
