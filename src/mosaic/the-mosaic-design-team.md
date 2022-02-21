@@ -16,7 +16,7 @@ tabs: []
 | Anagha Bhat | Front End Engineer |
 | Binay Sahu | Senior Front End Engineer |
 | Christian Baverstock | UX/UI Director |
-| Daniel Hitchins | Senior Front End Engineer |
+| Daniel Hitchins | Senior Front End Engineer, Accessibility Advocate |
 | Dixita Shah | Test Engineer |
 | Ian Hill | Principal Front End Engineer |
 | Geoff Faiers | Senior Front End Engineer |
@@ -26,6 +26,7 @@ tabs: []
 | Nagamallesha Venkate Gowda | Front End Engineer |
 | Samuel Bright | UX Copywriter |
 | Sindhu Pindi | Senior Development Manager |
-| Zoe Coultan | UX Designer |
+| Suvam Jaiswal | Front End Engineer |
+| Zoe Coultan | UX Designer, Accessibility Advocate |
 
 
