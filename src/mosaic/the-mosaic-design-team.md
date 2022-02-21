@@ -10,3 +10,13 @@ tabs: []
 | Team member | Role                 |
 | ----------- | -------------------- |
 | Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+| Adam Ridges | Assocate UX Designer |
+
