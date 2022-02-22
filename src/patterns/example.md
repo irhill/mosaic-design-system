@@ -2,7 +2,9 @@
 title: Example
 tabs:
   - title: Tab Uno
-    body: "## content for this tab"
+    body: |-
+      ## content for this tab
+      lorem ipsum etc...
   - title: Tab Dos
     body: "## content for second tab"
   - title: Tab three

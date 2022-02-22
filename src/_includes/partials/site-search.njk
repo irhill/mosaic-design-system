@@ -1,0 +1,19 @@
+{% set js %}
+  {% include "js/search.js" %}
+{% endset %}
+
+<script>
+  {{ js | jsmin | safe }}
+</script>
+
+<div id="search-container" class="mu-position-relative closed">
+  <input id="search" type="text" autocomplete="off" class="[ mu-position-absolute mu-top-0 mu-bottom-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]">
+  <button class="[ mcc-button mcc-button--primary mcc-button--icon-only ] [ mu-position-absolute mu-end-0 ]" onclick="toggleSearchInput()">
+    <mcc-icon name="search" aria-hidden="true"></mcc-icon>
+    <span class="mcc-button__label">Search</span>
+  </button>
+  <mcc-list-group id="search-results" class="mu-position-absolute mu-top-100 mu-start-0 mu-end-0"></mcc-list-group>
+</div>
+
+
+<script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>

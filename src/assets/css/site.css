@@ -126,3 +126,29 @@ html {
 #theme-toggle:not(.dark-theme-set) mcc-icon:nth-child(2) {
   display: none;
 }
+
+/* search */
+div#search-container {
+  width: 500px;
+  height: 40px;
+  transition: width 0.3s;
+}
+
+div#search-container.closed {
+  width: 40px;
+  height: 40px;
+}
+
+div#search-container > input {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+div#search-container.closed > input {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+mcc-list-group#search-results ul li {
+  cursor: pointer;
+}
