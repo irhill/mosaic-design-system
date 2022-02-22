@@ -65,4 +65,4 @@ window.addEventListener('resize', function() {
     sheet.setAttribute('scrim', 'true')
     sheet.classList.remove('mcc-sheet--in-view')
   }
-});
+})

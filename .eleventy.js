@@ -2,10 +2,9 @@ const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 const htmlmin = require("html-minifier")
 const markdownIt = require('markdown-it')({ html: true, linkify: true })
 let markdownItAnchor = require("markdown-it-anchor")
-let markdownItToc = require("markdown-it-table-of-contents")
-const { minify } = require('terser')
-const slugify = require("slugify")
-const pluginTOC = require('eleventy-plugin-toc')
+const { minify } = require('uglify-js')
+const slugify = require('./scripts/slugify-string')
+const buildCustomTableOfContents = require('./scripts/custom-table-of-contents')
 
 module.exports = (eleventyConfig) => {
   // disable automatic use of your .gitignore
@@ -25,65 +24,41 @@ module.exports = (eleventyConfig) => {
     return `/assets/js/${path}`
   })
 
-  // markdownIt table of contents configuration
-  function removeExtraText(s) {
-		let newStr = String(s).replace(/New\ in\ v\d+\.\d+\.\d+/, "")
-		newStr = newStr.replace(/Coming\ soon\ in\ v\d+\.\d+\.\d+/, "")
-		newStr = newStr.replace(/⚠️/g, "")
-		newStr = newStr.replace(/[?!]/g, "")
-		newStr = newStr.replace(/<[^>]*>/g, "")
-		return newStr;
-	}
-
-  function markdownItSlugify(s) {
-		return slugify(removeExtraText(s), { lower: true, remove: /[:’'`,]/g })
-	}
-
-  function getMarkdownItLibrary () {
+  function markdownItLib () {
     return markdownIt
-    .use(markdownItAnchor, {
-      permalink: true,
-      slugify: markdownItSlugify,
-      permalinkBefore: false,
-      permalinkClass: "direct-link",
-      permalinkSymbol: "#",
-      level: [1,2,3,4]
-    })
-    .use(markdownItToc, {
-      includeLevel: [2, 3],
-      slugify: markdownItSlugify,
-      format: function(heading) {
-        return removeExtraText(heading)
-      },
-      transformLink: function(link) {
-        // remove backticks from markdown code
-        return link.replace(/\%60/g, "")
-      }
-    })
+      .use(markdownItAnchor, { slugify })
   }
-  
-  eleventyConfig.setLibrary('md', getMarkdownItLibrary())
-	eleventyConfig.addPlugin(pluginTOC, {
-    tags: ['h2'],
-    wrapper: 'div',
-    wrapperClass: 'toc',
-    ul: true 
-  })
+
+  eleventyConfig.setLibrary('md', markdownItLib())
+  eleventyConfig.addFilter('custom_toc', buildCustomTableOfContents)
 
   // add filters
   eleventyConfig.addFilter("stringify_filter", (content) => JSON.stringify(content))
   eleventyConfig.addFilter("snake_case_filter", (name) => name.toLowerCase().replace(/\s+/g, '_'))
   eleventyConfig.addFilter("null_filter", (value) => value ? value : "")
   eleventyConfig.addFilter('markdownify', (markdownString) => markdownIt.render(markdownString))
+  
+  eleventyConfig.addFilter('jsmin', (js) => {
+    const result = minify(js)
+  
+    if (result.error) {
+      console.log('UglifyJS Error: ', result.error)
+      return js
+    }
+
+    return result.code
+  })
 
   // sort collections for navigation
   const orderSort = (a, b) => a.data.order - b.data.order
   const titleSort = (a, b) => a.data.title.toLowerCase() === 'overview' ? -1 : a.data.title.localeCompare(b.data.title)
 
+  // IMPORTANT: the order of the collections in this array must match the display order
+  // on the site otherwise the forward/backward navigation will not work properly
   const collections = [
     { name: 'sortedMosaic', collection: 'mosaic', sortFunc: orderSort },
-    { name: 'sortedDeveloping', collection: 'developing', sortFunc: orderSort },
     { name: 'sortedDesigning', collection: 'designing', sortFunc: orderSort },
+    { name: 'sortedDeveloping', collection: 'developing', sortFunc: orderSort },
     { name: 'sortedGuidelines', collection: 'guidelines', sortFunc: orderSort },
     { name: 'sortedComponents', collection: 'components', sortFunc: titleSort },
     { name: 'sortedPatterns', collection: 'patterns', sortFunc: titleSort },
@@ -105,18 +80,6 @@ module.exports = (eleventyConfig) => {
 
   // add global collection for footer nav
   eleventyConfig.addCollection('globalCollection', _ => globalCollection.flat())
-
-  // minify inline js
-  eleventyConfig.addNunjucksAsyncFilter('jsmin', async (code, callback) => {
-    try {
-      const minified = await minify(code)
-      callback(null, minified.code)
-    } catch (err) {
-      console.error("Terser error: ", err)
-      // Fail gracefully.
-      callback(null, code)
-    }
-  })
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight)
