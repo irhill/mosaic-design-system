@@ -8,7 +8,7 @@ tabs: []
 | Team member | Role                 |
 | ----------- | -------------------- |
 | Adam Ridges | Associate UX Designer |
-| Aditya Dhomne | Front End Engineer |
+| Aditya Dhomne <img src="/assets/img/aditya.png" width="100px"/> | Front End Engineer |
 | Alex Smith | UX Designer |
 | Amie Wilson | UX Designer |
 | Anagha Bhat | Front End Engineer |
