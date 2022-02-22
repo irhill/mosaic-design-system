@@ -5,17 +5,15 @@ tabs: []
 ---
 ## Mosaic has a passionate and dedicated team of designers and developers behind it, all working together to create an accessible, inclusive, performant, consistent and beautiful design system.
 
-### The team
-
 | Team member | Role                 |
 | ----------- | -------------------- |
-| <img src="/assets/img/me.jpg" width="100px"/> Adam Ridges | Associate UX Designer |
+| Adam Ridges | Associate UX Designer |
 | Aditya Dhomne | Front End Engineer |
 | Alex Smith | UX Designer |
 | Amie Wilson | UX Designer |
 | Anagha Bhat | Front End Engineer |
 | Binay Sahu | Senior Front End Engineer |
-| Christian Baverstock | UX/UI Director |
+| Christian Baverstock <img src="/assets/img/me.jpg" width="100px"/> | UX/UI Director |
 | Daniel Hitchins | Senior Front End Engineer, Accessibility Advocate |
 | Dixita Shah | Test Engineer |
 | Ian Hill | Principal Front End Engineer, Legend |
