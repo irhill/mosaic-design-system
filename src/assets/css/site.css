@@ -126,20 +126,3 @@ html {
 #theme-toggle:not(.dark-theme-set) mcc-icon:nth-child(2) {
   display: none;
 }
-
-/* search */
-/* div#search-container {
-  width: 380px;
-}
-div#search-container.js-closed {
-  display: none;
-}
-div#search-container:not(.js-closed) {
-  display: flex;
-}
-div#search-container.js-closed + .mcc-navigation-header__button mcc-icon:nth-child(1) {
-  display: none;
-}
-div#search-container:not(.js-closed) + .mcc-navigation-header__button mcc-icon:nth-child(2) {
-  display: none;
-} */
