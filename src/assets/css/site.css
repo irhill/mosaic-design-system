@@ -128,27 +128,18 @@ html {
 }
 
 /* search */
-div#search-container {
-  width: 500px;
-  height: 40px;
-  transition: width 0.3s;
+/* div#search-container {
+  width: 380px;
 }
-
-div#search-container.closed {
-  width: 40px;
-  height: 40px;
+div#search-container.js-closed {
+  display: none;
 }
-
-div#search-container > input {
-  border-top-right-radius: 6px;
-  border-bottom-right-radius: 6px;
+div#search-container:not(.js-closed) {
+  display: flex;
 }
-
-div#search-container.closed > input {
-  border-top-left-radius: 6px;
-  border-bottom-left-radius: 6px;
+div#search-container.js-closed + .mcc-navigation-header__button mcc-icon:nth-child(1) {
+  display: none;
 }
-
-mcc-list-group#search-results ul li {
-  cursor: pointer;
-}
+div#search-container:not(.js-closed) + .mcc-navigation-header__button mcc-icon:nth-child(2) {
+  display: none;
+} */
