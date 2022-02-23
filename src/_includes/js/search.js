@@ -16,17 +16,18 @@ window.addEventListener('DOMContentLoaded', async () => {
   })
 })
 
-const toggleSearchInput = () => {
-  const search = document.getElementById('search-container')
-  if (search.classList.contains('closed')) {
-    search.classList.remove('closed')
-  } else {
-    search.querySelector('input').value = ''
-    clearResults()
-    search.classList.add('closed')
-  }
-  
-}
+// const toggleSearchInput = () => {
+//   const search = document.getElementById('search-container')
+//   if (search.classList.contains('js-closed')) {
+//     search.classList.remove('js-closed')
+//     const searchInput = document.querySelector('input[type=text]#search')
+//     searchInput.focus()
+//   } else {
+//     search.querySelector('input').value = ''
+//     clearResults()
+//     search.classList.add('js-closed')
+//   }
+// }
 
 const clearResults = () => {
   const listGroup = document.getElementById('search-results')
@@ -52,10 +53,10 @@ const showResults = str => {
     const prefix = [result.collection, result.title, result.tab].filter(Boolean)
 
     return `
-      <div onclick="navigateTo('${result.ref}')">
-        <div><strong>${prefix.join(' > ')}</strong></div>
+      <button type="button" class="mu-d-flex mu-flex-column mu-text-start" onclick="navigateTo('${result.ref}')">
+        <div class="mu-fw-semi-bold">${prefix.join(' > ')}</div>
         <div>This is some context, hopefully this will work (finger crossed, in fact everything crossed!)</div>
-      </div>
+      </button>
     `
   })
 

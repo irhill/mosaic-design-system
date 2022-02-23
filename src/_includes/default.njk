@@ -40,13 +40,17 @@
       </div>
       <nav class="mcc-navigation-header__global">
         
-        {% include "./partials/site-search.njk" %}
+        <button class="[ mcc-navigation-header__button ]" onclick="showDialog()">
+          <mcc-icon name="search" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
+          <span class="mcc-button__label">Search</span>
+          <span class="mcc-chip mcc-chip--soft-info mcc-chip--xs">Ctrl+k</span>
+        </button>
         {% include "./partials/theme-toggle.njk" %}
         
         <details class="mcc-dropdown mcc-dropdown--sw">
           <summary class="mcc-navigation-header__button" aria-haspopup="true">
             <mcc-icon name="thumbnails" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-            <span class="mu-visually-hidden">Switch sites</span>
+            <span>Switch sites</span>
           </summary>
           <ul class="mcc-dropdown__menu">
             <li>
@@ -126,6 +130,21 @@
     </main>
 
     {% include "./partials/footer.njk" %}
+
+    <mcc-dialog id="default-dialog" class="mcc-dialog--primary">
+      {% include "./partials/site-search.njk" %}
+    </mcc-dialog>
+
+    <script>
+      function showDialog() {
+        const dialog = document.getElementById('default-dialog')
+        dialog.show()
+      }
+      function closeDialog() {
+        const dialog = document.getElementById('default-dialog')
+        dialog.close()
+      }
+    </script>
 
     <script src="{% js "web-components.js" %}" type="module"></script>
     <script src="{% js "theme-toggle.js" %}"></script>

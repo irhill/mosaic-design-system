@@ -6,14 +6,19 @@
   {{ js | jsmin | safe }}
 </script>
 
-<div id="search-container" class="mu-position-relative closed">
-  <input id="search" type="text" autocomplete="off" class="[ mu-position-absolute mu-top-0 mu-bottom-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]">
-  <button class="[ mcc-button mcc-button--primary mcc-button--icon-only ] [ mu-position-absolute mu-end-0 ]" onclick="toggleSearchInput()">
-    <mcc-icon name="search" aria-hidden="true"></mcc-icon>
-    <span class="mcc-button__label">Search</span>
+<div class="[ mcc-dialog__header ] [ mu-d-flex mu-align-items-center ]">
+  <h2 class="h4">Search</h2>
+  <button class="mcc-button mcc-button--icon-only" type="button" onclick="closeDialog()">
+    <mcc-icon name="close" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+    <span class="mcc-button__label">Close</span>
   </button>
-  <mcc-list-group id="search-results" class="mu-position-absolute mu-top-100 mu-start-0 mu-end-0"></mcc-list-group>
 </div>
-
+<div class="mcc-dialog__body">
+  <div id="search-container" class="[ mfc-input-wrapper mfc-input-wrapper--lg ] [ mu-d-flex mu-flex-column ]" style="gap: 1rem;">
+    <label class="mu-visually-hidden" for="search">Search</label>
+    <input id="search" type="text" autocomplete="off" class="mu-w-100">
+    <mcc-list-group id="search-results"></mcc-list-group>
+  </div>
+</div>
 
 <script src="https://unpkg.com/lunr@2.3.9/lunr.min.js"></script>
