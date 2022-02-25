@@ -1,12 +1,12 @@
 {% set js %}
-  {% include "js/component/code.js" %}
+  {% include "./code.js" %}
 {% endset %}
 
 <script>
   {{ js | safe }}
 </script>
 
-{% from "../../macros/table-of-contents.njk" import generateToc %}
+{% from "../../table-of-contents/table-of-contents.njk" import generateToc %}
 {{ generateToc(code.body) }}
 
 <!-- code content -->

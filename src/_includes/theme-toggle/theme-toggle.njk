@@ -1,5 +1,15 @@
+
+
 <button id="theme-toggle" class="mcc-navigation-header__button">
   <mcc-icon name="crescent_moon" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
   <mcc-icon name="sun" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
   <span>Toggle theme</span>
 </button>
+
+{% set js %}
+  {% include "./theme-toggle.js" %}
+{% endset %}
+
+<script>
+  {{ js | jsmin | safe }}
+</script>

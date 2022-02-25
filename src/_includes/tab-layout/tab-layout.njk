@@ -1,12 +1,12 @@
 {% set tab_layout_js %}
-  {% include "js/tab-layout.js" %}
+  {% include "./tab-layout.js" %}
 {% endset %}
 
 <script>
   {{ tab_layout_js | jsmin | safe }}
 </script>
 
-{% from "../macros/table-of-contents.njk" import generateToc %}
+{% from "../table-of-contents/table-of-contents.njk" import generateToc %}
 
 <div id="main-tab-layout" class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
   <mcc-tabs class="mcc-tabs--bar">
