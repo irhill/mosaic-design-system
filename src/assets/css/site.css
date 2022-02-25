@@ -136,3 +136,7 @@ html {
 .mcc-drawer-frame.mds-drawer-frame--nav-header-adjust {
   height: calc(100vh - var(--navigation-header-height));
 }
+
+.mds-site-name-logo svg {
+  height: 28px;
+}

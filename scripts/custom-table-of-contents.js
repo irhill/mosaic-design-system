@@ -11,7 +11,7 @@ module.exports = content => {
   })
 
   const contentsContainer = HTMLParser.parse(`
-    <div class="mu-mb-05">
+    <div class="mu-mb-07">
       <script>
         function scrollToElem(id) {
           document.getElementById(id).scrollIntoView()
