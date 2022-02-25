@@ -16,19 +16,6 @@ window.addEventListener('DOMContentLoaded', async () => {
   })
 })
 
-// const toggleSearchInput = () => {
-//   const search = document.getElementById('search-container')
-//   if (search.classList.contains('js-closed')) {
-//     search.classList.remove('js-closed')
-//     const searchInput = document.querySelector('input[type=text]#search')
-//     searchInput.focus()
-//   } else {
-//     search.querySelector('input').value = ''
-//     clearResults()
-//     search.classList.add('js-closed')
-//   }
-// }
-
 const clearResults = () => {
   const listGroup = document.getElementById('search-results')
   listGroup.clearData()

@@ -37,11 +37,7 @@
       {% include "./partials/logo.njk" %}
       <nav class="mcc-navigation-header__global">
         
-        <button class="[ mcc-navigation-header__button ]" onclick="showDialog()">
-          <mcc-icon name="search" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
-          <span class="mcc-button__label">Search</span>
-          <span class="mcc-chip mcc-chip--soft-info mcc-chip--xs">Ctrl+k</span>
-        </button>
+        {% include "./search/search-button.njk" %}
         {% include "./partials/theme-toggle.njk" %}
         {% include "./partials/switch-sites.njk" %}
       </nav>
@@ -49,7 +45,7 @@
 
     <div class="[ mcc-drawer-frame ] [ mds-drawer-frame--nav-header-adjust ]">
 
-      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer ]" type="dismissible">
+      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         {% include "./partials/site-nav.njk" %}
       </mcc-drawer>
 
@@ -127,20 +123,9 @@
 
     </div>
 
-    <mcc-dialog id="default-dialog" class="mcc-dialog--primary">
-      {% include "./partials/site-search.njk" %}
-    </mcc-dialog>
+    {% include "./search/search-dialog.njk" %}
 
-    <script>
-      function showDialog() {
-        const dialog = document.getElementById('default-dialog')
-        dialog.show()
-      }
-      function closeDialog() {
-        const dialog = document.getElementById('default-dialog')
-        dialog.close()
-      }
-    </script>
+    
 
     <script>
         function toggleDrawer () {

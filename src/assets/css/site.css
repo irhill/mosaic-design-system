@@ -126,8 +126,10 @@ html {
 }
 
 /* drawer offset */
-.mcc-drawer.mds-drawer {
-  top: var(--navigation-header-height)
+.mcc-drawer.mds-drawer--nav-header-adjust {
+  top: var(--navigation-header-height);
+  min-height: calc(100vh - var(--navigation-header-height)) !important;
+  height: calc(100vh - var(--navigation-header-height)) !important;
 }
 
 /* nav draer frame offset */
