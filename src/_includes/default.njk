@@ -31,13 +31,10 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body>
+  <body class="mu-overflow-hidden">
 
     <header class="[ mcc-navigation-header ] [ mu-position-sticky mu-top-0 ]" aria-label="Advanced Product" role="banner">
-      <div class="mu-d-flex mu-align-items-center mu-pl-05 mu-pl-xl-04">
-        <img class="mu-d-none mu-d-lg-block mu-mr-04" src="{% img "mosaic-logo.svg" %}" height="28" alt="Advanced Logo">
-        <span class="mu-fw-semi-bold">Mosaic Design System</span></span>
-      </div>
+      {% include "./partials/logo.njk" %}
       <nav class="mcc-navigation-header__global">
         
         <button class="[ mcc-navigation-header__button ]" onclick="showDialog()">
@@ -46,90 +43,89 @@
           <span class="mcc-chip mcc-chip--soft-info mcc-chip--xs">Ctrl+k</span>
         </button>
         {% include "./partials/theme-toggle.njk" %}
-        
-        <details class="mcc-dropdown mcc-dropdown--sw">
-          <summary class="mcc-navigation-header__button" aria-haspopup="true">
-            <mcc-icon name="thumbnails" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-            <span>Switch sites</span>
-          </summary>
-          <ul class="mcc-dropdown__menu">
-            <li>
-              <button type="button">
-                <mcc-icon name="does-not-exist"></mcc-icon>
-                <div>Developer Portal</div>
-              </button>
-            </li>
-          </ul>
-        </details>
+        {% include "./partials/switch-sites.njk" %}
       </nav>
     </header>
 
-    <mcc-sheet id="site-nav-sheet" class="mcc-sheet--left mu-border-end mu-py-05 mu-px-02" style="width: 280px; background-color: var(--ui-01, #fff); height: 100vh; box-shadow: none; top: 64px;">
-      {% include "./partials/site-nav.njk" %}
-    </mcc-sheet>
+    <div class="[ mcc-drawer-frame ] [ mds-drawer-frame--nav-header-adjust ]">
 
-    <main class="mcc-sheet--offset">
+      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer ]" type="dismissible">
+        {% include "./partials/site-nav.njk" %}
+      </mcc-drawer>
 
-      <article>
+      <div class="mcc-drawer-app-content" tabindex="0">
 
-        <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
-          <div class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-            <div class="mu-py-07">
-              <h1 class="mu-display-heading-1 mu-mb-00">{{ title }}</h1>
-              {% if chips %}
-                <div class="mu-d-flex mu-mt-02" style="gap: 0.5rem;">
-                  {% for chip in chips %}
-                    <span class="mcc-chip mcc-chip--primary mcc-chip--xs">{{ chip }}</span>
-                  {% endfor %}
+        <main>
+
+          <article>
+
+          {# <button class="mcc-navigation-header__button" onclick="toggleDrawer()">
+            <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
+            <span>Toggle drawer</span>
+          </button> #}
+
+            <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
+              <div class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+                <div class="mu-py-07">
+                  <h1 class="mu-display-heading-1 mu-mb-00">{{ title }}</h1>
+                  {% if chips %}
+                    <div class="mu-d-flex mu-mt-02" style="gap: 0.5rem;">
+                      {% for chip in chips %}
+                        <span class="mcc-chip mcc-chip--primary mcc-chip--xs">{{ chip }}</span>
+                      {% endfor %}
+                    </div>
+                  {% endif %}
                 </div>
-              {% endif %}
-            </div>
-          </div>
-        </header>
+              </div>
+            </header>
 
-        {% if tabs and tabs.length %}
-          {% include "./partials/tab-layout.njk" %}
-        {% else %}
-          <section class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
-            <div class="temp-content-chunk">
-              {% from "./macros/table-of-contents.njk" import generateToc %}
-              {{ generateToc(content) }}
-              {{ content | safe }}
-            </div>
-          </section>
-        {% endif %}
+            {% if tabs and tabs.length %}
+              {% include "./partials/tab-layout.njk" %}
+            {% else %}
+              <section class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
+                <div class="temp-content-chunk">
+                  {% from "./macros/table-of-contents.njk" import generateToc %}
+                  {{ generateToc(content) }}
+                  {{ content | safe }}
+                </div>
+              </section>
+            {% endif %}
 
-        <footer>
+            <footer>
+      
+              {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
+              {% set next = collections.globalCollection | getNextCollectionItem(page) %}
+
+              <div class="[ temp-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+                <div class="mcc-button-group mcc-button-group--lg" role="group" aria-label="Navigation buttons">
+                  {% if previous %}
+                    <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
+                      <mcc-icon name="left_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+                      <span class="mcc-button__label">
+                        {{ previous.data.title }}
+                      </span>
+                    </a>
+                  {% endif %}
+                  {% if next %}
+                    <a class="mcc-button mcc-button--outline" href="{{ next.url }}">
+                      <span class="mcc-button__label">{{ next.data.title }}</span>
+                      <mcc-icon name="right_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+                    </a>
+                  {% endif %}
+                </div>
+              </div>
+            
+            </footer>
+
+          </article>
+
+        </main>
+
+        {% include "./partials/footer.njk" %}
   
-          {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
-          {% set next = collections.globalCollection | getNextCollectionItem(page) %}
+      </div>
 
-          <div class="[ temp-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-            <div class="mcc-button-group mcc-button-group--lg" role="group" aria-label="Navigation buttons">
-              {% if previous %}
-                <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
-                  <mcc-icon name="left_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-                  <span class="mcc-button__label">
-                    {{ previous.data.title }}
-                  </span>
-                </a>
-              {% endif %}
-              {% if next %}
-                <a class="mcc-button mcc-button--outline" href="{{ next.url }}">
-                  <span class="mcc-button__label">{{ next.data.title }}</span>
-                  <mcc-icon name="right_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-                </a>
-              {% endif %}
-            </div>
-          </div>
-        
-        </footer>
-
-      </article>
-
-    </main>
-
-    {% include "./partials/footer.njk" %}
+    </div>
 
     <mcc-dialog id="default-dialog" class="mcc-dialog--primary">
       {% include "./partials/site-search.njk" %}
@@ -145,6 +141,13 @@
         dialog.close()
       }
     </script>
+
+    <script>
+        function toggleDrawer () {
+          const drawer = document.getElementById('site-nav-drawer')
+          drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
+        }
+      </script>
 
     <script src="{% js "web-components.js" %}" type="module"></script>
     <script src="{% js "theme-toggle.js" %}"></script>

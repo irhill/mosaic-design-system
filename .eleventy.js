@@ -95,9 +95,6 @@ module.exports = (eleventyConfig) => {
   // Copy images to route of /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img")
 
-  // Copy tessera components /_site
-  eleventyConfig.addPassthroughCopy("./src/assets/tessera")
-
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead

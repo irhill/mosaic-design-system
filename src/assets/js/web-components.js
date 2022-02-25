@@ -6,7 +6,7 @@ import { dialog } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-co
 import { icon } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/icon/index.js'
 import { accordion } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/accordion/index.js'
 import { sheet } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/sheet/index.js'
-import { drawer } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/drawer/index.js'
+import { drawer } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/2.7.4/components/custom-elements/drawer/index.js'
 import { tabs } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/tabs/index.js'
 import { listGroup } from 'https://dev-cdn.svc.oneadvanced.io/tessera/components-core/v2/components/custom-elements/list-group/index.js'
 

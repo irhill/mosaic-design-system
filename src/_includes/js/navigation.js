@@ -32,11 +32,6 @@ document.addEventListener('DOMContentLoaded', _ => {
   highlightCurrentPage()
 })
 
-const navSheet = document.getElementById('site-nav-sheet')
-function toggleNavSheet() {
-  navSheet.classList.toggle('mcc-sheet--in-view')
-}
-
 const desktop = window.matchMedia('(min-width: 960px)')
 console.log(desktop)
 if (desktop.matches) {
