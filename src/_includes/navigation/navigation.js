@@ -32,21 +32,21 @@ document.addEventListener('DOMContentLoaded', _ => {
   highlightCurrentPage()
 })
 
-const desktop = window.matchMedia('(min-width: 960px)')
-console.log(desktop)
-if (desktop.matches) {
-  navSheet.setAttribute('modal', 'true')
-  navSheet.setAttribute('scrim', 'false')
-  navSheet.classList.add('mcc-sheet--in-view')
-}
+// const desktop = window.matchMedia('(min-width: 960px)')
+// console.log(desktop)
+// if (desktop.matches) {
+//   navSheet.setAttribute('modal', 'true')
+//   navSheet.setAttribute('scrim', 'false')
+//   navSheet.classList.add('mcc-sheet--in-view')
+// }
 
-const mobile = window.matchMedia('(max-width: 960px)')
-console.log(mobile)
-if (mobile.matches) {
-  navSheet.setAttribute('modal', 'false')
-  navSheet.setAttribute('scrim', 'true')
-  navSheet.classList.remove('mcc-sheet--in-view')
-}
+// const mobile = window.matchMedia('(max-width: 960px)')
+// console.log(mobile)
+// if (mobile.matches) {
+//   navSheet.setAttribute('modal', 'false')
+//   navSheet.setAttribute('scrim', 'true')
+//   navSheet.classList.remove('mcc-sheet--in-view')
+// }
 
 // Window resize
 window.addEventListener('resize', function() {

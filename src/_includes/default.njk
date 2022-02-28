@@ -31,12 +31,12 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body class="mu-overflow-hidden">
+  <body>
 
     <a class="mds-skip-to" href="#maincontent">Skip to main content</a>
     <a class="mds-skip-to" href="#navigation">Skip to navigation</a>
 
-    <header class="[ mcc-navigation-header ] [ mu-position-sticky mu-top-0 ]" aria-label="Advanced Product" role="banner">
+    <header class="[ mcc-navigation-header ] [  mu-top-0 ]" aria-label="Advanced Product" role="banner">
       {% include "./partials/site-name.njk" %}
       <nav class="mcc-navigation-header__global">
         
@@ -126,14 +126,16 @@
 
     </div>
 
+    {% include "./back-to-top/back-to-top.njk" %}
+
     {% include "./search/search-dialog.njk" %}
 
     <script>
-        function toggleDrawer () {
-          const drawer = document.getElementById('site-nav-drawer')
-          drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
-        }
-      </script>
+      function toggleDrawer () {
+        const drawer = document.getElementById('site-nav-drawer')
+        drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
+      }
+    </script>
 
     <script src="{% js "web-components.js" %}" type="module"></script>
 
