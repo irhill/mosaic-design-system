@@ -33,6 +33,9 @@
   </head>
   <body class="mu-overflow-hidden">
 
+    <a class="mds-skip-to" href="#maincontent">Skip to main content</a>
+    <a class="mds-skip-to" href="#navigation">Skip to navigation</a>
+
     <header class="[ mcc-navigation-header ] [ mu-position-sticky mu-top-0 ]" aria-label="Advanced Product" role="banner">
       {% include "./partials/site-name.njk" %}
       <nav class="mcc-navigation-header__global">
@@ -49,7 +52,7 @@
         {% include "./navigation/navigation.njk" %}
       </mcc-drawer>
 
-      <div class="mcc-drawer-app-content" tabindex="0">
+      <div id="maincontent" class="mcc-drawer-app-content" tabindex="0">
 
         <main>
 
