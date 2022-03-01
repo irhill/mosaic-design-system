@@ -4,6 +4,7 @@ navigation: button
 chips:
   - HTML/CSS
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
+storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 tabs:
   - title: Usage
     body: >-
@@ -159,23 +160,10 @@ tabs:
 code:
   example: <button class="mcc-button">Button text</button>
   body: >-
-    #### Code block for a Button
-
-
-    ```html
-
-    <button class="mcc-button">Button text</button>
-
-    ```
-
-
-    - - -
-
-
     ### Live demo
 
 
-    Below you can find a live demo for a Button component. Use the drop-down menus and radio buttons to view the different Button Types and Variants.
+    Below, you can find a live demo for a Button component. Use the drop-down menus and radio buttons to view the different Button Types and Variants.
   preview:
     variants:
       - template:

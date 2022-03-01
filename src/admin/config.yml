@@ -175,8 +175,8 @@ collections:
         widget: "select"
         multiple: true
         options: ["HTML/CSS", "Web Component"]
-      - label: "Storybook URL"
-        name: "storybook-url"
+      - label: "Storybook"
+        name: "storybook"
         widget: "string"
         required: false
       - label: "Tabs"

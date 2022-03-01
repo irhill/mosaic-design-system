@@ -33,7 +33,7 @@
 }
 
 /* content chunk width */
-.temp-content-chunk :is(hr, pre, table) {
+.temp-content-chunk :is(hr, pre, table, .mcc-alert) {
   max-width: 48rem;
 }
 .temp-content-chunk :is(p, ul, ol) {
