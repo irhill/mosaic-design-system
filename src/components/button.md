@@ -148,9 +148,6 @@ tabs:
 
       A few ways you can achieve consistency is making sure your **Labels** are identical in all areas – do not switch between using 'close' and 'cancel' on your **Buttons**. Pick one, and stick with it. The same goes for **Icons**. Make sure you review your **Buttons** in comparison to others in the system when making them.
     icon: file_invoice
-  - title: Style
-    body: "## this is the content from the style tab"
-    icon: paint_palette
   - title: Code
     hook: code
     icon: source_code

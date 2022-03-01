@@ -7,8 +7,6 @@ chips:
 tabs:
   - title: Usage
     body: "## this is the content from the usage tab"
-  - title: Style
-    body: "## this is the content from the style tab"
   - title: Code
     hook: code
   - title: Accessibility
