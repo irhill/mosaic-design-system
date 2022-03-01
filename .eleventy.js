@@ -95,6 +95,9 @@ module.exports = (eleventyConfig) => {
   // Copy images to route of /_site
   eleventyConfig.addPassthroughCopy("./src/assets/img")
 
+  // Copy fonts to route of /_site
+  eleventyConfig.addPassthroughCopy("./src/assets/fonts")
+
   // Minify HTML
   eleventyConfig.addTransform("htmlmin", function (content, outputPath) {
     // Eleventy 1.0+: use this.inputPath and this.outputPath instead
