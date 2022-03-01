@@ -152,7 +152,47 @@ tabs:
     hook: code
     icon: source_code
   - title: Accessibility
-    body: "## this is the content from the accessibility tab"
+    body: >-
+      ## Component accessibility 
+
+
+      This component has been built to meet the current WCAG AA 2.1 guidelines. We also test these components against the guidelines before release. 
+
+
+      ## Colour combinations 
+
+
+      Please be mindful of colour contrast when using these buttons. Please make sure that the there is a clear colour contrast between the button and the background it is on. Please check this using this colour checker (https://webaim.org/resources/contrastchecker/). 
+
+
+      ## Key binding 
+
+
+      You should be able to select, submit data, confirm etc from all buttons via the keyboard ‘enter’ key. 
+
+
+      ## Aria tags 
+
+
+      Please ensure that all buttons have aria tags to ensure screen readers can understand that they are focussed on a button. 
+
+
+      ## Focus state 
+
+
+      All buttons should have a focus state and be able to have a focus applied to them by tabbing via a keyboard. (See focus state styling). 
+
+
+      ## Wording  
+
+
+      Please ensure that wording is as descriptive of the action as possible to help people understand clearly what action they are performing when they select the button. 
+
+
+      ## Icons  
+
+
+      Buttons without text should only be used as a last resort to save space on a table etc. 
     icon: web_accessibility_1
 code:
   example: <button class="mcc-button">Button text</button>
