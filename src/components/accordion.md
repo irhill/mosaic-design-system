@@ -26,197 +26,48 @@ code:
     variants:
       - template:
           lang: html
-          code: |-
-            <button class="mcc-button">
-              <span class="mcc-button__label">Button</span>
-            </button>
+          code: >-
+            <details class="mcc-accordion">
+              <summary>
+                <span class="mcc-accordion__label">Accordion item</span>
+                <mcc-icon class="mcc-accordion__caret mu-ml-auto" name="angle_down" aria-hidden="true"></mcc-icon>
+              </summary>
+              <div class="mcc-accordion__body">
+                Something small enough to escape casual notice.
+              </div>
+            </details>
         name: Default
-        modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--primary
-              - name: Secondary
-                value: mcc-button--secondary
-              - name: Success
-                value: mcc-button--success
-              - name: Danger
-                value: mcc-button--danger
-              - name: Warning
-                value: mcc-button--warning
-              - name: Info
-                value: mcc-button--info
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
+        modifiers: []
+        attributes: []
       - template:
           lang: html
-          code: |-
-            <button class="mcc-button">
-              <mcc-icon name="home" aria-hidden="true"></mcc-icon>
-              <span class="mcc-button__label">Button</span>
-            </button>
+          code: >-
+            <details class="mcc-accordion mcc-card mcc-card--high-emphasis">
+              <summary>
+                <span class="mcc-accordion__label">Accordion item</span>
+                <mcc-icon class="mcc-accordion__caret mu-ml-auto" name="angle_down" aria-hidden="true"></mcc-icon>
+              </summary>
+              <div class="mcc-accordion__body">
+                Something small enough to escape casual notice.
+              </div>
+            </details>
+        name: With card
+        modifiers: []
+        attributes: []
+      - template:
+          lang: html
+          code: >-
+            <details class="mcc-accordion mcc-card">
+              <summary>
+                <mcc-icon name="does-not-exist" aria-hidden="true"></mcc-icon>
+                <span class="mcc-accordion__label">Accordion item</span>
+                <mcc-icon class="mcc-accordion__caret mu-ml-auto" name="angle_down" aria-hidden="true"></mcc-icon>
+              </summary>
+              <div class="mcc-accordion__body">
+                Something small enough to escape casual notice.
+              </div>
+            </details>
         name: With icon
-        modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--primary
-              - name: Secondary
-                value: mcc-button--secondary
-              - name: Success
-                value: mcc-button--success
-              - name: Danger
-                value: mcc-button--danger
-              - name: Warning
-                value: mcc-button--warning
-              - name: Info
-                value: mcc-button--info
-              - name: Light
-                value: mcc-button--light
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
-      - template:
-          lang: html
-          code: |-
-            <button class="mcc-button">
-              <span class="mcc-button__label">Button</span>
-              <mcc-icon name="arrows_long_right" aria-hidden="true"></mcc-icon>
-            </button>
-        name: With trailing icon
-        modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--primary
-              - name: Secondary
-                value: mcc-button--secondary
-              - name: Success
-                value: mcc-button--success
-              - name: Danger
-                value: mcc-button--danger
-              - name: Warning
-                value: mcc-button--warning
-              - name: Info
-                value: mcc-button--info
-              - name: Light
-                value: mcc-button--light
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
-      - template:
-          lang: html
-          code: |-
-            <button class="mcc-button mcc-button--outline">
-              <mcc-icon name="home" aria-hidden="true"></mcc-icon>
-              <span class="mcc-button__label">Button</span>
-            </button>
-        name: As outline
-        modifiers:
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            selector: button
-            attribute: disabled
-      - template:
-          lang: html
-          code: |-
-            <button class="mcc-button mcc-button--text">
-              <mcc-icon name="home" aria-hidden="true"></mcc-icon>
-              <span class="mcc-button__label">Button</span>
-            </button>
-        name: As text
-        modifiers:
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
-      - template:
-          lang: html
-          code: |-
-            <button class="mcc-button mcc-button--icon-only">
-              <mcc-icon name="home" aria-hidden="true"></mcc-icon>
-              <span class="mcc-button__label">Button</span>
-            </button>
-        name: As icon only
-        modifiers:
-          - name: Colour
-            selector: button
-            classes:
-              - name: Primary
-                value: mcc-button--primary
-              - name: Secondary
-                value: mcc-button--secondary
-              - name: Success
-                value: mcc-button--success
-              - name: Danger
-                value: mcc-button--danger
-              - name: Warning
-                value: mcc-button--warning
-              - name: Info
-                value: mcc-button--info
-          - name: Size
-            selector: button
-            classes:
-              - name: Default
-                value: mcc-button
-              - name: Small
-                value: mcc-button--sm
-              - name: Large
-                value: mcc-button--lg
-        attributes:
-          - name: Disabled
-            attribute: disabled
-            selector: button
+        modifiers: []
+        attributes: []
 ---
