@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: home.njk
 title: Design System
 path: home
 ---
