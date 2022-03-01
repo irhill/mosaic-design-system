@@ -188,7 +188,7 @@ html {
   position: fixed;
   right: 0;
 }
-body {
+/* body {
   scroll-behavior: smooth;
   background-color: var(--ui-01,#fff);
 }
@@ -199,4 +199,4 @@ body {
 
 .mcc-footer {
   background-color: var(--ui-02,#fff);
-}
+} */
