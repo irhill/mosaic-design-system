@@ -33,11 +33,11 @@
 }
 
 /* content chunk width */
-.temp-content-chunk :is(p, ul, ol, hr, pre) {
-  max-width: 42rem;
+.temp-content-chunk :is(hr, pre, table) {
+  max-width: 48rem;
 }
-.temp-content-chunk :is(table) {
-  max-width: 58rem
+.temp-content-chunk :is(p, ul, ol) {
+  max-width: 42rem
 }
 
 /* content chunk spacing */
@@ -190,4 +190,13 @@ html {
 }
 body {
   scroll-behavior: smooth;
+  background-color: var(--ui-01,#fff);
+}
+
+.mcc-page-header {
+  background-color: var(--ui-02,#fff);
+}
+
+.mcc-footer {
+  background-color: var(--ui-02,#fff);
 }

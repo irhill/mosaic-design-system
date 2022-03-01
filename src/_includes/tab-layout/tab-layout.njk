@@ -8,7 +8,7 @@
 
 {% from "../table-of-contents/table-of-contents.njk" import generateToc %}
 
-<div id="main-tab-layout" class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+<div id="main-tab-layout" class="[ temp-container mds-tabs ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
   <mcc-tabs class="mcc-tabs--bar" nav-classes="mu-border-bottom">
     {% for tab in tabs %}
       <mcc-tab-pane class="mu-mt-09" label="{{ tab.title }}">
