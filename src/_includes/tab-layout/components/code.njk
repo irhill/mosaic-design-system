@@ -44,8 +44,8 @@
   {% for variant in code.preview.variants %}
     <div id="{{ variant.name | snake_case_filter }}" class="[ mcc-card__body ] [ variant-container ] [ mu-d-none ]" style="gap: 2rem;">
       <!-- preview panel for displaying component -->
-      <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ]" style="position: relative; overflow: hidden;">
-        {{ variant.template.code | safe }}
+      <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]" style="position: relative; overflow: hidden;">
+          {{ variant.template.code | safe }}
       </div>
       <!-- options panel for switching modifiers -->
       <div class="variant-modifiers" style="width: 240px;">
