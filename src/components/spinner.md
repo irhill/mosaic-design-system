@@ -37,9 +37,9 @@ code:
             selector: .mcc-spinner
             classes:
               - name: No
-                value: mcc-spinner--mono
-              - name: Yes
                 value: mcc-spinner
+              - name: Yes
+                value: mcc-spinner--mono
         attributes: []
       - template:
           lang: html
