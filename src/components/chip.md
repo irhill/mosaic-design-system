@@ -27,7 +27,7 @@ code:
       - template:
           lang: html
           code: <span class="mcc-chip">Chip</span>
-        name: Chip
+        name: As default
         modifiers:
           - name: Colours
             selector: .mcc-chip
@@ -44,15 +44,27 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
         attributes: []
       - template:
           lang: html
           code: |-
-            <span class="mcc-chip">
+            <span class="mcc-chip mds-hide-chip-icon">
               <mcc-icon name="does-not-exist"></mcc-icon>
               <span>Chip</span>
             </span>
-        name: Chip with icon
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: With icon
         modifiers:
           - name: Colours
             selector: .mcc-chip
@@ -69,6 +81,17 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
         attributes: []
       - template:
           lang: html
@@ -77,7 +100,8 @@ code:
               <span>Chip</span>
               <mcc-icon name="does-not-exist"></mcc-icon>
             </span>
-        name: Chip with trailing icon
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: With trailing icon
         modifiers:
           - name: Colours
             selector: .mcc-chip
@@ -94,5 +118,152 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
         attributes: []
+      - template:
+          lang: html
+          code: |-
+            <span class="mcc-chip">
+              <mcc-icon name="does-not-exist"></mcc-icon>
+              <span>Chip</span>
+            </span>
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: As soft
+        modifiers:
+          - name: Colours
+            selector: .mcc-chip
+            classes:
+              - value: mcc-chip--soft-primary
+                name: Primary
+              - value: mcc-chip--soft-secondary
+                name: Secondary
+              - value: mcc-chip--soft-success
+                name: Success
+              - value: mcc-chip--soft-danger
+                name: Danger
+              - value: mcc-chip--soft-warning
+                name: Warning
+              - value: mcc-chip--soft-info
+                name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
+        attributes: []
+      - template:
+          lang: html
+          code: |-
+            <span class="mcc-chip mcc-chip--outline">
+              <mcc-icon name="does-not-exist"></mcc-icon>
+              <span>Chip</span>
+            </span>
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: As outline
+        modifiers:
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
+        attributes: []
+      - template:
+          lang: html
+          code: |-
+            <a href="#" class="mcc-chip">
+              <mcc-icon name="does-not-exist"></mcc-icon>
+              <span>Chip</span>
+            </a>
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: As anchor
+        modifiers:
+          - name: Colours
+            selector: .mcc-chip
+            classes:
+              - value: mcc-chip--soft-primary
+                name: Primary
+              - value: mcc-chip--soft-secondary
+                name: Secondary
+              - value: mcc-chip--soft-success
+                name: Success
+              - value: mcc-chip--soft-danger
+                name: Danger
+              - value: mcc-chip--soft-warning
+                name: Warning
+              - value: mcc-chip--soft-info
+                name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
+        attributes: []
+      - template:
+          lang: html
+          code: |-
+            <button class="mcc-chip">
+              <mcc-icon name="does-not-exist"></mcc-icon>
+              <span>Chip</span>
+            </button>
+            <style>.mcc-chip.mcc-chip--xs > mcc-icon {display: none}</style>
+        name: As button
+        modifiers:
+          - name: Colours
+            selector: .mcc-chip
+            classes:
+              - value: mcc-chip--soft-primary
+                name: Primary
+              - value: mcc-chip--soft-secondary
+                name: Secondary
+              - value: mcc-chip--soft-success
+                name: Success
+              - value: mcc-chip--soft-danger
+                name: Danger
+              - value: mcc-chip--soft-warning
+                name: Warning
+              - value: mcc-chip--soft-info
+                name: Info
+          - name: Size
+            selector: .mcc-chip
+            classes:
+              - name: Extra small
+                value: mcc-chip--xs
+              - name: Small
+                value: mcc-chip--sm
+              - name: Medium
+                value: mcc-chip
+              - name: Large
+                value: mcc-chip--lg
+        attributes:
+          - name: Disabled
+            attribute: disabled
+            selector: button
 ---
