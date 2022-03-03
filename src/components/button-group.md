@@ -49,28 +49,30 @@ code:
                 value: mcc-button-group--sm
               - name: Medium (default)
                 value: mcc-button-group
+                default: true
               - name: Large
                 value: mcc-button-group--lg
+            type: class
+            select_multiple: false
           - name: Spaced
             selector: .mcc-button-group
             classes:
-              - name: No
-                value: mcc-button-group
-              - name: Yes
+              - name: Spaced
                 value: mcc-button-group--spaced
+            type: class
+            select_multiple: false
           - name: Vertical
             selector: .mcc-button-group
             classes:
-              - name: No
-                value: mcc-button-group
-              - name: Yes
+              - name: Vertical
                 value: mcc-button-group--vertical
+            type: class
+            select_multiple: false
           - name: Block
             selector: .mcc-button-group
             classes:
-              - name: No
-                value: mcc-button-group
-              - name: Yes
+              - name: Block
                 value: mcc-button-group--block
-        attributes: []
+            type: class
+            select_multiple: false
 ---

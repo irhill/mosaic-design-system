@@ -37,7 +37,6 @@ code:
             </nav>
         name: Breadcrumb
         modifiers: []
-        attributes: []
       - template:
           lang: html
           code: |-

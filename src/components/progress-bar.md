@@ -37,6 +37,7 @@ code:
             classes:
               - name: Primary 
                 value: mcc-progress-bar--primary
+                default: true
               - name: Secondary
                 value: mcc-progress-bar--secondary
               - name: Success
@@ -47,6 +48,8 @@ code:
                 value: mcc-progress-bar--warning
               - name: Info
                 value: mcc-progress-bar--info
+            type: class
+            select_multiple: false
           - name: Height
             selector: .mcc-progress-bar
             classes:
@@ -56,9 +59,11 @@ code:
                 value: mcc-progress-bar--sm
               - name: Medium (default)
                 value: mcc-progress-bar
+                default: true
               - name: Large
                 value: mcc-progress-bar--lg
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -72,6 +77,7 @@ code:
             classes:
               - name: Primary 
                 value: mcc-progress-bar--primary
+                default: true
               - name: Secondary
                 value: mcc-progress-bar--secondary
               - name: Success
@@ -82,6 +88,8 @@ code:
                 value: mcc-progress-bar--warning
               - name: Info
                 value: mcc-progress-bar--info
+            type: class
+            select_multiple: false
           - name: Height
             selector: .mcc-progress-bar
             classes:
@@ -91,14 +99,16 @@ code:
                 value: mcc-progress-bar--sm
               - name: Medium (default)
                 value: mcc-progress-bar
+                default: true
               - name: Large
                 value: mcc-progress-bar--lg
+            type: class
+            select_multiple: false
           - name: Animated 
             selector: .mcc-progress-bar
             classes:
-              - name: No
-                value: mcc-progress-bar
-              - name: Yes
+              - name: Animated
                 value: mcc-progress-bar--animated
-        attributes: []
+            type: class
+            select_multiple: false
 ---

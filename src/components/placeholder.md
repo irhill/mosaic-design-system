@@ -37,11 +37,10 @@ code:
           - name: Animated
             selector: .mcc-placeholder
             classes:
-              - name: No
-                value: mcc-placeholder
-              - name: Yes
+              - name: Animated
                 value: mcc-placeholder--animation
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -61,9 +60,8 @@ code:
           - name: Animated
             selector: .mcc-placeholder
             classes:
-              - name: No
-                value: mcc-placeholder
-              - name: Yes
+              - name: Animated
                 value: mcc-placeholder--animation
-        attributes: []
+            type: class
+            select_multiple: false
 ---

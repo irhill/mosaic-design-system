@@ -37,9 +37,8 @@ code:
           - name: Vertical
             selector: .mcc-nav
             classes:
-              - name: No
-                value: mcc-nav
-              - name: Yes
+              - name: Vertical
                 value: mcc-nav--vertical
-        attributes: []
+            type: class
+            select_multiple: false
 ---

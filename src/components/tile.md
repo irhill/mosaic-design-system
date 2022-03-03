@@ -32,7 +32,6 @@ code:
             </button>
         name: As default
         modifiers: []
-        attributes: []
       - template:
           lang: html
           code: |-
@@ -41,6 +40,5 @@ code:
               <span>Tile</span>
             </button>
         name: With icon
-        attributes: []
         modifiers: []
 ---

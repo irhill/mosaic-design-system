@@ -47,8 +47,30 @@ code:
               </ul>
             </details>
         name: As default
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -78,6 +100,7 @@ code:
             classes:
               - name: North West
                 value: mcc-dropdown--nw
+                default: true
               - name: North
                 value: mcc-dropdown--n
               - name: North East
@@ -86,13 +109,15 @@ code:
                 value: mcc-dropdown--sw
               - name: South
                 value: mcc-dropdown--s
+                default: true
               - name: South East
                 value: mcc-dropdown--se
               - name: East
                 value: mcc-dropdown--e
               - name: West
                 value: mcc-dropdown--w
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -118,8 +143,30 @@ code:
               </ul>
             </details>
         name: With header
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -153,8 +200,30 @@ code:
               </ul>
             </details>
         name: With divider
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -178,8 +247,30 @@ code:
               </ul>
             </details>
         name: With disabled button
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -212,8 +303,30 @@ code:
               </ul>
             </details>
         name: With icon
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -246,8 +359,30 @@ code:
               </ul>
             </details>
         name: With trailing icon
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -274,8 +409,30 @@ code:
               </ul>
             </details>
         name: With checkbox item
-        modifiers: []
-        attributes: []
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -299,7 +456,28 @@ code:
               </ul>
             </details>
         name: As overflow menu
-        modifiers: []
-        attributes: []
-      
+        modifiers:
+          - name: Alignment
+            selector: .mcc-dropdown
+            classes:
+              - name: North West
+                value: mcc-dropdown--nw
+                default: true
+              - name: North
+                value: mcc-dropdown--n
+              - name: North East
+                value: mcc-dropdown--ne
+              - name: South West
+                value: mcc-dropdown--sw
+              - name: South
+                value: mcc-dropdown--s
+                default: true
+              - name: South East
+                value: mcc-dropdown--se
+              - name: East
+                value: mcc-dropdown--e
+              - name: West
+                value: mcc-dropdown--w
+            type: class
+            select_multiple: false
 ---

@@ -26,8 +26,7 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="[ mcc-alert mcc-alert--primary ] [ mu-mb-00 ]"
-            role="alert">
+            <div class="[ mcc-alert mcc-alert--primary ] [ mu-mb-00 ]" role="alert" style="max-width: 400px; width: 100%">
               <mcc-icon name="ok" aria-hidden="true"></mcc-icon>
               <div class="mu-d-flex mu-flex-column">
                 <div class="mu-fw-semi-bold">Information title</div>
@@ -41,6 +40,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-alert--primary
+                default: true
               - name: Secondary
                 value: mcc-alert--secondary
               - name: Success
@@ -51,11 +51,12 @@ code:
                 value: mcc-alert--danger
               - name: Info
                 value: mcc-alert--info
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
-            <div class="mcc-alert mcc-alert--primary-solid" role="alert">
+            <div class="mcc-alert mcc-alert--primary-solid" role="alert" style="max-width: 400px; width: 100%">
               <mcc-icon name="ok" aria-hidden="true"></mcc-icon>
               <div class="mu-d-flex mu-flex-column">
                 <div class="mu-fw-semi-bold">Information title</div>
@@ -69,6 +70,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-alert--primary-solid
+                default: true
               - name: Secondary
                 value: mcc-alert--secondary-solid
               - name: Success
@@ -79,12 +81,13 @@ code:
                 value: mcc-alert--danger-solid
               - name: Info
                 value: mcc-alert--info-solid
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
             <div class="mcc-alert mcc-alert--compact mcc-alert--primary-solid
-            mu-mb-00" role="alert">
+            mu-mb-00" role="alert" style="max-width: 400px; width: 100%">
               <mcc-icon name="ok" aria-hidden="true"></mcc-icon>
               <div class="mu-fw-semi-bold">Information title</div>
             </div>
@@ -95,6 +98,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-alert--primary-solid
+                default: true
               - name: Secondary
                 value: mcc-alert--secondary-solid
               - name: Success
@@ -105,5 +109,6 @@ code:
                 value: mcc-alert--danger-solid
               - value: mcc-alert--info-solid
                 name: Info
-        attributes: []
+            type: class
+            select_multiple: false
 ---

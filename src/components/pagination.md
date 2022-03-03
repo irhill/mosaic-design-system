@@ -49,9 +49,10 @@ code:
               </button>
             </nav>
         name: Default
-        modifiers: []
-        attributes:
+        modifiers:
           - name: Disabled
-            attribute: disabled
-            selector: .mcc-pagination > button:nth-child(5)
+            selector: .mcc-pagination button:nth-child(5)
+            type: attribute
+            attribute:
+              name: disabled
 ---

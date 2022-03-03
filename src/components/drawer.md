@@ -48,7 +48,9 @@ code:
                 value: mcc-drawer--bottom
               - name: Start
                 value: mcc-drawer--start
+                default: true
               - name: End
                 value: mcc-drawer--end
-        attributes: []
+            type: class
+            select_multiple: false
 ---

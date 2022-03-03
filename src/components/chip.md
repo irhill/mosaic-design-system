@@ -33,6 +33,7 @@ code:
             classes:
               - value: mcc-chip--primary
                 name: Primary
+                default: true
               - value: mcc-chip--secondary
                 name: Secondary
               - value: mcc-chip--success
@@ -43,6 +44,8 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -52,9 +55,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -70,6 +75,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-chip--primary
+                default: true
               - value: mcc-chip--secondary
                 name: Secondary
               - value: mcc-chip--success
@@ -80,6 +86,8 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -89,9 +97,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -107,6 +117,7 @@ code:
             classes:
               - value: mcc-chip--primary
                 name: Primary
+                default: true
               - value: mcc-chip--secondary
                 name: Secondary
               - value: mcc-chip--success
@@ -117,6 +128,8 @@ code:
                 name: Warning
               - value: mcc-chip--info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -126,9 +139,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -144,6 +159,7 @@ code:
             classes:
               - value: mcc-chip--soft-primary
                 name: Primary
+                default: true
               - value: mcc-chip--soft-secondary
                 name: Secondary
               - value: mcc-chip--soft-success
@@ -154,6 +170,8 @@ code:
                 name: Warning
               - value: mcc-chip--soft-info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -163,9 +181,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -185,9 +205,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -203,6 +225,7 @@ code:
             classes:
               - value: mcc-chip--soft-primary
                 name: Primary
+                default: true
               - value: mcc-chip--soft-secondary
                 name: Secondary
               - value: mcc-chip--soft-success
@@ -213,6 +236,8 @@ code:
                 name: Warning
               - value: mcc-chip--soft-info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -222,9 +247,11 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes: []
+            select_multiple: true
+            type: class
       - template:
           lang: html
           code: |-
@@ -240,6 +267,7 @@ code:
             classes:
               - value: mcc-chip--soft-primary
                 name: Primary
+                default: true
               - value: mcc-chip--soft-secondary
                 name: Secondary
               - value: mcc-chip--soft-success
@@ -250,6 +278,8 @@ code:
                 name: Warning
               - value: mcc-chip--soft-info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Size
             selector: .mcc-chip
             classes:
@@ -259,10 +289,14 @@ code:
                 value: mcc-chip--sm
               - name: Medium
                 value: mcc-chip
+                default: true
               - name: Large
                 value: mcc-chip--lg
-        attributes:
+            select_multiple: true
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
 ---

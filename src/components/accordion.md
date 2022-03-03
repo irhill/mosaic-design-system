@@ -37,7 +37,6 @@ code:
             </details>
         name: As default
         modifiers: []
-        attributes: []
       - template:
           lang: html
           code: >-
@@ -52,7 +51,6 @@ code:
             </details>
         name: With card
         modifiers: []
-        attributes: []
       - template:
           lang: html
           code: >-
@@ -68,5 +66,4 @@ code:
             </details>
         name: With icon
         modifiers: []
-        attributes: []
 ---

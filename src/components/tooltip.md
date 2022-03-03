@@ -36,6 +36,7 @@ code:
             classes:
               - name: North West
                 value: mcc-tooltip--nw
+                default: true
               - name: North
                 value: mcc-tooltip--n
               - name: North East
@@ -50,19 +51,20 @@ code:
                 value: mcc-tooltip--e
               - name: West
                 value: mcc-tooltip--w
+            type: class
+            select_multiple: false
           - name: Multiple lines
             selector: .mcc-tooltip
             classes:
-              - name: No
-                value: mcc-tooltip
-              - name: Yes
+              - name: Multiple lines
                 value: mcc-tooltip--multiline
+            type: class
+            select_multiple: false
           - name: Delay
             selector: .mcc-tooltip
             classes:
-              - name: No
-                value: mcc-tooltip--no-delay
-              - name: Yes
+              - name: Delay
                 value: mcc-tooltip
-        attributes: []
+            type: class
+            select_multiple: false    
 ---

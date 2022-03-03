@@ -39,11 +39,10 @@ code:
           - name: Flush
             selector: .mcc-list-group
             classes:
-              - name: No
-                value: mcc-list-group
-              - name: Yes
+              - name: Flush
                 value: mcc-list-group--flush
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: |-
@@ -69,11 +68,10 @@ code:
           - name: Flush
             selector: .mcc-list-group
             classes:
-              - name: No
-                value: mcc-list-group
-              - name: Yes
+              - name: Flush
                 value: mcc-list-group--flush
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -94,11 +92,10 @@ code:
           - name: Flush
             selector: .mcc-list-group
             classes:
-              - name: No
-                value: mcc-list-group
-              - name: Yes
+              - name: Flush
                 value: mcc-list-group--flush
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -149,9 +146,8 @@ code:
           - name: Flush
             selector: .mcc-list-group
             classes:
-              - name: No
-                value: mcc-list-group
-              - name: Yes
+              - name: Flush
                 value: mcc-list-group--flush
-        attributes: []
+            type: class
+            select_multiple: false
 ---

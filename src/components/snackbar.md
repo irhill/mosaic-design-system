@@ -47,6 +47,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-snackbar--primary
+                default: true
               - name: Secondary
                 value: mcc-snackbar--secondary
               - name: Success
@@ -57,19 +58,20 @@ code:
                 value: mcc-snackbar--warning
               - name: Info
                 value: mcc-snackbar--info
+            type: class
+            select_multiple: false
           - name: Left
             selector: .mcc-snackbar
             classes:
-              - name: No
-                value: mcc-snackbar
-              - name: Yes
+              - name: Left
                 value: mcc-snackbar--left
+            type: class
+            select_multiple: false
           - name: Right
             selector: .mcc-snackbar
             classes:
-              - name: No
-                value: mcc-snackbar
-              - name: Yes
+              - name: Right
                 value: mcc-snackbar--right
-        attributes: []
+            type: class
+            select_multiple: false
 ---

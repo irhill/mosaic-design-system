@@ -186,5 +186,4 @@ code:
             </ul>
         name: As default
         modifiers: []
-        attributes: []
 ---

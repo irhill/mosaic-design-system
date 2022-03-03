@@ -38,13 +38,15 @@ code:
                 value: mcc-avatar--sm
               - name: Medium
                 value: mcc-avatar
+                default: true
               - name: Large
                 value: mcc-avatar--lg
               - name: Extra large
                 value: mcc-avatar--xl
               - name: Extra extra large
                 value: mcc-avatar--xxl
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: <div class="mcc-avatar">XX</div>
@@ -57,13 +59,15 @@ code:
                 value: mcc-avatar--sm
               - name: Medium
                 value: mcc-avatar
+                default: true
               - name: Large
                 value: mcc-avatar--lg
               - name: Extra large
                 value: mcc-avatar--xl
               - name: Extra extra large
                 value: mcc-avatar--xxl
-        attributes: []
+            type: class
+            select_multiple: false
       - template:
           lang: html
           code: >-
@@ -77,13 +81,15 @@ code:
             classes:
               - name: Small
                 value: mcc-avatar--sm
-              - value: mcc-avatar
-                name: Medium
+              - name: Medium
+                value: mcc-avatar
+                default: true
               - name: Large
                 value: mcc-avatar--lg
               - name: Extra large
                 value: mcc-avatar--xl
               - name: Extra extra large
                 value: mcc-avatar--xxl
-        attributes: []
+            type: class
+            select_multiple: false
 ---

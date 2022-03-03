@@ -77,15 +77,19 @@ code:
                 value: mcc-dialog--sm
               - name: Medium (default)
                 value: mcc-dialog--md
+                default: true
               - name: Large
                 value: mcc-dialog--lg
               - name: Full
                 value: mcc-dialog--full
+            type: class
+            select_multiple: false
           - name: Type
             selector: .mcc-dialog
             classes:
               - name: Default 
                 value: mcc-dialog
+                default: true
               - name: Primary 
                 value: mcc-dialog--primary
               - name: Secondary
@@ -98,6 +102,6 @@ code:
                 value: mcc-dialog--warning
               - name: Info
                 value: mcc-dialog--info
-              
-        attributes: []
+            type: class
+            select_multiple: false 
 ---

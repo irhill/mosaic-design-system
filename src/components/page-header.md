@@ -48,5 +48,4 @@ code:
             </div>
         name: As default
         modifiers: []
-        attributes: []
 ---
