@@ -27,29 +27,25 @@ code:
       - template:
           lang: html
           code: |-
-            <div class="mcc-placeholder">
+            <div class="mcc-placeholder" style="max-width: 400px; width: 100%">
               <div></div>
               <div></div>
               <div></div>
             </div>
         name: As default
-        modifiers: []
-        attributes: []
-      - template:
-          lang: html
-          code: |-
-            <div class="mcc-placeholder mcc-placeholder--animation">
-              <div></div>
-              <div></div>
-              <div></div>
-            </div>
-        name: With Animation
-        modifiers: []
+        modifiers:
+          - name: Animated
+            selector: .mcc-placeholder
+            classes:
+              - name: No
+                value: mcc-placeholder
+              - name: Yes
+                value: mcc-placeholder--animation
         attributes: []
       - template:
           lang: html
           code: >-
-            <div class="mcc-placeholder mcc-placeholder--animation">
+            <div class="mcc-placeholder" style="max-width: 400px; width: 100%">
                 <section class="mu-d-flex mu-mb-05">
                     <div style="border-radius: 50%; width: 64px; height: 64px;"></div>
                     <section class="mu-flex-fill">
@@ -61,6 +57,13 @@ code:
                 <div></div>
             </div>
         name: With sizes and shapes
-        modifiers: []
+        modifiers:
+          - name: Animated
+            selector: .mcc-placeholder
+            classes:
+              - name: No
+                value: mcc-placeholder
+              - name: Yes
+                value: mcc-placeholder--animation
         attributes: []
 ---
