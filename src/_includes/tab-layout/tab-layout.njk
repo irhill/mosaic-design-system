@@ -12,18 +12,20 @@
   <mcc-tabs class="mcc-tabs--bar" nav-classes="mu-border-bottom">
     {% for tab in tabs %}
       <mcc-tab-pane class="mu-mt-09" label="{{ tab.title }}">
+        <article>
         {% if tab.hook %}
-          <article>
-            {% include "./" + page.url.split('/')[1] + "/" + tab.hook + ".njk" %}
-          </article>
+          {% include "./" + page.url.split('/')[1] + "/" + tab.hook + ".njk" %}
+        {% elif tab.body %}
+          {{ generateToc(tab.body) }}
+          <div class="temp-content-chunk">
+            {{ tab.body | markdownify | safe }}
+          </div>
         {% else %}
-          <article>
-            {{ generateToc(tab.body) }}
-            <div class="temp-content-chunk">
-              {{ tab.body | markdownify | safe }}
-            </div>
-          </article>
+          <div class="mu-d-none">
+            Something has gone wrong. This page has neither content nor tabs.
+          </div>
         {% endif %}
+        </article>
       </mcc-tab-pane>
     {% endfor %}
   </mcc-tabs>

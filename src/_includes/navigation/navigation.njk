@@ -103,6 +103,21 @@
       </div>
     </details>
   
+    <!-- pendo -->
+    <details>
+      <summary class="mcc-menu__subtitle">
+        <span>Pendo</span>
+        <mcc-icon name="angle_down" aria-hidden="true"></mcc-icon>
+      </summary>
+      <div>
+        {% for page in collections.sortedPendo %}
+          <a class="mcc-menu__button" href={{ page.url }}>
+            <span>{{ page.data.title }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </details>
+  
     <div class="mu-border-bottom mu-my-03 mu-mx-06"></div>
   
     <!-- help -->

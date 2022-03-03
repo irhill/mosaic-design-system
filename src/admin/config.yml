@@ -234,33 +234,29 @@ collections:
                       - label: "Selector"
                         name: "selector"
                         widget: "string"
+                      - label: "Select multiple?"
+                        name: "select_multiple"
+                        widget: "boolean"
+                        required: false
+                      - label: "Type"
+                        name: "type"
+                        widget: "select"
+                        options: ["class", "attribute"]
+                      - label: "Attribute"
+                        name: "attribute"
+                        widget: "object"
+                        required: false
+                        fields:
+                          - { label: "Name", name: "name", widget: "string", required: false }
+                          - { label: "Value", name: "value", widget: "string", required: false }
                       - label: "Classes"
                         name: "classes"
                         widget: "list"
-                        fields:
-                          - label: "Name"
-                            name: "name"
-                            widget: "string"
-                          - label: "Value"
-                            name: "value"
-                            widget: "string"
-                  - label: "Attributes"
-                    name: "attributes"
-                    widget: "list"
-                    fields:
-                      - label: "Name"
-                        name: "name"
-                        widget: "string"
-                      - label: "Selector"
-                        name: "selector"
-                        widget: "string"
-                      - label: "Attribute"
-                        name: "attribute"
-                        widget: "string"
-                      - label: "Value"
-                        name: "value"
-                        widget: "string"
                         required: false
+                        fields:
+                          - { label: "Name", name: "name", widget: "string", required: false }
+                          - { label: "Value", name: "value", widget: "string", required: false }
+                          - { label: "Default", name: "default", widget: "boolean", required: false }
   - label: "Pattern"
     name: "patterns"
     folder: "src/patterns"
@@ -269,6 +265,41 @@ collections:
       - label: "Title"
         name: "title"
         widget: "string"
+      - label: "Hero image"
+        name: "hero"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - label: "Tabs"
+        name: "tabs"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Hook"
+            name: "hook"
+            widget: "string"
+            required: false
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
+  - label: "Pendo"
+    name: "pendo"
+    folder: "src/pendo"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Order"
+        name: "order"
+        widget: "number"
       - label: "Hero image"
         name: "hero"
         widget: "image"
