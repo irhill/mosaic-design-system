@@ -30,8 +30,6 @@ const modifyVariant = (template) => {
     return { selector, value }
   })
 
-  console.log('>>>>> CLASSES: ', JSON.stringify(classes))
-
   // get attributes
   const attributes = Array.from(form.querySelectorAll('input[type=checkbox]')).map(attr => {
     const { selector, attributeDetails } = attr.dataset
@@ -39,8 +37,6 @@ const modifyVariant = (template) => {
     const checked = attr.checked
     return { selector, name, value, checked }
   })
-
-  console.log('>>>>> ATTRIBUTES: ', JSON.stringify(attributes))
 
   // get handle container to and reset template
   const container = document.querySelector('div.variant-container:not(.mu-d-none) div.variant-template')
