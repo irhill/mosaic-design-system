@@ -36,7 +36,7 @@ code:
                 Something small enough to escape casual notice.
               </div>
             </details>
-        name: Default
+        name: As default
         modifiers: []
         attributes: []
       - template:
