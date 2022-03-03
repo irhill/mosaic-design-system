@@ -26,16 +26,21 @@ const modifyVariant = (template) => {
   // get classes
   const form = document.querySelector('div.variant-container:not(.mu-d-none) div.variant-modifiers form')
   const classes = Array.from(form.querySelectorAll('input[type=radio]:checked')).map(input => {
-    const { selector, value } = input.dataset
-    return { selector, value }
+    const { selector, multiple, value } = input.dataset
+    return { selector, multiple, value }
+  })
+
+  // get toggle classes
+  const toggleClasses = Array.from(form.querySelectorAll('input[type=checkbox][data-type=class]:checked')).map(input => {
+    const { selector, multiple, value } = input.dataset
+    return { selector, multiple, value }
   })
 
   // get attributes
-  const attributes = Array.from(form.querySelectorAll('input[type=checkbox]')).map(attr => {
-    const { selector, attributeDetails } = attr.dataset
+  const attributes = Array.from(form.querySelectorAll('input[type=checkbox][data-type=attribute]:checked')).map(input => {
+    const { selector, multiple, attributeDetails } = input.dataset
     const { name, value } = JSON.parse(attributeDetails)
-    const checked = attr.checked
-    return { selector, name, value, checked }
+    return { selector, multiple, name, value }
   })
 
   // get handle container to and reset template
@@ -43,15 +48,36 @@ const modifyVariant = (template) => {
   container.innerHTML = template
 
   // apply classes
-  classes.forEach(toApply => {
-    const elem = container.querySelector(toApply.selector)
-    elem.classList.add(toApply.value)
+  classes.forEach(c => {
+    if (c.multiple) {
+      const elems = container.querySelectorAll(c.selector)
+      Array.from(elems).forEach(elem => elem.classList.add(c.value))
+    } else {
+      const elem = container.querySelector(c.selector)
+      elem.classList.add(c.value)
+    }
+  })
+
+  // apply toggle classes
+  toggleClasses.forEach(c => {
+    if (c.multiple) {
+      const elems = container.querySelectorAll(c.selector)
+      Array.from(elems).forEach(elem => elem.classList.add(c.value))
+    } else {
+      const elem = container.querySelector(c.selector)
+      elem.classList.add(c.value)
+    }
   })
 
   // apply attributes
   attributes.forEach(attr => {
-    const elem = container.querySelector(attr.selector)
-    attr.checked ? elem.setAttribute(attr.name, attr.value || "") : elem.removeAttribute(attr.name)
+    if (attr.multiple) {
+      const elems = container.querySelectorAll(attr.selector)
+      Array.from(elems).forEach(elem => elem.setAttribute(attr.name, attr.value || ""))
+    } else {
+      const elem = container.querySelector(attr.selector)
+      elem.setAttribute(attr.name, attr.value || "")
+    }
   })
 }
 
@@ -66,19 +92,26 @@ document.addEventListener('DOMContentLoaded', _ => {
   Array.from(variants).forEach(variant => {
     // set initial form values
     const form = variant.querySelector('div.variant-modifiers form')
+    if (!form) return
+
     const inputs = form.querySelectorAll('legend ~ div.mfc-radio-wrapper > input[type=radio][data-default=true]') || form.querySelector('legend ~ div.mfc-radio-wrapper > input[type=radio]:first-of-type')
 
     const classesToApply = Array.from(inputs).map(input => {
       input.checked = true
-      const { selector, value } = input.dataset
-      return { selector, value }
+      const { selector, multiple, value } = input.dataset
+      return { selector, multiple, value }
     })
 
     // modify the variant state
     const container = variant.querySelector('div.variant-template')
-    classesToApply.filter(Boolean).forEach(toApply => {
-      const elem = container.querySelector(toApply.selector)
-      elem.classList.add(toApply.value)
+    classesToApply.filter(Boolean).forEach(c => {
+      if (c.multiple) {
+        const elems = container.querySelectorAll(c.selector)
+        Array.from(elems).forEach(elem => elem.classList.add(c.value))
+      } else {
+        const elem = container.querySelector(c.selector)
+        elem.classList.add(c.value)
+      }
     })
   })
 })

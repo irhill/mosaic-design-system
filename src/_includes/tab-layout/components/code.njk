@@ -71,9 +71,10 @@
                           class="mfc-switch"
                           type="checkbox"
                           onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                          data-type="class"
                           data-selector={{ modifier.selector }}
+                          data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                           data-value={{ class.value }}>
-                        <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">{{ class.name }}</label>
                       </div>
 
                     {% else %}
@@ -86,6 +87,7 @@
                             onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
                             data-default={{ 'true' if class.default else 'false' }}
                             data-selector={{ modifier.selector }}
+                            data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                             data-value={{ class.value }}>
                           <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
                             {{ class.name }}
@@ -103,7 +105,9 @@
                         class="mfc-switch"
                         type="checkbox"
                         onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                        data-type="attribute"
                         data-selector={{ modifier.selector }}
+                        data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                         data-attribute-details={{ attribute | stringify_filter }}>
                     </div>
 

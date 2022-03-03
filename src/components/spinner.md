@@ -36,11 +36,9 @@ code:
           - name: Mono
             selector: .mcc-spinner
             classes:
-              - name: No
-                value: mcc-spinner
-              - name: Yes
+              - name: Mono
                 value: mcc-spinner--mono
-        attributes: []
+            type: class
       - template:
           lang: html
           code: >
@@ -71,6 +69,5 @@ code:
               </button>
             </div>
         name: As current color
-        attributes: []
         modifiers: []
 ---

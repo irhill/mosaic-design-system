@@ -60,6 +60,7 @@ code:
             classes:
               - value: mcc-timeline-item__badge--primary
                 name: Primary
+                default: true
               - value: mcc-timeline-item__badge--secondary
                 name: Secondary
               - value: mcc-timeline-item__badge--success
@@ -70,21 +71,20 @@ code:
                 name: Warning
               - value: mcc-timeline-item__badge--info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Separator
             selector: .mcc-timeline
             classes:
-              - name: No
-                value: mcc-timeline
-              - name: Yes
+              - name: Separator
                 value: mcc-timeline--separator
+            type: class
           - name: Spanned
             selector: .mcc-timeline
             classes:
-              - name: No
-                value: mcc-timeline
-              - name: Yes
+              - name: Spanned
                 value: mcc-timeline--spanned
-        attributes: []
+            type: class
       - template:
           lang: html
           code: >-
@@ -129,6 +129,7 @@ code:
             classes:
               - value: mcc-timeline-item__badge--primary
                 name: Primary
+                default: true
               - value: mcc-timeline-item__badge--secondary
                 name: Secondary
               - value: mcc-timeline-item__badge--success
@@ -139,21 +140,20 @@ code:
                 name: Warning
               - value: mcc-timeline-item__badge--info
                 name: Info
+            select_multiple: true
+            type: class
           - name: Separator
             selector: .mcc-timeline
             classes:
-              - name: No
-                value: mcc-timeline
-              - name: Yes
+              - name: Separator
                 value: mcc-timeline--separator
+            type: class
           - name: Spanned
             selector: .mcc-timeline
             classes:
-              - name: No
-                value: mcc-timeline
-              - name: Yes
+              - name: Spanned
                 value: mcc-timeline--spanned
-        attributes: []
+            type: class
       - template:
           lang: html
           code: |-
