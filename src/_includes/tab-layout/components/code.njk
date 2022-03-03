@@ -15,7 +15,9 @@
 </div>
 
 <!-- code content -->
-<div class="temp-content-chunk">{{ code.body | markdownify | safe }}</div>
+{% if code.body %}
+  <div class="temp-content-chunk">{{ code.body | markdownify | safe }}</div>
+{% endif %}
 
 <!-- container for displaying component preview with variants etc.. -->
 <div class="[ mcc-card mcc-card--high-emphasis ] [ component-preview ]">
@@ -47,55 +49,75 @@
       <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]" style="position: relative; overflow: hidden;">
           {{ variant.template.code | safe }}
       </div>
-      <!-- options panel for switching modifiers -->
-      <div class="variant-modifiers" style="width: 240px;">
 
-          {% for modifier in variant.modifiers %}
-            
-            <form class="[ class-form ] [ mu-mb-05 ]">
+      {% if variant.modifiers | length %}
+        <!-- options panel for switching modifiers -->
+        <div class="variant-modifiers" style="width: 240px;">
+
+            <form class="[ mu-mb-05 ]">
               <fieldset class="mfc-fieldset">
-                <legend>{{ modifier.name }}</legend>
-                {% for class in modifier.classes  %}
-                  <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
-                    <input
-                      id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
-                      name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
-                      type="radio"
-                      onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
-                      data-selector={{ modifier.selector }}
-                      data-value={{ class.value }}>
-                    <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
-                      {{ class.name }}
-                    </label>
-                  </div>
-                {% endfor %}
+
+                {% for modifier in variant.modifiers %}
+                  <legend>{{ modifier.name }}</legend>
+
+                  {% if modifier.type === 'class' and modifier.classes | length %}
+
+                    {% if modifier.classes | length === 1 %}
+                      {% set class = modifier.classes[0] %}
+                      <div class="mfc-checkbox-wrapper">
+                        <input
+                          id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                          name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                          class="mfc-switch"
+                          type="checkbox"
+                          onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                          data-selector={{ modifier.selector }}
+                          data-value={{ class.value }}>
+                        <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">{{ class.name }}</label>
+                      </div>
+
+                    {% else %}
+                      {% for class in modifier.classes  %}
+                        <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                          <input
+                            id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                            name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                            type="radio"
+                            onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                            data-default={{ 'true' if class.default else 'false' }}
+                            data-selector={{ modifier.selector }}
+                            data-value={{ class.value }}>
+                          <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
+                            {{ class.name }}
+                          </label>
+                        </div>
+                      {% endfor %} <!-- class in modifier.classes -->
+                    {% endif %}
+
+                  {% elif modifier.type === 'attribute' %}
+                    {% set attribute = modifier.attribute %}
+                    <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
+                      <input
+                        id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                        name="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                        class="mfc-switch"
+                        type="checkbox"
+                        onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                        data-selector={{ modifier.selector }}
+                        data-attribute-details={{ attribute | stringify_filter }}>
+                    </div>
+
+                  {% else %}
+                  {% endif %}
+
+                {% endfor %} <!-- modifier in variant.modifiers -->
               </fieldset>
             </form>
-          {% endfor %}
 
-          <!-- attributes -->
-          {% if variant.attributes %}
-            <form class="attribute-form">
-              <fieldset class="mfc-fieldset">
-                <legend>Attributes</legend>
-                {% for attribute in variant.attributes %}
-                  <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
-                    <input
-                      id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
-                      name="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
-                      type="checkbox"
-                      onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
-                      data-selector={{ attribute.selector }}
-                      data-attribute-details={{ attribute | stringify_filter }}>
-                    <label for="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}">{{ attribute.name }}</label>
-                  </div>
-                {% endfor %}
-              </fieldset>
-            </form>
-          {% endif %}
+        </div>
+      {% endif %} <!-- variant.modifiers | length -->
 
-      </div>
     </div>
-  {% endfor %}
+  {% endfor %} <!-- variant in code.preview.variants -->
 
 </div>

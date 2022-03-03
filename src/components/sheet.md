@@ -1,6 +1,5 @@
 ---
 title: Sheet
-navigation: /sheet
 chips:
   - HTML/CSS
   - Web Component

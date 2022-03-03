@@ -1,6 +1,5 @@
 ---
 title: Button
-navigation: button
 chips:
   - HTML/CSS
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
@@ -216,29 +215,36 @@ code:
             classes:
               - name: Primary
                 value: mcc-button--primary
+                default: false
               - name: Secondary
                 value: mcc-button--secondary
               - name: Success
                 value: mcc-button--success
               - name: Danger
                 value: mcc-button--danger
+                default: true
               - name: Warning
                 value: mcc-button--warning
               - name: Info
                 value: mcc-button--info
+            type: class
+            select_multiple: false
           - name: Size
             selector: button
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
       - template:
           lang: html
           code: |-
@@ -253,6 +259,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-button--primary
+                default: true
               - name: Secondary
                 value: mcc-button--secondary
               - name: Success
@@ -265,19 +272,23 @@ code:
                 value: mcc-button--info
               - name: Light
                 value: mcc-button--light
+            type: class
           - name: Size
             selector: button
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
       - template:
           lang: html
           code: |-
@@ -292,6 +303,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-button--primary
+                default: true
               - name: Secondary
                 value: mcc-button--secondary
               - name: Success
@@ -304,19 +316,23 @@ code:
                 value: mcc-button--info
               - name: Light
                 value: mcc-button--light
+            type: class
           - name: Size
             selector: button
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
       - template:
           lang: html
           code: |-
@@ -331,14 +347,17 @@ code:
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
             selector: button
-            attribute: disabled
+            type: attribute
+            attribute:
+              name: disabled
       - template:
           lang: html
           code: |-
@@ -353,14 +372,17 @@ code:
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
       - template:
           lang: html
           code: |-
@@ -375,6 +397,7 @@ code:
             classes:
               - name: Primary
                 value: mcc-button--primary
+                default: true
               - name: Secondary
                 value: mcc-button--secondary
               - name: Success
@@ -385,17 +408,21 @@ code:
                 value: mcc-button--warning
               - name: Info
                 value: mcc-button--info
+            type: class
           - name: Size
             selector: button
             classes:
               - name: Default
                 value: mcc-button
+                default: true
               - name: Small
                 value: mcc-button--sm
               - name: Large
                 value: mcc-button--lg
-        attributes:
+            type: class
           - name: Disabled
-            attribute: disabled
             selector: button
+            type: attribute
+            attribute:
+              name: disabled
 ---
