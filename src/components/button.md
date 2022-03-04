@@ -215,14 +215,14 @@ code:
             classes:
               - name: Primary
                 value: mcc-button--primary
-                default: false
+                default: true
               - name: Secondary
                 value: mcc-button--secondary
               - name: Success
                 value: mcc-button--success
               - name: Danger
                 value: mcc-button--danger
-                default: true
+                default: false
               - name: Warning
                 value: mcc-button--warning
               - name: Info

@@ -51,7 +51,12 @@ module.exports = (eleventyConfig) => {
 
   // sort collections for navigation
   const orderSort = (a, b) => a.data.order - b.data.order
-  const titleSort = (a, b) => a.data.title.toLowerCase() === 'overview' ? -1 : a.data.title.localeCompare(b.data.title)
+  const titleSort = (a, b) =>
+    a.data.title.toLowerCase() === 'overview'
+      ? -1
+      : b.data.title.toLowerCase() === 'overview'
+        ? 1
+        : a.data.title.localeCompare(b.data.title)
 
   // IMPORTANT: the order of the collections in this array must match the display order
   // on the site otherwise the forward/backward navigation will not work properly

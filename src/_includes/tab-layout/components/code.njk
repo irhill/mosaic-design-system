@@ -72,7 +72,7 @@
                           type="checkbox"
                           onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
                           data-type="class"
-                          data-selector={{ modifier.selector }}
+                          data-selector="{{ modifier.selector }}"
                           data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                           data-value={{ class.value }}>
                       </div>
@@ -86,7 +86,7 @@
                             type="radio"
                             onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
                             data-default={{ 'true' if class.default else 'false' }}
-                            data-selector={{ modifier.selector }}
+                            data-selector="{{ modifier.selector }}"
                             data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                             data-value={{ class.value }}>
                           <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
@@ -106,7 +106,7 @@
                         type="checkbox"
                         onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
                         data-type="attribute"
-                        data-selector={{ modifier.selector }}
+                        data-selector="{{ modifier.selector }}"
                         data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
                         data-attribute-details={{ attribute | stringify_filter }}>
                     </div>
