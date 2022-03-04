@@ -1,0 +1,127 @@
+{% set js %}
+  {% include "./code.js" %}
+{% endset %}
+
+<script>
+  {{ js | safe }}
+</script>
+
+<div class="temp-content-chunk">
+  {% if storybook %}
+    <div class="[ mcc-alert mcc-alert--info ] [ mu-mb-09 ]" role="alert">
+      <p class="mu-mb-00">For additional examples and API documentation, see <a href="{{ storybook }}" target="_blank">Storybook</a></p>
+    </div>
+  {% endif %}
+</div>
+
+<!-- code content -->
+{% if code.body %}
+  <div class="temp-content-chunk">{{ code.body | markdownify | safe }}</div>
+{% endif %}
+
+<!-- container for displaying component preview with variants etc.. -->
+<div class="[ mcc-card mcc-card--high-emphasis ] [ component-preview ]">
+  <!-- 'header' section for switching variants etc.. -->
+  <div class="mcc-card__header">
+    <h2 id="variant-name" class="[ mcc-card__title ] [ mu-mb-05 ]">Select variant</h2>
+    <details id="variant-selector" class="mcc-dropdown">
+      <summary class="mcc-button mcc-button--sm mcc-button--primary" aria-haspopup="true">
+        <span class="mcc-button__label">Variant selector</span>
+        <mcc-icon class="mcc-button__dropdown-caret" name="angle_down" aria-hidden="true"></mcc-icon>
+      </summary>
+      <ul class="mcc-dropdown__menu">
+
+        {% for variant in code.preview.variants %}
+          <li>
+            <button type="button" onclick="showVariant('{{ variant.name }}')">
+              <div>{{ variant.name }}</div>
+            </button>
+          </li>
+        {% endfor %}
+
+      </ul>
+    </details>
+  </div>
+
+  {% for variant in code.preview.variants %}
+    <div id="{{ variant.name | snake_case_filter }}" class="[ mcc-card__body ] [ variant-container ] [ mu-d-none ]" style="gap: 2rem;">
+      <!-- preview panel for displaying component -->
+      <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]" style="position: relative; overflow: hidden;">
+          {{ variant.template.code | safe }}
+      </div>
+
+      {% if variant.modifiers | length %}
+        <!-- options panel for switching modifiers -->
+        <div class="variant-modifiers" style="width: 240px;">
+
+            <form class="[ mu-mb-05 ]">
+              <fieldset class="mfc-fieldset">
+
+                {% for modifier in variant.modifiers %}
+                  <legend>{{ modifier.name }}</legend>
+
+                  {% if modifier.type === 'class' and modifier.classes | length %}
+
+                    {% if modifier.classes | length === 1 %}
+                      {% set class = modifier.classes[0] %}
+                      <div class="mfc-checkbox-wrapper">
+                        <input
+                          id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                          name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                          class="mfc-switch"
+                          type="checkbox"
+                          onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                          data-type="class"
+                          data-selector="{{ modifier.selector }}"
+                          data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                          data-value={{ class.value }}>
+                      </div>
+
+                    {% else %}
+                      {% for class in modifier.classes  %}
+                        <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                          <input
+                            id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                            name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                            type="radio"
+                            onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                            data-default={{ 'true' if class.default else 'false' }}
+                            data-selector="{{ modifier.selector }}"
+                            data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                            data-value={{ class.value }}>
+                          <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
+                            {{ class.name }}
+                          </label>
+                        </div>
+                      {% endfor %} <!-- class in modifier.classes -->
+                    {% endif %}
+
+                  {% elif modifier.type === 'attribute' %}
+                    {% set attribute = modifier.attribute %}
+                    <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
+                      <input
+                        id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                        name="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                        class="mfc-switch"
+                        type="checkbox"
+                        onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                        data-type="attribute"
+                        data-selector="{{ modifier.selector }}"
+                        data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                        data-attribute-details={{ attribute | stringify_filter }}>
+                    </div>
+
+                  {% else %}
+                  {% endif %}
+
+                {% endfor %} <!-- modifier in variant.modifiers -->
+              </fieldset>
+            </form>
+
+        </div>
+      {% endif %} <!-- variant.modifiers | length -->
+
+    </div>
+  {% endfor %} <!-- variant in code.preview.variants -->
+
+</div>

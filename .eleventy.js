@@ -66,6 +66,7 @@ module.exports = (eleventyConfig) => {
     { name: 'sortedDeveloping', collection: 'developing', sortFunc: orderSort },
     { name: 'sortedGuidelines', collection: 'guidelines', sortFunc: orderSort },
     { name: 'sortedComponents', collection: 'components', sortFunc: titleSort },
+    { name: 'sortedForms', collection: 'forms', sortFunc: titleSort },
     { name: 'sortedPatterns', collection: 'patterns', sortFunc: titleSort },
     { name: 'sortedPendo', collection: 'pendo', sortFunc: orderSort },
     { name: 'sortedHelp', collection: 'help', sortFunc: orderSort }

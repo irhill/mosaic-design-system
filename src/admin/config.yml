@@ -257,6 +257,41 @@ collections:
                           - { label: "Name", name: "name", widget: "string", required: false }
                           - { label: "Value", name: "value", widget: "string", required: false }
                           - { label: "Default", name: "default", widget: "boolean", required: false }
+  - label: "Forms"
+    name: "Forms"
+    folder: "src/forms"
+    create: true
+    fields:
+      - label: "Title"
+        name: "title"
+        widget: "string"
+      - label: "Order"
+        name: "order"
+        widget: "number"
+      - label: "Hero image"
+        name: "hero"
+        widget: "image"
+        required: false
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+        required: false
+      - label: "Tabs"
+        name: "tabs"
+        widget: "list"
+        required: false
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Hook"
+            name: "hook"
+            widget: "string"
+            required: false
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
+            required: false
   - label: "Pattern"
     name: "patterns"
     folder: "src/patterns"
