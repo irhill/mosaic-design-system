@@ -24,46 +24,62 @@ code:
       - template:
           lang: html
           code: >-
-            <label class="mfc-label">Radio input</label>
-            <div class="mfc-radio-wrapper">
-              <input id="radioInput1" name="radioInput1" type="radio" checked>
-              <label for="radioInput1">Radio input</label>
+            <fieldset class="mfc-fieldset">
+              <legend>Radio input legend</legend>
+              <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput1" name="radioInputGroup" type="radio">
+                <label for="radioInput1">Radio input</label>
+              </div>
+              <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput2" name="radioInputGroup" type="radio">
+                <label for="radioInput2">Radio input</label>
+              </div>
+              <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput3" name="radioInputGroup" type="radio">
+                <label for="radioInput3">Radio input</label>
+              </div>
               <div class="mfc-help-text">Radio input help text</div>
-            </div>
+            </fieldset>
         name: As default
         modifiers:
           - name: Disabled
-            selector: input
+            selector: input[id="radioInput1"]
             type: attribute
             attribute:
               name: disabled
-          - name: Checked
-            selector: input
-            type: attribute
-            attribute:
-              name: checked
       - template:
           lang: html
           code: >-
-            <label class="mfc-label">Radio input</label>
-            <div class="mfc-radio-button-wrapper" style="max-width: 280px; width: 100%">
-              <input id="radioInput18" name="radioInput18" type="radio">
-              <label for="radioInput18">
-                <span>Radio input</span>
-                <span>Subtitle</span>
-              </label>
+            <fieldset class="mfc-fieldset" style="max-width: 320px; width: 100%">
+              <legend>Radio input legend</legend>
+              <div class="[ mfc-radio-button-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput4" name="radioInputGroup2" type="radio">
+                <label for="radioInput4">
+                  <span>Radio input</span>
+                  <span>Subtitle</span>
+                </label>
+              </div>
+              <div class="[ mfc-radio-button-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput5" name="radioInputGroup2" type="radio">
+                <label for="radioInput5">
+                  <span>Radio input</span>
+                  <span>Subtitle</span>
+                </label>
+              </div>
+              <div class="[ mfc-radio-button-wrapper ] [ mu-mb-03 ]">
+                <input id="radioInput6" name="radioInputGroup2" type="radio">
+                <label for="radioInput6">
+                  <span>Radio input</span>
+                  <span>Subtitle</span>
+                </label>
+              </div>
               <div class="mfc-help-text">Radio input help text</div>
-            </div>
+            </fieldset>
         name: As choice button
         modifiers:
           - name: Disabled
-            selector: input
+            selector: input[id="radioInput4"]
             type: attribute
             attribute:
               name: disabled
-          - name: Checked
-            selector: input
-            type: attribute
-            attribute:
-              name: checked
 ---

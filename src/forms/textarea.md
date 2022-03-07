@@ -30,7 +30,7 @@ code:
               <div class="mfc-help-text">Textarea input help text</div>
               <div id="textarea1" class="mfc-invalid-feedback">This is some invalid text</div>
             </div>
-        name: As date
+        name: As default
         modifiers:
           - name: Size
             selector: .mfc-textarea-wrapper

@@ -24,11 +24,13 @@ code:
       - template:
           lang: html
           code: >-
-            <label class="mfc-label">Checkbox input</label>
-            <div class="mfc-checkbox-wrapper">
-              <input id="checkboxInput1" name="checkboxInput1" type="checkbox">
-              <label for="checkboxInput1">Checkbox input</label>
-              <div class="mfc-help-text">Checkbox input help text</div>
+            <div>
+              <label class="mfc-label">Checkbox input</label>
+              <div class="mfc-checkbox-wrapper">
+                <input id="checkboxInput1" name="checkboxInput1" type="checkbox">
+                <label for="checkboxInput1">Checkbox input</label>
+                <div class="mfc-help-text">Checkbox input help text</div>
+              </div>
             </div>
         name: As default
         modifiers:

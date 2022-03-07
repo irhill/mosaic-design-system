@@ -37,7 +37,7 @@ code:
               <div class="mfc-help-text">Select input help text</div>
               <div id="selectInput1" class="mfc-invalid-feedback">This is some invalid text</div>
             </div>
-        name: As date
+        name: As default
         modifiers:
           - name: Size
             selector: .mfc-select-wrapper

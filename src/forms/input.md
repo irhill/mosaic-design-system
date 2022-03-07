@@ -26,9 +26,44 @@ code:
           code: >-
             <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
               <label for="textInput1">Input</label>
-              <input id="textInput1" name="textInput1" type="date">
+              <input id="textInput1" name="textInput1" type="text">
               <div class="mfc-help-text">Input help text</div>
               <div id="textInput1" class="mfc-invalid-feedback">This is some invalid text</div>
+            </div>
+        name: As text
+        modifiers:
+          - name: Size
+            selector: .mfc-input-wrapper
+            classes:
+              - name: Small
+                value: mfc-input-wrapper--sm
+              - name: Medium (default)
+                value: mfc-input-wrapper
+                default: true
+              - name: Large
+                value: mfc-input-wrapper--lg
+            type: class
+            select_multiple: false
+          - name: Disabled
+            selector: input
+            type: attribute
+            attribute:
+              name: disabled
+          - name: Invalid
+            selector: input
+            classes:
+              - name: Invalid
+                value: ms-is-invalid
+            type: class
+            select_multiple: false
+      - template:
+          lang: html
+          code: >-
+            <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
+              <label for="textInput2">Input</label>
+              <input id="textInput2" name="textInput2" type="date">
+              <div class="mfc-help-text">Input help text</div>
+              <div id="textInput2" class="mfc-invalid-feedback">This is some invalid text</div>
             </div>
         name: As date
         modifiers:
@@ -60,47 +95,12 @@ code:
           lang: html
           code: >-
             <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
-              <label for="textInput1">Input</label>
-              <input id="textInput1" name="textInput1" type="number">
+              <label for="textInput3">Input</label>
+              <input id="textInput3" name="textInput3" type="number">
               <div class="mfc-help-text">Input help text</div>
-              <div id="textInput1" class="mfc-invalid-feedback">This is some invalid text</div>
+              <div id="textInput3" class="mfc-invalid-feedback">This is some invalid text</div>
             </div>
         name: As number
-        modifiers:
-          - name: Size
-            selector: .mfc-input-wrapper
-            classes:
-              - name: Small
-                value: mfc-input-wrapper--sm
-              - name: Medium (default)
-                value: mfc-input-wrapper
-                default: true
-              - name: Large
-                value: mfc-input-wrapper--lg
-            type: class
-            select_multiple: false
-          - name: Disabled
-            selector: input
-            type: attribute
-            attribute:
-              name: disabled
-          - name: Invalid
-            selector: input
-            classes:
-              - name: Invalid
-                value: ms-is-invalid
-            type: class
-            select_multiple: false
-      - template:
-          lang: html
-          code: >-
-            <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
-              <label for="textInput1">Input</label>
-              <input id="textInput1" name="textInput1" type="text">
-              <div class="mfc-help-text">Input help text</div>
-              <div id="textInput1" class="mfc-invalid-feedback">This is some invalid text</div>
-            </div>
-        name: As text
         modifiers:
           - name: Size
             selector: .mfc-input-wrapper
