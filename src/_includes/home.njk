@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1078cf">
 
     {% include "./partials/favicons.njk" %}
   
@@ -34,9 +35,18 @@
     <a class="mds-skip-to" href="#navigation">Skip to navigation</a>
 
     <header class="[ mcc-navigation-header ] [  mu-top-0 ]" aria-label="Advanced Product" role="banner">
-      {% include "./partials/site-name.njk" %}
+
+      <button class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ] [ mu-d-lg-none ]" onclick="toggleSiteNavDrawer()">
+        <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
+        <span>Toggle drawer</span>
+      </button>
+      
+      <div class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
+        <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
+        <span class="mu-fw-semi-bold">Mosaic Design System</span></span>
+      </div>
+
       <nav class="mcc-navigation-header__global">
-        
         {% include "./search/search-button.njk" %}
         {% include "./theme-toggle/theme-toggle.njk" %}
         {% include "./switch-sites/switch-sites.njk" %}
@@ -46,7 +56,14 @@
     <div class="[ mcc-drawer-frame ] [ mds-drawer-frame--nav-header-adjust ]">
 
       <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
-        {% include "./navigation/navigation.njk" %}
+        <div class="mu-d-flex mu-flex-column">
+          <div class="mu-d-flex mu-d-lg-none mu-align-items-center mu-mt-06 mu-mx-03 mu-px-05">
+            <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
+            <span class="mu-fw-semi-bold">MDS</span></span>
+          </div>
+
+          {% include "./navigation/navigation.njk" %}
+        </div>
       </mcc-drawer>
 
       <div id="maincontent" class="mcc-drawer-app-content" tabindex="0">
@@ -54,11 +71,6 @@
         <main>
 
           <article>
-
-          {# <button class="mcc-navigation-header__button" onclick="toggleDrawer()">
-            <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
-            <span>Toggle drawer</span>
-          </button> #}
 
             <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
               <div class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
@@ -128,7 +140,7 @@
     {% include "./search/search-dialog.njk" %}
 
     <script>
-      function toggleDrawer () {
+      function toggleSiteNavDrawer () {
         const drawer = document.getElementById('site-nav-drawer')
         drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
       }
