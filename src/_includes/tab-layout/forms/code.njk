@@ -47,7 +47,9 @@
     <div id="{{ variant.name | snake_case_filter }}" class="[ mcc-card__body ] [ variant-container ] [ mu-d-none ]" style="gap: 2rem;">
       <!-- preview panel for displaying component -->
       <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]" style="position: relative; overflow: hidden;">
+        <div style="width: 100%; display: flex; justify-content: center;"> 
           {{ variant.template.code | safe }}
+        </div>
       </div>
 
       {% if variant.modifiers | length %}
