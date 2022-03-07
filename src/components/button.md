@@ -208,7 +208,7 @@ code:
             <button class="mcc-button">
               <span class="mcc-button__label">Button</span>
             </button>
-        name: Default
+        name: As default
         modifiers:
           - name: Colour
             selector: button

@@ -48,7 +48,7 @@ code:
                 <span class="mcc-button__label">End</span>
               </button>
             </nav>
-        name: Default
+        name: As default
         modifiers:
           - name: Disabled
             selector: .mcc-pagination button:nth-child(5)

@@ -20,7 +20,7 @@ code:
     ### Live demo
 
 
-    Below, you can find a live demo for a Breadcrumb component. Use the drop-down menus and radio buttons to view the different Button Types and Variants.
+    Below, you can find a live demo for a Breadcrumb component. Use the drop-down menus and radio buttons to view the different Breadcrumb Types and Variants.
   preview:
     variants:
       - template:
@@ -35,7 +35,7 @@ code:
                 <li aria-current="page">Data</li>
               </ol>
             </nav>
-        name: Breadcrumb
+        name: As default
         modifiers: []
       - template:
           lang: html
@@ -50,5 +50,5 @@ code:
                 <li aria-current="page">Data</li>
               </ol>
             </nav>
-        name: Breadcrumb with label
+        name: With label
 ---
