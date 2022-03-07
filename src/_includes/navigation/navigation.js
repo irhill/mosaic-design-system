@@ -32,32 +32,33 @@ document.addEventListener('DOMContentLoaded', _ => {
   highlightCurrentPage()
 })
 
-// const desktop = window.matchMedia('(min-width: 960px)')
-// console.log(desktop)
-// if (desktop.matches) {
-//   navSheet.setAttribute('modal', 'true')
-//   navSheet.setAttribute('scrim', 'false')
-//   navSheet.classList.add('mcc-sheet--in-view')
-// }
+// Change drawer type to dismissible on desktop
+const navDrawer = document.getElementById('site-nav-drawer')
+const desktop = window.matchMedia('(min-width: 992px)')
+if (desktop.matches) {
+  navDrawer.setAttribute('type', 'dismissible')
+  navDrawer.classList.add('mcc-drawer--open')
+  navDrawer.classList.remove('mcc-drawer--closed')
+}
 
-// const mobile = window.matchMedia('(max-width: 960px)')
-// console.log(mobile)
-// if (mobile.matches) {
-//   navSheet.setAttribute('modal', 'false')
-//   navSheet.setAttribute('scrim', 'true')
-//   navSheet.classList.remove('mcc-sheet--in-view')
-// }
+// Change drawer type to modal on desktop
+const mobile = window.matchMedia('(max-width: 992px)')
+if (mobile.matches) {
+  navDrawer.setAttribute('type', 'modal')
+  navDrawer.classList.remove('mcc-drawer--open')
+  navDrawer.classList.add('mcc-drawer--closed')
+}
 
-// Window resize
+// Toggle drawer type based on window size
 window.addEventListener('resize', function() {
-  const sheet = document.getElementById('site-nav-sheet')
-  if (window.innerWidth > 960) {
-    sheet.setAttribute('modal', 'true')
-    sheet.setAttribute('scrim', 'false')
-    sheet.classList.add('mcc-sheet--in-view')
-  } else if (window.innerWidth < 960) {
-    sheet.setAttribute('modal', 'false')
-    sheet.setAttribute('scrim', 'true')
-    sheet.classList.remove('mcc-sheet--in-view')
+  const navDrawer = document.getElementById('site-nav-drawer')
+  if (window.innerWidth > 992) {
+    navDrawer.setAttribute('type', 'dismissible')
+    navDrawer.classList.add('mcc-drawer--open')
+    navDrawer.classList.remove('mcc-drawer--closed')
+  } else if (window.innerWidth < 992) {
+    navDrawer.setAttribute('type', 'modal')
+    navDrawer.classList.remove('mcc-drawer--open')
+    navDrawer.classList.add('mcc-drawer--closed')
   }
 })
