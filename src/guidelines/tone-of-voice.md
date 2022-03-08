@@ -370,13 +370,181 @@ tabs:
 
       \  <div class=\"mcc-accordion__body\">
 
-      \    <p>
+      \    <p>Instructions that the user is given should include a
+      “Please” at the start of the sentence in the vast majority of cases, to
+      avoid grammatical errors. Ending a sentence with please requires a comma,
+      and it takes up valuable screen space and sometimes requires an entirely
+      separate clause in the sentence. Take the two following examples:
+
+
+      \r
+
+      1.\tPlease press submit
+
+
+      \r
+
+      2.\tPress submit please
+
+
+      \r
+
+      Example 2 should actually read “Press submit, please”. But - imagine
+      that in a modal? Imagine it without a full-stop. Example 1 works fine as a
+      message without a full-stop, but “Press submit, please” looks very strange
+      without a full-stop.\r
+
+      This is a problem that is extremely context-sensitive, and the
+      answer to most of the problems that arise is “it works fine with the
+      please at the beginning”. It will not work in all sentence structures, ask
+      somebody to double check when in doubt.\r
+
 
       </p>
 
       \  </div>
 
-      </details>"
+      </details>
+
+
+      ### Elegance in Simplicity
+
+
+      There is a tendency to overcomplicate a matter when you know the
+      inner nuts and bolts of a product. “Booking an absence” may well
+      technically be “submitting an absence request”, but the user does not care
+      what is happening under the hood of the product. Complex concepts need to
+      be broken down into their simplest parts. \r
+
+      The copy in our products needs to be **clear** and **concise**.
+      Users use our product to cut down on time so they can do their job more
+      efficiently. We are helping them solve a business need - we should strive
+      to make that as easy as possible. If a user reads something in our
+      products and needs to think for a moment to work out what that means, we
+      are doing our job badly. Often this comes about from us (as the creators
+      of a product) becoming supremely familiar with workflows and steps taken
+      to achieving a process - the user does not care how it happens, they just
+      care about the result.\r
+
+      Unnecessary detail needs to be stripped out of messaging. Take the
+      above example: if a user wants to book an absence, they want to book an
+      absence. They don't want to submit an absence request. Call a spade a
+      spade, not a utensil for moving soil.\r
+
+      Context also plays a role in this. Sometimes, we provide much more
+      detail than is necessary. Surprisingly, we can give our users some credit
+      when it comes to reading between the lines. If the context of piece of
+      copy does some of the heavy-lifting, we do not need to reiterate that
+      message. For example, if we were submitting a timesheet for a user, we may
+      be tempted to write a message saying: “[Person X]'s timesheet for [Week Y]
+      has been successfully submitted”. A simple “Timesheet has been
+      successfully submitted.” will suffice - the user knows that they have just
+      been filling out a timesheet for Person X in Week Y, they do not need to
+      be reminded.\r
+
+      **However**, accuracy is also important. Do not skip over important
+      elements of a message because it is quicker to not mention them. But, be
+      wary that it is possible to be too accurate. General beats specific,
+      unless specificity is important.\r
+
+
+      ### Target Audience
+
+
+      * **Prioritise clarity over style**
+
+      * **Identify and understand your expected users**
+
+      * **Use jargon where appropriate**
+
+
+      When writing copy within products, your end-user should always be at
+      the forefront of your mind. Useful copy is more important than beautiful
+      copy. When you are creating your system messages, you must consider who
+      will be reading them. \r
+
+      Professionals in different industries will have different
+      expectations of the software they are using, in particular around things
+      like formality and complexity. Copy should be catered to these individuals
+      - users that using our products aimed at the legal sector would expect a a
+      lot of industry-specific terminology and common parlance, for example.
+      This will be vastly different to a product aimed at a wider range of users
+      like one of our HCM products. The ‘feel’ of these products should remain
+      largely the same - to preserve the Advanced product identity - which will
+      be achieved through the tone of voice guidelines above; however, while
+      writing copy you should be aware that different users have different
+      needs. This will be mostly achieved by how you approach **Jargon** within
+      the products.\r
+
+      **Jargon** is a series of words that are associated with a niche
+      community of people - for example, those interested in a particular hobby
+      will know the ins-and-outs of their hobby and either use short-hand or
+      specialised terms that will only make sense to them. For example, within
+      the tech community, most developers would know that ‘rubber-ducking’ is
+      explaining to a rubber duck how their code works, in order to go through a
+      process one step at a time and hopefully spot a problem. This is the same
+      within the industries we aim our products at. You should hopefully be
+      aware of the kind of jargon used within the industry you are currently
+      working with, and there are a few guidelines below on how best to use
+      these.\r
+
+
+      #### Industry Jargon
+
+
+      * **Not all users speak the same language**
+
+
+      Users of our HCM products are not always guaranteed to be
+      particularly familiar with HR processes, so it needs to be approachable
+      for someone who is not aware of those. On the other hand, we can be
+      confident that somebody using our financial solutions will know what a pay
+      period is. Jargon is encouraged when it is industry-specific terminology
+      that a professional in that sector can be expected to know - as long as
+      that professional is the expected user of the product. If this is
+      ambiguous, then we need to take care in how we use jargon. \r
+
+      Take, for example, a fictional product that allows an employee of a
+      company to record their worked hours into a timesheet, and gives them an
+      expected payslip. That timesheet is then submitted to the payroll
+      administrator for their company, who works their financial magic on it to
+      pay them. We have two users here - the employee, and the payroll
+      administrator. The payroll administrator will probably use things like the
+      employee’s full-time equivalent salary and their tax code, and also worry
+      about additions and deductions to the employee’s pay, and enter values for
+      their holiday pay and statutory sick pay… stuff that sounds like
+      accounting wizardry to a layman. In this instance, the target audience for
+      the two separate parts of the product are vastly different. Jargon must be
+      applied differently in these two scenarios, catering for the end user. If
+      it is not reasonable to assume that a user knows an industry-specific
+      term, then either it should not be used, or an explanation should be
+      provided.\r
+
+
+      #### Technical Jargon
+
+
+      * **Have an awareness that you are a tech expert, but your user is
+      not**
+
+
+      One thing we cannot be sure about, however, is the computer-literacy
+      of the end user. We, as employees of a tech company working in the
+      software industry, know far more than the layman about how our products
+      work. We are comfortable using specialised terms for areas of our
+      products, as it is ubiquitous language among our colleagues - but, our
+      users (probably) are not well-versed in this kind of terminology. \r
+
+      It is absolutely best to avoid technical jargon wherever possible. A
+      message that says something like ‘the function was unsuccessful due to
+      this technical error’ will mean little to a regular user, but ‘We could
+      not do that because your X is not Y' tells them exactly what they need to
+      know. It may be reasonable to surmise that most in the 21st century are
+      familiar with topics like that, but we cannot assume. Technical problems
+      within our products need to be explained simply to the user to avoid
+      alienating them. The worst outcome would be our user being presented with
+      an incomprehensible mess of technical detail, and having no idea what they
+      are looking at - this would discourage them from using the product. \r\n"
 ---
 
 
