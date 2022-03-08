@@ -58,10 +58,11 @@
               <fieldset class="mfc-fieldset">
 
                 {% for modifier in variant.modifiers %}
-                  <legend>{{ modifier.name }}</legend>
+                  
 
                   {% if modifier.type === 'class' and modifier.classes | length %}
-
+                    
+                    <legend>{{ modifier.name }}</legend>
                     {% if modifier.classes | length === 1 %}
                       {% set class = modifier.classes[0] %}
                       <div class="mfc-checkbox-wrapper">
@@ -78,7 +79,9 @@
                       </div>
 
                     {% else %}
+                      
                       {% for class in modifier.classes  %}
+                        
                         <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
                           <input
                             id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
@@ -98,6 +101,7 @@
 
                   {% elif modifier.type === 'attribute' %}
                     {% set attribute = modifier.attribute %}
+                    <label for="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}">{{ modifier.name }}</label>
                     <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
                       <input
                         id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
