@@ -134,7 +134,7 @@ html {
 }
 
 .mds-site-name-logo svg {
-  height: 28px;
+  height: 24px;
 }
 
 /* skip to */
@@ -178,14 +178,18 @@ html {
 }
 
 /* temp */
-.mcc-navigation-header {
+/* .mcc-navigation-header {
   left: 0;
   position: fixed;
   right: 0;
-}
+} */
 
 /* @media (min-width: 768px) and (max-width: 1279px ) {
   .mcc-navigation-header {
     padding: 8px 12px;
   }
 } */
+
+.mds-site-name {
+  height: var(--navigation-header-height);
+}
