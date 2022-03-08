@@ -4,31 +4,23 @@
   display: none;
 }
 
-.mds-back-to-top--show {
+.mds-back-to-top {
   position: fixed;
   bottom: var(--spacing-05);
   right: var(--spacing-05);
   z-index: 100;
-  opacity: 0;
-  transform: translateY(100%);
-  transition: all .5s ease
 }
 
 @media (min-width: 768px) {
-  .mds-back-to-top--show {
+  .mds-back-to-top {
     bottom: var(--spacing-06);
     right: var(--spacing-06);
   }
 }
 
 @media (min-width: 993px) {
-  .mds-back-to-top--show {
+  .mds-back-to-top {
     bottom: var(--spacing-07);
     right: var(--spacing-07);
   }
-}
-
-.mds-back-to-top--show {
-  opacity: 1;
-  transform: translateY(0)
 }
