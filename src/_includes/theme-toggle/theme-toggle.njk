@@ -6,6 +6,14 @@
   <span class="mu-d-none mu-d-md-block">Toggle theme</span>
 </button>
 
+{% set css %}
+  {% include "./theme-toggle.css" %}
+{% endset %}
+
+<style>
+  {{ css | safe }}
+</style>
+
 {% set js %}
   {% include "./theme-toggle.js" %}
 {% endset %}
