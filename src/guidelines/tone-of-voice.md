@@ -136,7 +136,7 @@ tabs:
 
 
 
-      <li>**Personable**<li>
+      * **Personable**
 
 
 
