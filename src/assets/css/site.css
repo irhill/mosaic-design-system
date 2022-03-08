@@ -86,33 +86,6 @@ html {
   }
 }
 
-/* stickey tabs */
-.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav {
-  position: sticky;
-  top: var(--navigation-header-height);
-  padding-top: 1rem;
-  background-color: var(--ui-02, #eeeef1);
-}
-
-.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::before,
-.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::after {
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: 0.5rem;
-  background-color: var(--ui-02, #eeeef1);
-  content: "";
-}
-
-.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::before {
-  left: -0.5rem;
-}
-
-.mcc-tabs.mcc-tabs--bar > .md-sticky-tab-nav::after {
-  right: -0.5rem;
-}
-
-
 
 /* drawer offset */
 @media (min-width: 993px) {
