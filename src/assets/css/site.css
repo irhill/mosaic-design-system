@@ -220,3 +220,7 @@ html {
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
 }
+
+.variant-container {
+  grid-template-columns: 1fr minmax(0, max-content);
+}

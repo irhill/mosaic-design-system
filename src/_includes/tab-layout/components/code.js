@@ -4,14 +4,14 @@ const showVariant = variantName => {
 
   // make sure all variants are hidden
   Array.from(variants).forEach(p => {
-    p.classList.remove('mu-d-flex')
+    p.classList.remove('mu-d-grid')
     p.classList.add('mu-d-none')
   })
 
   // show selected variant
   const selectedVariant = document.getElementById(id)
   selectedVariant.classList.remove('mu-d-none')
-  selectedVariant.classList.add('mu-d-flex')
+  selectedVariant.classList.add('mu-d-grid')
 
   // update variant title
   const nameElem = document.getElementById('variant-name')
