@@ -129,9 +129,20 @@ html {
 
 /* nav drawer frame offset */
 .mcc-drawer-frame.mds-drawer-frame--nav-header-adjust {
-  margin-top: var(--navigation-header-height);
+  padding-top: var(--navigation-header-height);
+  /* height: calc(100vh - var(--navigation-header-height)); */
+}
+
+.mcc-drawer-app-content {
   height: calc(100vh - var(--navigation-header-height));
 }
+
+/* .mcc-drawer-app-content > main {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
+} */
 
 .mds-site-name-logo svg {
   height: 24px;
@@ -160,6 +171,10 @@ html {
 }
 
 /* back to top */
+.mds-back-to-top:not(.mds-back-to-top--show) {
+  display: none;
+}
+
 .mds-back-to-top--show {
   position: fixed;
   bottom: var(--spacing-07);
@@ -192,4 +207,12 @@ html {
 
 .mds-site-name {
   height: var(--navigation-header-height);
+}
+
+.mcc-drawer-app-content {
+  min-height: 100%;
+  height: calc(100vh - var(--navigation-header-height));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  grid-template-columns: 100%;
 }
