@@ -27,7 +27,7 @@
 .temp-content-chunk :is(hr, pre, table, .mcc-alert) {
   max-width: 48rem;
 }
-.temp-content-chunk :is(p, ul, ol) {
+.temp-content-chunk :is(p, ul, ol, .mcc-accordion) {
   max-width: 42rem
 }
 
@@ -40,6 +40,10 @@
 }
 .temp-content-chunk hr {
   --content-chunk-space: 48px;
+  margin: var(--content-chunk-space) 0;
+}
+.temp-content-chunk > .mcc-accordion {
+  --content-chunk-space: 40px;
   margin: var(--content-chunk-space) 0;
 }
 
