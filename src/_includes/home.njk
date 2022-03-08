@@ -19,7 +19,7 @@
     {% endset %}
 
     <style>
-      {{ css | safe }}
+      {{ css | cssmin | safe }}
     </style>
 
     <title>
@@ -31,8 +31,7 @@
   </head>
   <body>
 
-    <a class="mds-skip-to" href="#maincontent">Skip to main content</a>
-    <a class="mds-skip-to" href="#navigation">Skip to navigation</a>
+    {% include "./skip-to/skip-to.njk" %}
 
     <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
 

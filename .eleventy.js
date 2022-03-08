@@ -5,6 +5,7 @@ let markdownItAnchor = require("markdown-it-anchor")
 const { minify } = require('uglify-js')
 const slugify = require('./scripts/slugify-string')
 const buildCustomTableOfContents = require('./scripts/custom-table-of-contents')
+const CleanCSS = require("clean-css");
 
 module.exports = (eleventyConfig) => {
   // disable automatic use of your .gitignore
@@ -119,6 +120,11 @@ module.exports = (eleventyConfig) => {
 
     return content
   })
+
+  // Minify CSS
+  eleventyConfig.addFilter("cssmin", function(code) {
+    return new CleanCSS({}).minify(code).styles;
+  });
 
   eleventyConfig.setTemplateFormats("md,njk")
 
