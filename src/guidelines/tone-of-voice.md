@@ -182,7 +182,9 @@ tabs:
       [idioms](https://en.wikipedia.org/wiki/Idiom) may shorten the message you
       need to deliver, but it will come across as sloppy and lacking in
       professionalism. Copy in our products should always be complete sentences,
-      where possible, and use proper English. \r
+      where possible, and use proper English.
+
+      \ \r
 
       This is a difficult habit to break, and I am sure you will smile
       once or twice while reading this document when you notice I have not
@@ -219,6 +221,7 @@ tabs:
       universally applicable. It also adds to the professional tone of voice -
       we would not call an invalid URL a “dead link” for example.
 
+
       However, some slang is sneaky. Sometimes, we go our whole lives
       knowing a word, without realising that it is actually a slang word. This
       is really difficult to “learn” how to avoid: if you do not know something
@@ -226,20 +229,19 @@ tabs:
       applicable examples:
 
 
-      \\
 
       *\t**Phone support** - this is slang. “Phone” is not a verb. Well,
       it is. Sort of. It is in the dictionary and most people would know what
       you mean, but it is a widely-used informal word. This is an example where
       we are less worried about the loss of meaning, and are more worried about
       the impression its usage gives. The “correct” words are “telephone” or
-      “call”. It would be much better to say “Call support” for this example.\\
+      “call”. It would be much better to say “Call support” for this example.
 
 
       *\t**Click the button** - another sneaky slang word. “Click” comes
       from the sound the mouse button makes when you press it - also, it is not
       a very inclusive term, what if someone is using a tablet, or keyboard
-      controls? Really, this should be “select/press the button”. \\
+      controls? Really, this should be “select/press the button”.\ 
 
 
       There is not an easy answer for this one, and mostly this will come
@@ -277,7 +279,10 @@ tabs:
       think of as ‘correct’, others will disagree with. There are basics, sure,
       but the scope is far too huge for me to cover here. Throughout, I will be
       giving some common misconceptions and easy mistakes, but in all likelihood
-      your grammar is not going to be perfect…\r
+      your grammar is not going to be perfect…
+
+
+      \r
 
       and that is fine! Anyone that tells you they have perfect grammar is
       lying or trying far harder than they need to be. I definitely make
@@ -295,6 +300,7 @@ tabs:
       the meaning to be clear - “good grammar” comes second to that. In
       addition, being overly formal and having perfect grammar is going to make
       the products feel unapproachable and inhuman.\r
+
 
       Controversial opinion, I know, especially from a copywriter, but our
       goal here is to make language accessible, understandable, consistent, and
@@ -346,7 +352,10 @@ tabs:
       submit” doesn't require a please, but “Your changes haven't been saved
       yet. Please press the save button before leaving the page.” should. This
       can lead to some dodgy sentence structures, so refer to the expandable
-      note below for guidance. \r
+      note below for guidance.\ 
+
+
+      \r
 
       Similarly - we should thank a user for their time! When appropriate.
       Thanking them for every single step they take within our products will get
@@ -392,7 +401,10 @@ tabs:
       Example 2 should actually read “Press submit, please”. But - imagine
       that in a modal? Imagine it without a full-stop. Example 1 works fine as a
       message without a full-stop, but “Press submit, please” looks very strange
-      without a full-stop.\r
+      without a full-stop.
+
+
+      \r
 
       This is a problem that is extremely context-sensitive, and the
       answer to most of the problems that arise is “it works fine with the
@@ -416,6 +428,7 @@ tabs:
       what is happening under the hood of the product. Complex concepts need to
       be broken down into their simplest parts. \r
 
+
       The copy in our products needs to be **clear** and **concise**.
       Users use our product to cut down on time so they can do their job more
       efficiently. We are helping them solve a business need - we should strive
@@ -424,12 +437,16 @@ tabs:
       are doing our job badly. Often this comes about from us (as the creators
       of a product) becoming supremely familiar with workflows and steps taken
       to achieving a process - the user does not care how it happens, they just
-      care about the result.\r
+      care about the result.
+
+
+      \r
 
       Unnecessary detail needs to be stripped out of messaging. Take the
       above example: if a user wants to book an absence, they want to book an
       absence. They don't want to submit an absence request. Call a spade a
       spade, not a utensil for moving soil.\r
+
 
       Context also plays a role in this. Sometimes, we provide much more
       detail than is necessary. Surprisingly, we can give our users some credit
@@ -440,7 +457,10 @@ tabs:
       has been successfully submitted”. A simple “Timesheet has been
       successfully submitted.” will suffice - the user knows that they have just
       been filling out a timesheet for Person X in Week Y, they do not need to
-      be reminded.\r
+      be reminded.
+
+
+      \r
 
       **However**, accuracy is also important. Do not skip over important
       elements of a message because it is quicker to not mention them. But, be
@@ -463,6 +483,7 @@ tabs:
       copy. When you are creating your system messages, you must consider who
       will be reading them. \r
 
+
       Professionals in different industries will have different
       expectations of the software they are using, in particular around things
       like formality and complexity. Copy should be catered to these individuals
@@ -475,6 +496,7 @@ tabs:
       writing copy you should be aware that different users have different
       needs. This will be mostly achieved by how you approach **Jargon** within
       the products.\r
+
 
       **Jargon** is a series of words that are associated with a niche
       community of people - for example, those interested in a particular hobby
@@ -503,6 +525,7 @@ tabs:
       that a professional in that sector can be expected to know - as long as
       that professional is the expected user of the product. If this is
       ambiguous, then we need to take care in how we use jargon. \r
+
 
       Take, for example, a fictional product that allows an employee of a
       company to record their worked hours into a timesheet, and gives them an
@@ -535,6 +558,7 @@ tabs:
       products, as it is ubiquitous language among our colleagues - but, our
       users (probably) are not well-versed in this kind of terminology. \r
 
+
       It is absolutely best to avoid technical jargon wherever possible. A
       message that says something like ‘the function was unsuccessful due to
       this technical error’ will mean little to a regular user, but ‘We could
@@ -546,7 +570,3 @@ tabs:
       an incomprehensible mess of technical detail, and having no idea what they
       are looking at - this would discourage them from using the product. \r\n"
 ---
-
-
-
-
