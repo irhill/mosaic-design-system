@@ -45,7 +45,10 @@ tabs:
       Speaking to a close family member will definitely be different to speaking
       to a colleague (I hope). It also changes depending on the situation at
       hand – your tone will immediately change in an emergency. The same goes
-      for a product.\r
+      for a product. Reminding a user than they need to fill a mandatory field
+      when submitting a form will have a vastly different tone to telling them
+      that the system has encountered a critical error and they need to phone
+      support immediately.\r
 
 
       <hr>
@@ -95,7 +98,7 @@ tabs:
 
       Our users are the experts, but so are we. Our products should
       inspire confidence in our users – we know what we're doing. Language
-      should be appropriate for the task at hand, especially if when it comes to
+      should be appropriate for the task at hand, especially when it comes to
       sector-specific knowledge, and it should show the users that they can
       trust us to do the job right. Be confident. Be assertive. Make it clear we
       know what we're doing. But never be aggressive or smug.
