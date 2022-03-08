@@ -34,16 +34,18 @@
     <a class="mds-skip-to" href="#maincontent">Skip to main content</a>
     <a class="mds-skip-to" href="#navigation">Skip to navigation</a>
 
-    <header class="[ mcc-navigation-header ] [  mu-top-0 ]" aria-label="Advanced Product" role="banner">
+    <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
 
       <button class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ] [ mu-d-lg-none ]" onclick="toggleSiteNavDrawer()">
         <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
         <span>Toggle drawer</span>
       </button>
+
+      <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold">MDS</span>
       
       <div class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
         <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-        <span class="mu-fw-semi-bold">Mosaic Design System</span></span>
+        <span class="mu-fw-semi-bold">Mosaic Design System</span>
       </div>
 
       <nav class="mcc-navigation-header__global">
@@ -57,11 +59,12 @@
 
       <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         <div class="mu-d-flex mu-flex-column">
-          <div class="mu-d-flex mu-d-lg-none mu-align-items-center mu-mt-06 mu-mx-03 mu-px-05">
-            <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-            <span class="mu-fw-semi-bold">MDS</span></span>
+          
+          <div class="[ mds-site-name ] [ mu-d-flex mu-d-lg-none mu-align-items-center mu-px-06 mu-border-bottom  ]">
+            <span class="[ mds-site-name-logo ] [ mu-d-flex mu-align-items-center mu-mr-04 ]">{% include "./partials/logo.njk" %}</span>
+            <span class="mu-fw-semi-bold">MDS</span>
           </div>
-
+          
           {% include "./navigation/navigation.njk" %}
         </div>
       </mcc-drawer>
@@ -70,7 +73,7 @@
 
         <main>
 
-          <article>
+          <article class="mds-article-grid">
 
             <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
               <div class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
