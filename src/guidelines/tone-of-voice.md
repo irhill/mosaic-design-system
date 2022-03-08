@@ -1,7 +1,157 @@
 ---
 title: Tone of Voice
 order: 30
+tabs:
+  - title: Product Voice
+    body: "## Introduction
+
+
+      This guide is designed to provide guidance on how copy should be
+      written in the absence of a specifically provided message. On this tab,
+      you will find the outlines for our products' **voice** and **tone** – a
+      consistent style of messaging across our product suite. Use it as a
+      playbook when you're writing copy in the products, and let it serve as
+      inspiration to keep things consistent.
+
+      \r
+
+      This is **not** a guide on how to write an e-mail to a customer -
+      this guide should purely be used for messaging within one of our products.
+      Our “brand” identity is similar to the identity we have within the
+      products, but they are not identical.
+
+
+      \r
+
+      ### What's the difference between voice and tone?
+
+
+      **Voice** and **Tone** are two very similar concepts, and are
+      intrinsically linked. There are some subtle differences, though.
+
+      \r
+
+      The **Voice** of a products are what it says. Much like you have
+      your own way of putting things, Mosaic also has its own way of putting
+      things. It's the difference between saying \"Hi\", and saying
+      \"Salutations\". \"Indeed\" or \"Agreed\". \"Woke\" or \"Socially
+      conscious\".\ 
+
+      \r
+
+      The **Tone** of our product is similar to the **Voice**, but there
+      are some key differences. You have your own personal voice, and your voice
+      doesn't change – but, depending on the situation, your tone will change.
+      Speaking to a close family member will definitely be different to speaking
+      to a colleague (I hope). It also changes depending on the situation at
+      hand – your tone will immediately change in an emergency. The same goes
+      for a product.\r
+
+
+      <hr>
+
+
+      ## The Voice of Mosaic
+
+
+      Our voice is **human** but **professional**. We don’t want to treat
+      our users like unfamiliar strangers and bark orders at them, but being too
+      casual is just as bad. Our products saying: “Ah, saved that for you mate,
+      no problem!” comes across as far too casual, but equally, “You must save
+      this form.” is incredibly unfriendly. Users of Mosaic products should
+      enjoy the experience, feel welcome, and have a **human** interaction – and
+      also feel confident that their business needs are being treated with care
+      and due diligence. Our products are expert solutions from a trusted
+      source. We aren't just professionals: we are the professionals.
+
+      \r
+
+      But… What does this actually mean? When writing copy, you should
+      strive to make it…
+
+      * **Focused**
+
+
+      We play an important role in our users' work. The user has come to
+      us to solve a problem, and we chose our words carefully to do that
+      quickly, and efficiently. We simplify things as much as possible, and
+      don't waste time over-complicating things that simply don't need it.
+
+
+      * **Genuine**
+
+
+      Our users are people with a need, not clients. We don't have to keep
+      them at arm's length, or maintain a business-like persona, or treat every
+      interaction as a transaction. We're not looking for validation or seeking
+      to impress. Our products have a collaborative relationship with our users
+      – do away with pretence and get on with the job at hand. We don't worry
+      about looking smart or keeping up appearances – we get to the point and
+      say what we mean.
+
+
+      * **Insightful**
+
+
+      Our users are the experts, but so are we. Our products should
+      inspire confidence in our users – we know what we're doing. Language
+      should be appropriate for the task at hand, especially if when it comes to
+      sector-specific knowledge, and it should show the users that they can
+      trust us to do the job right. Be confident. Be assertive. Make it clear we
+      know what we're doing. But never be aggressive or smug.
+
+
+      <hr>
+
+
+      ## The Tone of Mosaic
+
+
+      Mosaic's tone is largely **friendly** and **encouraging**. We know
+      that our products are used in hectic and important work environments, so
+      we strive to put the user at ease. We use an everyday conversational tone
+      in our products to achieve this. We are helpful, encouraging, and are
+      there to support the user in every step of the way.
+
+
+      * **Encouraging**
+
+
+      Not all of our users are confident with tech. Nor will they always
+      be 100% certain about how to complete a job. Some might even have no idea
+      what they're looking for. That's fine – we're here to show them, and
+      reassure them they're on the right track. Our tone reassures the user, and
+      encourages them to make decisions with confidence. We might even
+      occasionally pat them on the back for a job well done.\ 
+
+
+      * **Approachable**
+
+
+      Users should never feel alienated by our products. The language
+      should be simple to understand, and everything should always be clear. We
+      shouldn't worry them, or admonish them for doing something a wrong. Our
+      products should guide them down the right path with a gentle hand, and
+      encourage them to feel relaxed and at ease.
+
+
+
+      <li>**Personable**<li>
+
+
+
+      Finally, our voice is friendly. Our products are a collaborator, not
+      a service. Our relationship is not business-to-business, it's
+      person-to-person. A user should never feel like they are interacting with
+      a machine, they should instead feel like they're working on a project with
+      a co-worker.
+
+      \r"
 ---
+
+
+
+
 <details class="mcc-accordion mcc-card mcc-card--high-emphasis">
   <summary>
     <span class="mcc-accordion__label">Obviously I'm not going to use slang! ...Right?</span>
