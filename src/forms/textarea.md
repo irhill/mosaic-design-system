@@ -16,7 +16,7 @@ tabs:
 code:
   example:
   body: >-
-    ### Live demo
+    ## Live demo
 
     Below, you can find a live demo for a Textarea component. Use the drop-down menus and radio buttons to view the different Textarea Types and Variants.
   preview:

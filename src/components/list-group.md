@@ -18,7 +18,7 @@ tabs:
 code:
   example: <button class="mcc-button">Button text</button>
   body: >-
-    ### Live demo
+    ## Live demo
 
 
     Below, you can find a live demo for a List Group component. Use the drop-down menus and radio buttons to view the different List Group Types and Variants.

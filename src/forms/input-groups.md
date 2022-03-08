@@ -16,7 +16,7 @@ tabs:
 code:
   example:
   body: >-
-    ### Live demo
+    ## Live demo
 
     Below, you can find a live demo for an Input group component. Use the drop-down menus and radio buttons to view the different Input group Types and Variants.
   preview:
