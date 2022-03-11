@@ -56,63 +56,73 @@
 
             <form class="[ mu-mb-05 ]">
               <fieldset class="mfc-fieldset">
-
+                <legend class="mu-mb-05">Modifiers</legend>
+  
                 {% for modifier in variant.modifiers %}
                   
-
                   {% if modifier.type === 'class' and modifier.classes | length %}
                     
-                    <legend>{{ modifier.name }}</legend>
                     {% if modifier.classes | length === 1 %}
+                      
                       {% set class = modifier.classes[0] %}
-                      <div class="mfc-checkbox-wrapper">
-                        <input
-                          id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
-                          name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
-                          class="mfc-switch"
-                          type="checkbox"
-                          onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
-                          data-type="class"
-                          data-selector="{{ modifier.selector }}"
-                          data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
-                          data-value={{ class.value }}>
+
+                      <div class="mu-mb-05">
+                        <label class="mu-mb-02" for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">{{ modifier.name }}</label>
+                        <div class="mfc-checkbox-wrapper">
+                          <input
+                            id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                            name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                            class="mfc-switch"
+                            type="checkbox"
+                            onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                            data-type="class"
+                            data-selector="{{ modifier.selector }}"
+                            data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                            data-value={{ class.value }}>
+                        </div>
                       </div>
 
                     {% else %}
                       
-                      {% for class in modifier.classes  %}
-                        
-                        <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
-                          <input
-                            id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
-                            name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
-                            type="radio"
-                            onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
-                            data-default={{ 'true' if class.default else 'false' }}
-                            data-selector="{{ modifier.selector }}"
-                            data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
-                            data-value={{ class.value }}>
-                          <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
-                            {{ class.name }}
-                          </label>
-                        </div>
-                      {% endfor %} <!-- class in modifier.classes -->
+                      <fieldset class="mfc-fieldset mu-mb-02">
+                        <legend class="mu-fw-medium">{{ modifier.name }}</legend>
+                        {% for class in modifier.classes  %}
+                          
+                          <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
+                            <input
+                              id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
+                              name="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}"
+                              type="radio"
+                              onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                              data-default={{ 'true' if class.default else 'false' }}
+                              data-selector="{{ modifier.selector }}"
+                              data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                              data-value={{ class.value }}>
+                            <label for="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}">
+                              {{ class.name }}
+                            </label>
+                          </div>
+                        {% endfor %} <!-- class in modifier.classes -->
+                      </fieldset>
+                      
                     {% endif %}
 
                   {% elif modifier.type === 'attribute' %}
-                    {% set attribute = modifier.attribute %}
-                    <label for="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}">{{ modifier.name }}</label>
-                    <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
-                      <input
-                        id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
-                        name="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
-                        class="mfc-switch"
-                        type="checkbox"
-                        onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
-                        data-type="attribute"
-                        data-selector="{{ modifier.selector }}"
-                        data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
-                        data-attribute-details={{ attribute | stringify_filter }}>
+                    <div class="mu-mb-05">
+                      {% set attribute = modifier.attribute %}
+                      <label class="mu-mb-02" for="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}">{{ modifier.name }}</label>
+                      <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
+                        <input
+                          id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                          name="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"
+                          class="mfc-switch"
+                          type="checkbox"
+                          onchange="modifyVariant({{ variant.template.code | stringify_filter }})"
+                          data-type="attribute"
+                          data-selector="{{ modifier.selector }}"
+                          data-multiple={{ 'true' if modifier.select_multiple else 'false' }}
+                          data-attribute-details={{ attribute | stringify_filter }}>
+                      </div>
                     </div>
 
                   {% else %}
