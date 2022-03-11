@@ -24,7 +24,7 @@ html {
     top: var(--navigation-header-height);
     min-height: calc(100vh - var(--navigation-header-height)) !important;
     height: calc(100vh - var(--navigation-header-height)) !important;
-  }  
+  }
 }
 
 /* drawer frame  */
@@ -46,6 +46,7 @@ html {
 .mds-site-name {
   height: var(--navigation-header-height);
 }
+
 .mds-site-name-logo svg {
   height: 24px;
 }
@@ -68,23 +69,29 @@ html {
 .mds-content-chunk :is(hr, pre, table, .mcc-alert) {
   max-width: 48rem;
 }
+
 .mds-content-chunk :is(p, ul, ol, .mcc-accordion) {
-  max-width: 42rem
+  max-width: 42rem;
 }
 
 /* content chunk spacing */
 .mds-content-chunk > * + * {
-  margin-top: var(--content-chunk-space, 1rem)
+  margin-top: var(--content-chunk-space, 1rem);
 }
+
 .mds-content-chunk :is(h2:not(:first-of-type), h3, .mds-component-preview, pre, table, blockquote) {
   --content-chunk-space: var(--spacing-09);
 }
+
 .mds-content-chunk hr {
   --content-chunk-space: var(--spacing-09);
+
   margin: var(--content-chunk-space) 0;
 }
+
 .mds-content-chunk > .mcc-accordion {
   --content-chunk-space: var(--spacing-08);
+
   margin: var(--content-chunk-space) 0;
 }
 
@@ -97,4 +104,3 @@ html {
 .mds-component-preview__container {
   grid-template-columns: 1fr minmax(0, max-content);
 }
-
