@@ -1,5 +1,5 @@
-/* tessera media queries */
-/* 
+/*
+  tessera breakpoints:
   xs: 0
   sm: 576px
   md: 768px
@@ -10,82 +10,13 @@
 */
 
 :root {
-  --mcc-drawer-offset: 160px;
-}
-
-
-
-/* table of contents
-.toc ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  margin-bottom: 64px;
-} */
-
-/* content chunk width */
-.temp-content-chunk :is(hr, pre, table, .mcc-alert) {
-  max-width: 48rem;
-}
-.temp-content-chunk :is(p, ul, ol, .mcc-accordion) {
-  max-width: 42rem
-}
-
-/* content chunk spacing */
-.temp-content-chunk > * + * {
-  margin-top: var(--content-chunk-space, 1rem)
-}
-.temp-content-chunk :is(h2:not(:first-of-type), h3, .mds-component-preview, pre, table, blockquote) {
-  --content-chunk-space: 48px;
-}
-.temp-content-chunk hr {
-  --content-chunk-space: 48px;
-  margin: var(--content-chunk-space) 0;
-}
-.temp-content-chunk > .mcc-accordion {
-  --content-chunk-space: 40px;
-  margin: var(--content-chunk-space) 0;
-}
-
-/* content chunk anchor links */
-.direct-link {
-  color: var(--ui-05);
-  visibility: hidden;
-}
-:focus > a[href].direct-link,
-:focus > a[href].direct-link:visited,
-:hover > a[href].direct-link,
-:hover > a[href].direct-link:visited,
-a[href].direct-link:focus,
-a[href].direct-link:focus:visited {
-  visibility: visible;
+  --mcc-content-offset: 160px;
 }
 
 /* scroll position */
 html {
   scroll-padding-top: calc(var(--navigation-header-height) + 2rem);
 }
-
-/* component preview */
-.mds-component-preview {
-  min-height: 560px;
-  margin-top: 48px;
-}
-
-/* container */
-.temp-container {
-  width: 100%;
-  max-width: 1120px;
-  margin: 0 auto;
-}
-
-@media (min-width: 1920px) {
-  .temp-container {
-    max-width: 1300px;
-    margin: 0 0 0 var(--mcc-drawer-offset);
-  }
-}
-
 
 /* drawer offset */
 @media (min-width: 993px) {
@@ -96,62 +27,74 @@ html {
   }  
 }
 
-
-
-/* nav drawer frame offset */
-.mcc-drawer-frame.mds-drawer-frame--nav-header-adjust {
+/* drawer frame  */
+.mcc-drawer-frame.mcc-drawer-frame--nav-header-adjust {
   padding-top: var(--navigation-header-height);
-  /* height: calc(100vh - var(--navigation-header-height)); */
 }
 
-.mcc-drawer-app-content {
-  height: calc(100vh - var(--navigation-header-height));
-}
-
-/* .mcc-drawer-app-content > main {
-  display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  width: 100%;
-} */
-
-.mds-site-name-logo svg {
-  height: 24px;
-}
-
-
-
-
-
-/* temp */
-/* .mcc-navigation-header {
-  left: 0;
-  position: fixed;
-  right: 0;
-} */
-
-/* @media (min-width: 768px) and (max-width: 1279px ) {
-  .mcc-navigation-header {
-    padding: 8px 12px;
-  }
-} */
-
-.mds-site-name {
-  height: var(--navigation-header-height);
-}
-
-.mcc-drawer-app-content {
+/* app content position  */
+.mcc-drawer-app-content.mcc-drawer-app-content--nav-header-adjust {
   min-height: 100%;
   height: calc(100vh - var(--navigation-header-height));
   display: grid;
   grid-template-rows: 1fr auto;
   grid-template-columns: 100%;
+  overflow: unset;
 }
 
-.variant-container {
+/* site site and logo */
+.mds-site-name {
+  height: var(--navigation-header-height);
+}
+.mds-site-name-logo svg {
+  height: 24px;
+}
+
+/* container */
+.mds-container {
+  width: 100%;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1920px) {
+  .mds-container {
+    max-width: 1300px;
+    margin: 0 0 0 var(--mcc-content-offset);
+  }
+}
+
+/* content chunk width */
+.mds-content-chunk :is(hr, pre, table, .mcc-alert) {
+  max-width: 48rem;
+}
+.mds-content-chunk :is(p, ul, ol, .mcc-accordion) {
+  max-width: 42rem
+}
+
+/* content chunk spacing */
+.mds-content-chunk > * + * {
+  margin-top: var(--content-chunk-space, 1rem)
+}
+.mds-content-chunk :is(h2:not(:first-of-type), h3, .mds-component-preview, pre, table, blockquote) {
+  --content-chunk-space: var(--spacing-09);
+}
+.mds-content-chunk hr {
+  --content-chunk-space: var(--spacing-09);
+  margin: var(--content-chunk-space) 0;
+}
+.mds-content-chunk > .mcc-accordion {
+  --content-chunk-space: var(--spacing-08);
+  margin: var(--content-chunk-space) 0;
+}
+
+/* component preview */
+.mds-component-preview {
+  min-height: 560px;
+  margin-top: var(--spacing-09);
+}
+
+.mds-component-preview__container {
   grid-template-columns: 1fr minmax(0, max-content);
 }
 
-.mcc-drawer-app-content {
-  overflow: unset;
-}

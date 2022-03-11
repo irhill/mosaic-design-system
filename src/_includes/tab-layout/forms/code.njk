@@ -6,7 +6,7 @@
   {{ js | safe }}
 </script>
 
-<div class="temp-content-chunk">
+<div class="mds-content-chunk">
   {% if storybook %}
     <div class="[ mcc-alert mcc-alert--info ] [ mu-mb-09 ]" role="alert">
       <p class="mu-mb-00">For additional examples and API documentation, see <a href="{{ storybook }}" target="_blank">Storybook</a></p>
@@ -16,7 +16,7 @@
 
 <!-- code content -->
 {% if code.body %}
-  <div class="temp-content-chunk">{{ code.body | markdownify | safe }}</div>
+  <div class="mds-content-chunk">{{ code.body | markdownify | safe }}</div>
 {% endif %}
 
 <!-- container for displaying component preview with variants etc.. -->
@@ -44,24 +44,25 @@
   </div>
 
   {% for variant in code.preview.variants %}
-    <div id="{{ variant.name | snake_case_filter }}" class="[ mcc-card__body ] [ variant-container ] [ mu-d-none ]" style="gap: 2rem;">
+    <div id="{{ variant.name | snake_case_filter }}" class="[ mcc-card__body ] [ js-variant-container ] [ mu-d-none ] [ mds-component-preview__container ]">
       <!-- preview panel for displaying component -->
-      <div class="[ mcc-card ] [ variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]">
+      <div class="[ mcc-card ] [ js-variant-template ] [ mu-flex-grow-1 ] [ mu-d-flex mu-justify-content-center mu-align-items-center ] [ mu-p-08 ]">
         {{ variant.template.code | safe }}
       </div>
 
       {% if variant.modifiers | length %}
         <!-- options panel for switching modifiers -->
-        <div class="variant-modifiers" style="width: 240px;">
+        <div class="variant-modifiers mu-d-none mu-d-xl-block mu-ml-07" style="width: 240px;">
 
             <form class="[ mu-mb-05 ]">
               <fieldset class="mfc-fieldset">
 
                 {% for modifier in variant.modifiers %}
-                  <legend>{{ modifier.name }}</legend>
+                  
 
                   {% if modifier.type === 'class' and modifier.classes | length %}
-
+                    
+                    <legend>{{ modifier.name }}</legend>
                     {% if modifier.classes | length === 1 %}
                       {% set class = modifier.classes[0] %}
                       <div class="mfc-checkbox-wrapper">
@@ -78,7 +79,9 @@
                       </div>
 
                     {% else %}
+                      
                       {% for class in modifier.classes  %}
+                        
                         <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
                           <input
                             id="{{ variant.name | snake_case_filter }}_{{ modifier.name | snake_case_filter }}_{{ class.name | snake_case_filter }}"
@@ -98,6 +101,7 @@
 
                   {% elif modifier.type === 'attribute' %}
                     {% set attribute = modifier.attribute %}
+                    <label for="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}">{{ modifier.name }}</label>
                     <div class="[ mfc-checkbox-wrapper ] [ mu-mb-03 ]">
                       <input
                         id="{{ variant.name | snake_case_filter }}_{{ attribute.name | snake_case_filter }}"

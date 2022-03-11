@@ -1,6 +1,6 @@
 const showVariant = variantName => {
   const id = variantName.toLowerCase().replace(/\s+/g, '_')
-  const variants = document.getElementsByClassName('variant-container')
+  const variants = document.getElementsByClassName('js-variant-container')
 
   // make sure all variants are hidden
   Array.from(variants).forEach(p => {
@@ -24,7 +24,7 @@ const showVariant = variantName => {
 
 const modifyVariant = (template) => {
   // get classes
-  const form = document.querySelector('div.variant-container:not(.mu-d-none) div.variant-modifiers form')
+  const form = document.querySelector('div.js-variant-container:not(.mu-d-none) div.variant-modifiers form')
   const classes = Array.from(form.querySelectorAll('input[type=radio]:checked')).map(input => {
     const { selector, multiple, value } = input.dataset
     return { selector, multiple, value }
@@ -44,7 +44,7 @@ const modifyVariant = (template) => {
   })
 
   // get handle container to and reset template
-  const container = document.querySelector('div.variant-container:not(.mu-d-none) div.variant-template')
+  const container = document.querySelector('div.js-variant-container:not(.mu-d-none) div.js-variant-template')
   container.innerHTML = template
 
   // apply classes
@@ -88,7 +88,7 @@ document.addEventListener('DOMContentLoaded', _ => {
   firstItem.click()
 
   // set initial state for each variant
-  const variants = document.querySelectorAll('div.variant-container')
+  const variants = document.querySelectorAll('div.js-variant-container')
   Array.from(variants).forEach(variant => {
     // set initial form values
     const form = variant.querySelector('div.variant-modifiers form')
@@ -103,7 +103,7 @@ document.addEventListener('DOMContentLoaded', _ => {
     })
 
     // modify the variant state
-    const container = variant.querySelector('div.variant-template')
+    const container = variant.querySelector('div.js-variant-template')
     classesToApply.filter(Boolean).forEach(c => {
       if (c.multiple) {
         const elems = container.querySelectorAll(c.selector)

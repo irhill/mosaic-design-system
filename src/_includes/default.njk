@@ -54,7 +54,7 @@
       </nav>
     </header>
 
-    <div class="[ mcc-drawer-frame ] [ mds-drawer-frame--nav-header-adjust ]">
+    <div class="[ mcc-drawer-frame ] [ mcc-drawer-frame--nav-header-adjust ]">
 
       <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         <div class="mu-d-flex mu-flex-column">
@@ -68,14 +68,14 @@
         </div>
       </mcc-drawer>
 
-      <div id="maincontent" class="mcc-drawer-app-content" tabindex="0">
+      <div id="maincontent" class="mcc-drawer-app-content mcc-drawer-app-content--nav-header-adjust" tabindex="0">
 
         <main>
 
           <article class="mds-article-grid">
 
             <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
-              <div class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+              <div class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
                 <div class="mu-py-07">
                   <h1 class="mu-display-heading-1 mu-mb-00">{{ title }}</h1>
                   {% if chips %}
@@ -92,8 +92,8 @@
             {% if tabs and tabs.length %}
               {% include "./tab-layout/tab-layout.njk" %}
             {% else %}
-              <section class="[ temp-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
-                <div class="temp-content-chunk">
+              <section class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
+                <div class="mds-content-chunk">
                   {% from "./table-of-contents/table-of-contents.njk" import generateToc %}
                   {{ generateToc(content) }}
                   {{ content | safe }}
@@ -106,7 +106,7 @@
               {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
               {% set next = collections.globalCollection | getNextCollectionItem(page) %}
 
-              <div class="[ temp-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
+              <div class="[ mds-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
                 <div class="mcc-button-group mcc-button-group--lg" role="group" aria-label="Navigation buttons">
                   {% if previous %}
                     <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">

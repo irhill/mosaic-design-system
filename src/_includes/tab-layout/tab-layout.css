@@ -5,7 +5,7 @@
   top: var(--navigation-header-height);
   padding-top: 1rem;
   background-color: var(--ui-02, #eeeef1);
-  z-index: 3012;
+  /* z-index: 3012; */
 }
 
 .mcc-tabs.mds-tabs > .mcc-tabs__tabs::before,
