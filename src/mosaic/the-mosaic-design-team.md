@@ -22,9 +22,9 @@ tabs: []
 | Jonathan Smith | Senior UX Designer |
 | Louise Foster | Head of Experience Design |
 | Nagamallesha Venkate Gowda | Front End Engineer |
-| Samuel Bright | UX Copywriter |
+| Sam Bright | UX Copywriter, Senior Legend |
 | Sindhu Pindi | Senior Development Manager |
 | Suvam Jaiswal | Front End Engineer |
-| Zoe Coultan | UX Designer, Accessibility Advocate |
+| Zoe Coultan-Noble | Senior UX Designer, Accessibility Advocate |
 
 
