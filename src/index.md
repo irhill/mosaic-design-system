@@ -4,6 +4,12 @@ title: Design System
 path: home
 ---
 
-<div>
-  <h1>Welcome to {{ title }}</h1>
-</div>
+<img class="hp-img" src="/assets/img/me.jpg" alt="Christian Baverstock">
+
+<style>
+
+  .hp-img {
+    width: 100%;
+    height: 100%
+  }
+</style>
