@@ -44,7 +44,7 @@
       
       <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
         <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-        <span class="mu-fw-semi-bold">Mosaic Design System</span>
+        <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
       </a>
 
       <nav class="mcc-navigation-header__global">
@@ -61,7 +61,7 @@
           
           <div class="[ mds-site-name ] [ mu-d-flex mu-d-lg-none mu-align-items-center mu-px-06 mu-border-bottom  ]">
             <span class="[ mds-site-name-logo ] [ mu-d-flex mu-align-items-center mu-mr-04 ]">{% include "./partials/logo.njk" %}</span>
-            <span class="mu-fw-semi-bold">MDS</span>
+            <span class="mu-fw-semi-bold mu-text-default">MDS</span>
           </div>
           
           {% include "./navigation/navigation.njk" %}
@@ -149,6 +149,8 @@
     </script>
 
     <script src="{% js "web-components.js" %}" type="module"></script>
+
+    <script src="{% js "theme-toggle.js" %}" type="module"></script>
 
 
     {% if path == "home" %}

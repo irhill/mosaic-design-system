@@ -40,11 +40,11 @@
         <span>Toggle drawer</span>
       </button>
 
-      <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold">MDS</span>
+      <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
       
       <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
         <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-        <span class="mu-fw-semi-bold">Mosaic Design System</span>
+        <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
       </a>
 
       <nav class="mcc-navigation-header__global">
@@ -70,23 +70,17 @@
 
       <div id="maincontent" class="mcc-drawer-app-content mcc-drawer-app-content--nav-header-adjust" tabindex="0">
 
-        <main>
+        <main class="mds-home-page-container">
 
-          <article>
+          <video id="home-page-video" src="/assets/img/1062047155-preview.mp4" class="mds-home-page-video" autoplay="" loop="" playsinline="" width="390" height="220"></video>
 
-            <header class="mu-px-00 mu-py-07 mu-mb-07">
-              <div class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-                <div class="mu-py-07">
-                  <h1 class="mu-display-heading-3 mu-mb-00">{{ title }}</h1>
-                </div>
-              </div>
-            </header>
-
-            <section class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
-              <div class="mds-content-chunk">
-                {{ content | safe }}
-              </div>
-            </section>
+          <section class="[ mds-container home-page-content ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-0 ]">
+            <div class="mds-content-chunk">
+              <h1 class="mu-display-heading-1 mu-mb-00">Mosaic<br>Design System</h1>
+              <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              {{ content | safe }}
+            </div>
+          </section>
 
           </article>
 
@@ -110,6 +104,8 @@
     </script>
 
     <script src="{% js "web-components.js" %}" type="module"></script>
+
+    <script src="{% js "theme-toggle.js" %}" type="module"></script>
 
 
     {% if path == "home" %}

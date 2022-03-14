@@ -104,3 +104,35 @@ html {
 .mds-component-preview__container {
   grid-template-columns: 1fr minmax(0, max-content);
 }
+
+/* home page */
+.mds-home-page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.mds-home-page-video {
+  display: block;
+  filter: saturate(2) hue-rotate(333deg);
+  inset: 0;
+  min-block-size: 100%;
+  min-inline-size: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: .3;
+  position: absolute;
+}
+
+.home-page-content {
+  position: relative;
+  z-index: 1;
+}
+
+@media (min-width: 1280px) {
+  .home-page-content {
+    padding: 120px;
+  }
+}
+

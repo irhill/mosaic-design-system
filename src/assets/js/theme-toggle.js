@@ -6,7 +6,10 @@ console.log(homePageVideo)
 function setDarkTheme () {
   toggleSwitch.classList.remove('light-theme-set')
   toggleSwitch.classList.add('dark-theme-set')
-  homePageVideo.setAttribute('src', '/assets/img/1031784596-preview.mp4')
+  if (homePageVideo) {
+    homePageVideo.setAttribute('src', '/assets/img/1031784596-preview.mp4')
+  }
+  
 }
 
 if (currentTheme) {
@@ -25,12 +28,19 @@ toggleSwitch.addEventListener('click', e => {
     document.documentElement.setAttribute('data-color-theme', 'dark')
     window.localStorage.setItem('theme', 'dark')
     toggleSwitch.classList.add('dark-theme-set')
-    homePageVideo.setAttribute('src', '/assets/img/1031784596-preview.mp4')
+
+    if (homePageVideo) {
+      homePageVideo.setAttribute('src', '/assets/img/1031784596-preview.mp4')
+    }
+    
 
   } else {
     document.documentElement.setAttribute('data-color-theme', 'light')
     window.localStorage.setItem('theme', 'light')
     toggleSwitch.classList.remove('dark-theme-set')
-    homePageVideo.setAttribute('src', '/assets/img/1062047155-preview.mp4')
+
+    if (homePageVideo) {
+      homePageVideo.setAttribute('src', '/assets/img/1062047155-preview.mp4')
+    }
   }
 })
