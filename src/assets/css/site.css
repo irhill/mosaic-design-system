@@ -132,7 +132,12 @@ html {
 
 @media (min-width: 1280px) {
   .home-page-content {
-    padding: 120px;
+    padding-top: 160px !important;
+    padding-bottom: 160px !important;
   }
 }
 
+.temp-cont {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}

@@ -7,19 +7,19 @@
     <meta name="theme-color" content="#1078cf">
 
     {% include "./partials/favicons.njk" %}
-  
+
     {% set css %}
-      {% include "../assets/css/mosaic-global.css" %}
-      {% include "../assets/css/core.css" %}
-      {% include "../assets/css/forms.css" %}
-      {% include "../assets/css/mosaic-utilities.css" %}
-      {% include "../assets/css/prism-okaidia.css" %}
-      {% include "../assets/css/site.css" %}
-      {% include "../assets/css/fonts.css" %}
+    {% include "../assets/css/mosaic-global.css" %}
+    {% include "../assets/css/core.css" %}
+    {% include "../assets/css/forms.css" %}
+    {% include "../assets/css/mosaic-utilities.css" %}
+    {% include "../assets/css/prism-okaidia.css" %}
+    {% include "../assets/css/site.css" %}
+    {% include "../assets/css/fonts.css" %}
     {% endset %}
 
     <style>
-      {{ css | cssmin | safe }}
+      {{css | cssmin | safe}}
     </style>
 
     <title>
@@ -41,7 +41,7 @@
       </button>
 
       <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
-      
+
       <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
         <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
         <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
@@ -58,12 +58,12 @@
 
       <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         <div class="mu-d-flex mu-flex-column">
-          
+
           <div class="[ mds-site-name ] [ mu-d-flex mu-d-lg-none mu-align-items-center mu-px-06 mu-border-bottom  ]">
             <span class="[ mds-site-name-logo ] [ mu-d-flex mu-align-items-center mu-mr-04 ]">{% include "./partials/logo.njk" %}</span>
             <span class="mu-fw-semi-bold">MDS</span>
           </div>
-          
+
           {% include "./navigation/navigation.njk" %}
         </div>
       </mcc-drawer>
@@ -82,37 +82,119 @@
             </div>
           </section>
 
-          </article>
+          
 
-        </main>
 
-        {% include "./partials/footer.njk" %}
-  
-      </div>
+
+      </main>
+
+      <div class="mu-border-top temp-cont">
+      <mcc-grid
+          class="[ mds-container  ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-0  ]"
+  grid-template-columns="1fr"
+  md-grid-template-columns="1fr 1fr 1fr"
+  grid-template-rows="1fr"
+  gap="var(--spacing-05)">
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+            <div class="mcc-card">
+              <div class="mcc-card__header">
+                <h2 class="mcc-card__title">Card title</h2>
+                <div class="mcc-card__subtitle">Sub title</div>
+              </div>
+              <div class="mcc-card__body">
+                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+        dolore magna aliquam erat volutpat.</p>
+              </div>
+            </div>
+
+          </mcc-grid>
+          </div>
+
+      {% include "./partials/footer.njk" %}
 
     </div>
 
-    {% include "./back-to-top/back-to-top.njk" %}
+  </div>
 
-    {% include "./search/search-dialog.njk" %}
+  {% include "./back-to-top/back-to-top.njk" %}
 
-    <script>
-      function toggleSiteNavDrawer () {
-        const drawer = document.getElementById('site-nav-drawer')
-        drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
-      }
-    </script>
+  {% include "./search/search-dialog.njk" %}
 
-    <script src="{% js "web-components.js" %}" type="module"></script>
+  <script>
+    function toggleSiteNavDrawer() {
+      const drawer = document.getElementById('site-nav-drawer')
+      drawer
+        .classList
+        .contains('mcc-drawer--open')
+          ? drawer.close()
+          : drawer.open()
+    }
+  </script>
 
-    <script src="{% js "theme-toggle.js" %}" type="module"></script>
+  <script src="{% js "web-components.js" %}" type="module"></script>
 
+  <script src="{% js "theme-toggle.js" %}" type="module"></script>
 
-    {% if path == "home" %}
-      <!-- Netlify Identity Widget -->
-      <!-- Needed only if you are using Netlify Identity feature -->
-      <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    {% endif %}
+  {% if path == "home" %}
+    <!-- Netlify Identity Widget -->
+    <!-- Needed only if you are using Netlify Identity feature -->
+    <script type="text/javascript" src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+  {% endif %}
 
-  </body>
+</body>
 </html>
