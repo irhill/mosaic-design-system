@@ -35,25 +35,27 @@
 
     <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
 
-      <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
-        <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-        <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-        <span>Toggle navigation drawer</span>
-      </button>
+      <nav class="mcc-navigation-header__nav" style="gap: 0.25rem;">
+        <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
+          <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+          <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+          <span>Toggle navigation drawer</span>
+        </button>
 
-      <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
+        <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
 
-      {# <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
-        <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-        <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-      </a> #}
+        {# <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
+          <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
+          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
+        </a> #}
 
-      <a href="/" class="[ mcc-navigation-header__button ] mu-ml-02 mu-d-none mu-d-lg-flex">
-        <span class="mds-site-name-logo mu-d-flex mu-align-items-center">{% include "./partials/logo.njk" %}</span>
-        <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-      </a>
+        <a href="/" class="[ mcc-navigation-header__button ] mu-d-none mu-d-lg-flex">
+          <span class="mds-site-name-logo mu-d-flex mu-align-items-center">{% include "./partials/logo.njk" %}</span>
+          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
+        </a>
+      </nav>
 
-      <nav class="mcc-navigation-header__global">
+      <nav class="mcc-navigation-header__global" style="gap: 0.5rem;">
         {% include "./search/search-button.njk" %}
         {% include "./theme-toggle/theme-toggle.njk" %}
         {% include "./switch-sites/switch-sites.njk" %}
@@ -108,9 +110,9 @@
                   <h2 class="mu-mb-05">Designers</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </div>
-                <button class="mcc-button mcc-button--outline mcc-button--sm">
+                <a href="/designing/get-started" class="mcc-button mcc-button--outline mcc-button--sm">
                   <span class="mcc-button__label">Start drawing</span>
-                </button>
+                </a>
               </div>
 
               <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08">
@@ -120,9 +122,9 @@
                   <h2 class="mu-mb-05">Developers</h2>
                   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
                 </div>
-                <button class="mcc-button mcc-button--outline mcc-button--sm">
+                <a href="/developing/get-started" class="mcc-button mcc-button--outline mcc-button--sm">
                   <span class="mcc-button__label">Start coding</span>
-                </button>
+                </a>
               </div>
 
               <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08">
@@ -138,6 +140,54 @@
               </div>
 
               
+
+            </mcc-grid>
+          </section>
+
+          <mcc-grid
+            grid-template-columns="1fr 1fr 1fr 1fr 1fr"
+            grid-template-rows="1fr"
+            class="mds-separator mu-radius-03 mu-overflow-hidden"
+            style="height: var(--spacing-03)">
+            <div class="mu-bg-primary"></div>
+            <div class="mu-bg-success"></div>
+            <div class="mu-bg-danger"></div>
+            <div class="mu-bg-warning"></div>
+            <div class="mu-bg-info"></div>
+          </mcc-grid>
+
+          <section class="[ mcc-container temppos ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 mu-py-xl-09 ]">
+            <mcc-grid
+              grid-template-columns="1fr"
+              xxl-grid-template-columns="1fr 1fr"
+              grid-template-rows="1fr"
+              style="gap: 2rem;">
+              
+              <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08 mu-d-flex mu-justify-content-between mu-h-100">
+                <div class="mu-d-flex mu-align-items-start mu-flex-column mu-flex-fill">
+                  <h2 class="mu-mb-03">Components</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <a href="/components/overview" class="mcc-button mcc-button--outline mcc-button--sm">
+                    <span class="mcc-button__label">View</span>
+                  </a>
+                </div>
+                <div class="mu-ml-07">
+                  <mcc-icon name="unit" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
+                </div>
+              </div>
+
+              <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08 mu-d-flex mu-justify-content-between mu-h-100">
+                <div class="mu-d-flex mu-align-items-start mu-flex-column mu-flex-fill">
+                  <h2 class="mu-mb-03">Patterns</h2>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                  <a href="/patterns/overview" class="mcc-button mcc-button--outline mcc-button--sm">
+                    <span class="mcc-button__label">View</span>
+                  </a>
+                </div>
+                <div class="mu-ml-07">
+                  <mcc-icon name="form" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
+                </div>
+              </div>
 
             </mcc-grid>
           </section>

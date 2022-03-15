@@ -151,3 +151,9 @@ html {
 #drawer-toggle:not(.drawer-is-closed) mcc-icon:nth-child(2) {
   display: none;
 }
+
+.mds-separator {
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
+}
