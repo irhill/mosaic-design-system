@@ -35,9 +35,10 @@
 
     <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
 
-      <button class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ] [ mu-d-lg-none ]" onclick="toggleSiteNavDrawer()">
-        <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
-        <span>Toggle drawer</span>
+      <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
+        <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+        <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+        <span>Toggle navigation drawer</span>
       </button>
 
       <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold">MDS</span>
@@ -141,17 +142,9 @@
 
     {% include "./search/search-dialog.njk" %}
 
-    <script>
-      function toggleSiteNavDrawer () {
-        const drawer = document.getElementById('site-nav-drawer')
-        drawer.classList.contains('mcc-drawer--open') ? drawer.close() : drawer.open()
-      }
-    </script>
-
-    <script src="{% js "web-components.js" %}" type="module"></script>
-
+    <script src="{% js "drawer-states.js" %}" type="module"></script>
     <script src="{% js "theme-toggle.js" %}" type="module"></script>
-
+    <script src="{% js "web-components.js" %}" type="module"></script>
 
     {% if path == "home" %}
       <!-- Netlify Identity Widget -->

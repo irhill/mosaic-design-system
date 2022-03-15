@@ -11,7 +11,7 @@
     "debug": "set DEBUG=* & eleventy",
     "prebuild": "node ./scripts/build-search-index.js",
     "build": "rimraf _site && cross-env NODE_ENV=production eleventy",
-    "browsersync": "browser-sync start --server '_site' --files '_site' --port $PORT --no-notify --no-open",
+    "browsersync": "browser-sync start --server '_site' --files '_site' --port 8080 --no-notify --no-open",
     "local-backend": "npx netlify-cms-proxy-server"
   },
   "dependencies": {

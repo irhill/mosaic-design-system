@@ -32,8 +32,6 @@ toggleSwitch.addEventListener('click', e => {
     if (homePageVideo) {
       homePageVideo.setAttribute('src', '/assets/img/1031784596-preview.mp4')
     }
-    
-
   } else {
     document.documentElement.setAttribute('data-color-theme', 'light')
     window.localStorage.setItem('theme', 'light')

@@ -29,15 +29,16 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body>
+  <body class="is-home">
 
     {% include "./skip-to/skip-to.njk" %}
 
     <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
 
-      <button class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ] [ mu-d-lg-none ]" onclick="toggleSiteNavDrawer()">
-        <mcc-icon name="menu" aria-hidden="true"></mcc-icon>
-        <span>Toggle drawer</span>
+      <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
+        <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+        <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
+        <span>Toggle navigation drawer</span>
       </button>
 
       <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
@@ -56,7 +57,7 @@
 
     <div class="[ mcc-drawer-frame ] [ mcc-drawer-frame--nav-header-adjust ]">
 
-      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
+      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--closed ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         <div class="mu-d-flex mu-flex-column">
 
           <div class="[ mds-site-name ] [ mu-d-flex mu-d-lg-none mu-align-items-center mu-px-06 mu-border-bottom  ]">
@@ -78,7 +79,15 @@
             <div class="mds-content-chunk">
               <h1 class="mu-display-heading-1 mu-mb-00">Mosaic<br>Design System</h1>
               <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              {{ content | safe }}
+              <div class="mcc-button-group mcc-button-group--spaced" role="group" aria-label="Spaced example">
+                <button class="mcc-button mcc-button--lg mcc-button--primary mu-mt-07" type="button">
+                  <span class="mcc-button__label">Get started</span>
+                </button>
+                <button class="mcc-button mcc-button--lg mcc-button--outline mcc-button--icon-only mu-mt-07" type="button">
+                  <mcc-icon name="github" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
+                  <span class="mcc-button__label">Find us on gitHub</span>
+                </button>
+              </div>
             </div>
           </section>
 
@@ -89,80 +98,80 @@
       </main>
 
       <div class="mu-border-top temp-cont">
-      <mcc-grid
+        <mcc-grid
           class="[ mds-container  ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-0  ]"
-  grid-template-columns="1fr"
-  md-grid-template-columns="1fr 1fr 1fr"
-  grid-template-rows="1fr"
-  gap="var(--spacing-05)">
+          grid-template-columns="1fr"
+          md-grid-template-columns="1fr 1fr 1fr"
+          grid-template-rows="1fr"
+          gap="var(--spacing-05)">
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-            <div class="mcc-card">
-              <div class="mcc-card__header">
-                <h2 class="mcc-card__title">Card title</h2>
-                <div class="mcc-card__subtitle">Sub title</div>
+              <div class="mcc-card">
+                <div class="mcc-card__header">
+                  <h2 class="mcc-card__title">Card title</h2>
+                  <div class="mcc-card__subtitle">Sub title</div>
+                </div>
+                <div class="mcc-card__body">
+                  <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
+          dolore magna aliquam erat volutpat.</p>
+                </div>
               </div>
-              <div class="mcc-card__body">
-                <p class="mu-mb-00">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet
-        dolore magna aliquam erat volutpat.</p>
-              </div>
-            </div>
 
-          </mcc-grid>
+            </mcc-grid>
           </div>
 
       {% include "./partials/footer.njk" %}
@@ -175,20 +184,9 @@
 
   {% include "./search/search-dialog.njk" %}
 
-  <script>
-    function toggleSiteNavDrawer() {
-      const drawer = document.getElementById('site-nav-drawer')
-      drawer
-        .classList
-        .contains('mcc-drawer--open')
-          ? drawer.close()
-          : drawer.open()
-    }
-  </script>
-
-  <script src="{% js "web-components.js" %}" type="module"></script>
-
+  <script src="{% js "drawer-states.js" %}" type="module"></script>
   <script src="{% js "theme-toggle.js" %}" type="module"></script>
+  <script src="{% js "web-components.js" %}" type="module"></script>
 
   {% if path == "home" %}
     <!-- Netlify Identity Widget -->

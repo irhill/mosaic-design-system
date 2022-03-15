@@ -31,34 +31,3 @@ document.addEventListener('DOMContentLoaded', _ => {
   setScrollPosition()
   highlightCurrentPage()
 })
-
-// Change drawer type to dismissible on desktop
-const navDrawer = document.getElementById('site-nav-drawer')
-const desktop = window.matchMedia('(min-width: 992px)')
-if (desktop.matches) {
-  navDrawer.setAttribute('type', 'dismissible')
-  navDrawer.classList.add('mcc-drawer--open')
-  navDrawer.classList.remove('mcc-drawer--closed')
-}
-
-// Change drawer type to modal on desktop
-const mobile = window.matchMedia('(max-width: 992px)')
-if (mobile.matches) {
-  navDrawer.setAttribute('type', 'modal')
-  navDrawer.classList.remove('mcc-drawer--open')
-  navDrawer.classList.add('mcc-drawer--closed')
-}
-
-// Toggle drawer type based on window size
-window.addEventListener('resize', function() {
-  const navDrawer = document.getElementById('site-nav-drawer')
-  if (window.innerWidth > 992) {
-    navDrawer.setAttribute('type', 'dismissible')
-    navDrawer.classList.add('mcc-drawer--open')
-    navDrawer.classList.remove('mcc-drawer--closed')
-  } else if (window.innerWidth < 992) {
-    navDrawer.setAttribute('type', 'modal')
-    navDrawer.classList.remove('mcc-drawer--open')
-    navDrawer.classList.add('mcc-drawer--closed')
-  }
-})

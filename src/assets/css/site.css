@@ -141,3 +141,11 @@ html {
   padding-top: 80px !important;
   padding-bottom: 80px !important;
 }
+
+#drawer-toggle.drawer-is-closed mcc-icon:nth-child(1) {
+  display: none;
+}
+
+#drawer-toggle:not(.drawer-is-closed) mcc-icon:nth-child(2) {
+  display: none;
+}
