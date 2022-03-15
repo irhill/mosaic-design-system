@@ -138,7 +138,8 @@ html {
   }
 }
 
-.temp-cont {
+.temp-cont,
+.temppos {
   padding-top: 80px !important;
   padding-bottom: 80px !important;
 }
