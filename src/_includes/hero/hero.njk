@@ -1,0 +1,17 @@
+<canvas class='connecting-dots'></canvas>
+
+{% set css %}
+  {% include "./hero.css" %}
+{% endset %}
+
+<style>
+  {{ css | cssmin | safe }}
+</style>
+
+{% set js %}
+  {% include "./hero.js" %}
+{% endset %}
+
+<script>
+  {{ js | jsmin | safe }}
+</script>
