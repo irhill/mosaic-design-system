@@ -1,5 +1,6 @@
 ---
 title: Dialog
+toc: true
 navigation: button
 chips:
   - HTML/CSS

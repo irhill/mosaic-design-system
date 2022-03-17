@@ -1,5 +1,6 @@
 ---
 title: Tile
+toc: true
 navigation: button
 chips:
   - HTML/CSS

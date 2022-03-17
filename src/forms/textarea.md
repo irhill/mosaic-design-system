@@ -1,5 +1,6 @@
 ---
 title: Textarea
+toc: true
 chips:
   - HTML/CSS
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-textarea-examples--default-story

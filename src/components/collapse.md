@@ -1,5 +1,6 @@
 ---
 title: Collapse
+toc: true
 navigation: button
 chips:
   - HTML/CSS

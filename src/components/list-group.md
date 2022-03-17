@@ -1,5 +1,6 @@
 ---
 title: List group
+toc: true
 navigation: button
 chips:
   - HTML/CSS

@@ -1,5 +1,6 @@
 ---
 title: Pagination
+toc: true
 navigation: button
 chips:
   - HTML/CSS

@@ -1,5 +1,6 @@
 ---
 title: Radio
+toc: true
 chips:
   - HTML/CSS
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-radio--default-story

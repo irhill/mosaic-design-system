@@ -1,5 +1,6 @@
 ---
 title: Button group
+toc: true
 navigation: button
 chips:
   - HTML/CSS

@@ -2,6 +2,7 @@
 layout: default.njk
 title: Privacy
 path: privacy
+toc: true
 ---
 
 ## Heading

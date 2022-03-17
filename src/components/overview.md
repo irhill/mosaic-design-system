@@ -1,5 +1,6 @@
 ---
 title: Overview
+toc: true
 ---
 # Overview
 This is the component overview section.

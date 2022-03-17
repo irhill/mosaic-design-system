@@ -1,5 +1,6 @@
 ---
 title: Placeholder
+toc: true
 navigation: button
 chips:
   - HTML/CSS

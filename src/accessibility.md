@@ -2,6 +2,7 @@
 layout: default.njk
 title: Accessibility
 path: accessibility
+toc: true
 ---
 
 ## Heading

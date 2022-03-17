@@ -1,5 +1,6 @@
 ---
 title: Page header
+toc: true
 navigation: button
 chips:
   - HTML/CSS

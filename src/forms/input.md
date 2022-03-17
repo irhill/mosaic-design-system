@@ -1,5 +1,6 @@
 ---
 title: Input
+toc: true
 chips:
   - HTML/CSS
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-text--as-default

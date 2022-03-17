@@ -1,6 +1,7 @@
 ---
 title: What is Mosaic
 order: 1
+toc: true
 ---
 ## Heading 1
 

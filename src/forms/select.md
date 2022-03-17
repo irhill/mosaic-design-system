@@ -1,5 +1,6 @@
 ---
 title: Select
+toc: true
 chips:
   - HTML/CSS
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-select-examples--default-story

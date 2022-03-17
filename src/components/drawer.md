@@ -1,5 +1,6 @@
 ---
 title: Drawer
+toc: true
 navigation: button
 chips:
   - HTML/CSS

@@ -1,5 +1,6 @@
 ---
 title: Tabs
+toc: true
 navigation: button
 chips:
   - HTML/CSS

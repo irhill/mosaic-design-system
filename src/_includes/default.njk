@@ -102,8 +102,10 @@
             {% else %}
               <section class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
                 <div class="mds-content-chunk">
-                  {% from "./table-of-contents/table-of-contents.njk" import generateToc %}
-                  {{ generateToc(content) }}
+                  {% if toc == true %}
+                    {% from "./table-of-contents/table-of-contents.njk" import generateToc %}
+                    {{ generateToc(content) }}
+                  {% endif %}
                   {{ content | safe }}
                 </div>
               </section>

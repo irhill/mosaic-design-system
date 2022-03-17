@@ -2,6 +2,7 @@
 layout: default.njk
 title: Terms of use
 path: terms-of-use
+toc: true
 ---
 
 ## Heading

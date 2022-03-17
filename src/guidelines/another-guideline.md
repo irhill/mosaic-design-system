@@ -1,6 +1,7 @@
 ---
 title: Another Guideline
 order: 1
+toc: true
 ---
 # A header
 some content under the header

@@ -1,5 +1,6 @@
 ---
 title: Timeline
+toc: true
 navigation: button
 chips:
   - HTML/CSS

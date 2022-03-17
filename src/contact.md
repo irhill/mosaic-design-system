@@ -2,6 +2,7 @@
 layout: default.njk
 title: Contact
 path: contact
+toc: true
 ---
 
 ## Heading

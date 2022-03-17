@@ -1,5 +1,6 @@
 ---
 title: Button
+toc: true
 chips:
   - HTML/CSS
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default

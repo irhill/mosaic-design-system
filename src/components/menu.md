@@ -1,5 +1,6 @@
 ---
 title: Menu
+toc: true
 navigation: button
 chips:
   - HTML/CSS

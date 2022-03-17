@@ -1,5 +1,6 @@
 ---
 title: Spinner
+toc: true
 navigation: button
 chips:
   - HTML/CSS

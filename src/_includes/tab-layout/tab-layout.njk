@@ -16,7 +16,9 @@
         {% if tab.hook %}
           {% include "./" + page.url.split('/')[1] + "/" + tab.hook + ".njk" %}
         {% elif tab.body %}
-          {{ generateToc(tab.body) }}
+          {% if toc == true %}
+            {{ generateToc(tab.body) }}
+          {% endif %}
           <div class="mds-content-chunk">
             {{ tab.body | markdownify | safe }}
           </div>

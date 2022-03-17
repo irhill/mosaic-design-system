@@ -1,5 +1,6 @@
 ---
 title: A pattern
+toc: true
 ---
 # a pattern
 

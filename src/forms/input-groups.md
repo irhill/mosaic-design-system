@@ -1,5 +1,6 @@
 ---
 title: Input groups
+toc: true
 chips:
   - HTML/CSS
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-group--as-default

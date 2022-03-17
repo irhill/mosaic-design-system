@@ -1,5 +1,6 @@
 ---
 title: Example
+toc: true
 tabs:
   - title: Tab Uno
     body: |-

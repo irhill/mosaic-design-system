@@ -1,5 +1,6 @@
 ---
 title: Dropdown
+toc: true
 navigation: button
 chips:
   - HTML/CSS

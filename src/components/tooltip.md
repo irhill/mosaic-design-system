@@ -1,5 +1,6 @@
 ---
 title: Tooltip
+toc: true
 navigation: button
 chips:
   - HTML/CSS
