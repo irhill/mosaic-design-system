@@ -8,7 +8,6 @@ function setDarkTheme () {
   if (heroContainer) {
     heroContainer.classList.add('mds-hero-container--dark')
   }
-  
 }
 
 if (currentTheme) {

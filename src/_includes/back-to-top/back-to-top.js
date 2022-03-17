@@ -1,5 +1,5 @@
-var scrollToTopBtn = document.querySelector('.mds-back-to-top');
-var rootElement = document.documentElement;
+const scrollToTopBtn = document.querySelector('.mds-back-to-top')
+const rootElement = document.documentElement
 
 window.addEventListener('scroll', () => {
   const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight
@@ -13,6 +13,6 @@ window.addEventListener('scroll', () => {
 scrollToTopBtn.addEventListener('click', () => {
   rootElement.scrollTo({
     top: 0,
-    behavior: "smooth"
+    behavior: 'smooth'
   })
 })

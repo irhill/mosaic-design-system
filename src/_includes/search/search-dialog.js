@@ -1,7 +1,7 @@
 const _focusInput = () => {
   const searchInput = document.querySelector('input[type=text]#search')
   searchInput.focus()
-} 
+}
 
 const showSearchDialog = () => {
   const dialog = document.getElementById('search-dialog')

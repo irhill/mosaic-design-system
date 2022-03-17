@@ -66,5 +66,3 @@ drawerToggleButton.addEventListener('click', e => {
     drawerToggleButton.classList.remove('drawer-is-closed')
   }
 })
-
-

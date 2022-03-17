@@ -59,13 +59,13 @@ const searchContent = () => {
   const searchStr = searchInput.value
   const results = searchStr && searchStr.length
     ? window.design_system_search_index.search(searchStr).map(result => {
-      const { title, tab } = window.design_system_search_data[result.ref]
-      return {
-        ...result,
-        title,
-        ...tab && { tab }
-      }
-    })
+        const { title, tab } = window.design_system_search_data[result.ref]
+        return {
+          ...result,
+          title,
+          ...tab && { tab }
+        }
+      })
     : []
 
   console.log(searchStr)

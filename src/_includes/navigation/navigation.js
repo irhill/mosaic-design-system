@@ -1,12 +1,12 @@
 const storeScrollPosition = () => {
   // save current menu scroll position in session storage
   const sidebar = document.querySelector('aside > .mcc-menu')
-  sessionStorage.setItem('MDS_ScrollTop', sidebar.scrollTop)
+  window.sessionStorage.setItem('MDS_ScrollTop', sidebar.scrollTop)
 }
 
 const setScrollPosition = () => {
   // read menu scroll position from storage and apply
-  const scrollTop = sessionStorage.getItem('MDS_ScrollTop')
+  const scrollTop = window.sessionStorage.getItem('MDS_ScrollTop')
   const sidebar = document.querySelector('aside > .mcc-menu')
   sidebar.scrollTop = scrollTop
 }
