@@ -1,23 +1,25 @@
+const hero = function({
+  canvasSelector,
+  colorDotCSSProp,
+  colorCSSProp
+}) {
+  const canvas = document.querySelector(canvasSelector, colorDotCSSProp, colorCSSProp)
+  const ctx = canvas.getContext("2d")
+  const colorDot = getComputedStyle(document.documentElement).getPropertyValue(colorDotCSSProp)
+  const color = getComputedStyle(document.documentElement).getPropertyValue(colorCSSProp)
 
-
-var canvasDots = function() {
-  var canvas = document.querySelector("canvas"),
-    ctx = canvas.getContext("2d"),
-    colorDot = getComputedStyle(document.documentElement).getPropertyValue('--hero-line-color');;
-    color = getComputedStyle(document.documentElement).getPropertyValue('--hero-line-color');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
-  canvas.style.display = "block";
   ctx.fillStyle = colorDot;
   ctx.lineWidth = 0.1;
   ctx.strokeStyle = color;
 
-  var mousePosition = {
+  const mousePosition = {
     x: 30 * canvas.width / 100,
     y: 30 * canvas.height / 100
   };
 
-  var dots = {
+  const dots = {
     nb: 600,
     distance: 60,
     d_radius: 1000000,
@@ -111,6 +113,19 @@ var canvasDots = function() {
   setInterval(createDots, 1000 / 30);
 };
 
-window.onload = function() {
-  canvasDots();
+const light = {
+  canvasSelector: '.mds-home-page-hero--light',
+  colorDotCSSProp: '--mds-home-page-hero-light',
+  colorCSSProp: '--mds-home-page-hero-light'
 };
+
+const dark = {
+  canvasSelector: '.mds-home-page-hero--dark',
+  colorDotCSSProp: '--mds-home-page-hero-dark',
+  colorCSSProp: '--mds-home-page-hero-dark'
+};
+
+window.onload = function() {
+  hero(light)
+  hero(dark)
+}
