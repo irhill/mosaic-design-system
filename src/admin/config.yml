@@ -430,3 +430,34 @@ collections:
             name: "body"
             widget: "markdown"
             required: false
+  - label: "Team"
+    name: "team"
+    folder: "src/team"
+    identifier_field: name
+    create: true
+    fields:
+      - label: "Name"
+        name: "name"
+        widget: "string"
+      - label: "Job Title"
+        name: "job_title"
+        widget: "string"
+      - label: "Profile picture"
+        name: "profile_picture"
+        widget: "object"
+        required: false
+        fields:
+          - label: "Img"
+            name: "img"
+            widget: "image"
+            required: false
+          - label: "Background colour"
+            name: "background_colour"
+            widget: "select"
+            multiple: false
+            options: ["blue", "yellow", "red", "green", "orange", "pink", "teal", "purple"]
+            required: false
+      - label: "Bio"
+        name: "bio"
+        widget: "markdown"
+        required: false

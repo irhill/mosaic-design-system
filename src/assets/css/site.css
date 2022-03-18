@@ -80,7 +80,7 @@ html {
   margin-top: var(--content-chunk-space, 1rem);
 }
 
-.mds-content-chunk :is(h2:not(:first-of-type), h3, .mds-component-preview, pre, table, blockquote) {
+.mds-content-chunk :is(h2:not(:first-of-type), h3, .mds-component-preview, pre, table, blockquote, .mds-team-grid) {
   --content-chunk-space: var(--spacing-09);
 }
 
@@ -144,4 +144,64 @@ html {
   max-width: 320px;
   width: 100%;
   margin: 0 auto;
+}
+
+.mds-team-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: var(--spacing-05);
+}
+
+@media (min-width: 576px) {
+  .mds-team-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* team bg colors */
+
+.mds-team-member {
+  width: 120px;
+  height: 120px;
+}
+
+.mds-team-member > .mcc-icon svg {
+  fill: var(--white);
+}
+
+.mds-team-member-blue {
+  background: conic-gradient(from 180deg at 50% 50%, #87BEE5 -43.13deg, #1078CF 45deg, #87BEE5 316.87deg, #1078CF 405deg);
+}
+
+.mds-team-member-yellow {
+  background: conic-gradient(from 180deg at 50% 50%, #F1D9A2 -43.13deg, #F2A900 45deg, #F1D9A2 316.87deg, #F2A900 405deg);
+}
+
+.mds-team-member-red {
+  background: conic-gradient(from 180deg at 50% 50%, #F6AAB2 -43.13deg, #DC3545 45deg, #F6AAB2 316.87deg, #DC3545 405deg);
+}
+
+.mds-team-member-green {
+  background: conic-gradient(from 180deg at 50% 50%, #9CCB9C -43.13deg, #458045 45deg, #9CCB9C 316.87deg, #458045 405deg);
+}
+
+.mds-team-member-orange {
+  background: conic-gradient(from 180deg at 50% 50%, #EBBF9E -43.13deg, #DD7529 45deg, #EBBF9E 316.87deg, #DD7529 405deg);
+}
+
+.mds-team-member-pink {
+  background: conic-gradient(from 180deg at 50% 50%, #E2ACD1 -45deg, #AD2A81 46.87deg, #E2ACD1 315deg, #AD2A81 406.88deg);
+}
+
+.mds-team-member-teal {
+  background: conic-gradient(from 180deg at 50% 50%, #92BBBD -43.13deg, #157A80 45deg, #92BBBD 316.87deg, #157A80 405deg);
+}
+
+.mds-team-member-purple {
+  background: conic-gradient(from 180deg at 50% 50%, #B093D1 -43.13deg, #4E0B9B 45deg, #B093D1 316.87deg, #4E0B9B 405deg);
+}
+
+.mds-team-member-grey {
+  background: conic-gradient(from 180deg at 50% 50%, #A5A5B6 -43.13deg, #666679 45deg, #A5A5B6 316.87deg, #666679 405deg);
 }

@@ -89,6 +89,7 @@ module.exports = (eleventyConfig) => {
   // add global collection for footer nav
   eleventyConfig.addCollection('globalCollection', _ => globalCollection.flat())
 
+
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight)
 
