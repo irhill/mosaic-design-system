@@ -89,6 +89,17 @@ module.exports = (eleventyConfig) => {
   // add global collection for footer nav
   eleventyConfig.addCollection('globalCollection', _ => globalCollection.flat())
 
+  // sort team collection
+  eleventyConfig.addCollection("team", function(collection) {
+    return collection.getFilteredByGlob("src/team/*.md").sort(function(a, b) {
+        let nameA = a.data.name.toUpperCase();
+        let nameB = b.data.name.toUpperCase();
+        if (nameA < nameB) return -1;
+        else if (nameA > nameB) return 1;
+        else return 0;
+    });
+});
+
 
   // Syntax Highlighting for Code blocks
   eleventyConfig.addPlugin(syntaxHighlight)
