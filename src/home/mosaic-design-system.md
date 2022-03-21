@@ -20,4 +20,5 @@ personas:
       overline: For
       description: Struggling to find a voice for your product? Learn how Mosaic uses
         tone and voice to stand out from the crowd.
+  cards: []
 ---
