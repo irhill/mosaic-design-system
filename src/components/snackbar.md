@@ -1,5 +1,6 @@
 ---
 title: Snackbar
+layout: docs.njk
 toc: true
 navigation: button
 chips:

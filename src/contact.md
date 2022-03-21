@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: docs.njk
 title: Contact
 path: contact
 toc: true

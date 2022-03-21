@@ -1,5 +1,6 @@
 ---
 title: Tone of Voice
+layout: docs.njk
 order: 30
 toc: true
 tabs:

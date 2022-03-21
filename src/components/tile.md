@@ -1,5 +1,6 @@
 ---
 title: Tile
+layout: docs.njk
 toc: true
 navigation: button
 chips:

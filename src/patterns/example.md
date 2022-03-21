@@ -1,5 +1,6 @@
 ---
 title: Example
+layout: docs.njk
 toc: true
 tabs:
   - title: Tab Uno

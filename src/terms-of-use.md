@@ -1,5 +1,5 @@
 ---
-layout: default.njk
+layout: docs.njk
 title: Terms of use
 path: terms-of-use
 toc: true

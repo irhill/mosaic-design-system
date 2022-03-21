@@ -1,5 +1,6 @@
 ---
 title: Breadcrumb
+layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

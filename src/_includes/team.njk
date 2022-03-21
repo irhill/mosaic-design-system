@@ -33,34 +33,7 @@
 
     {% include "./skip-to/skip-to.njk" %}
 
-    <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
-
-      <nav class="mcc-navigation-header__nav" style="gap: 0.25rem;">
-        <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
-          <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-          <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-          <span>Toggle navigation drawer</span>
-        </button>
-
-        <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
-
-        {# <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
-          <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-        </a> #}
-
-        <a href="/" class="[ mcc-navigation-header__button ] mu-d-none mu-d-lg-flex">
-          <span class="mds-site-name-logo mu-d-flex mu-align-items-center">{% include "./partials/logo.njk" %}</span>
-          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-        </a>
-      </nav>
-
-      <nav class="mcc-navigation-header__global">
-        {% include "./search/search-button.njk" %}
-        {% include "./theme-toggle/theme-toggle.njk" %}
-        {% include "./switch-sites/switch-sites.njk" %}
-      </nav>
-    </header>
+    {% include "./partials/header.njk" %}
 
     <div class="[ mcc-drawer-frame ] [ mcc-drawer-frame--nav-header-adjust ]">
 
@@ -98,28 +71,7 @@
                 {% endif %}
                 {{ content | safe }}
 
-                <div class="mds-team-grid">
-                  {% for item in collections.team %}
-                    <div class="mcc-card">
-                      <div class="[ mcc-card__body ] [ mu-d-flex mu-flex-column mu-flex-xl-row ]">
-                        <div class="mu-flex-shrink-0 mu-mb-05 mu-mb-xl-00">
-                          {% if item.data.profile_picture %}
-                            <img class="[ mds-team-member-{{ item.data.profile_picture.background_colour }} ] [ mu-radius-03 ]" src="{{ item.data.profile_picture.img }}" width="124" height="124">
-                            {% else %}
-                            <div class="[ mds-team-member mds-team-member-grey ] mu-d-flex mu-justify-content-center mu-align-items-center mu-radius-03">
-                              <mcc-icon name="user" icon-set="fluency-outline" aria-hidden="true" width="80" height="80"></mcc-icon>
-                            </div>
-                          {% endif %}
-                        </div>
-                        <div class="mu-ml-xl-06">
-                          <div class="mu-fs-2 mu-fw-semi-bold mu-mb-01">{{ item.data.name }}</div>
-                          <div class="mu-fw-semi-bold mu-mb-03">{{ item.data.job_title }}</div>
-                          <p class="mu-text-muted mu-mb-00">{{ item.data.bio }}</p>
-                        </div>
-                      </div>
-                    </div>
-                  {% endfor %}
-                </div>
+                {% include "./team-member/team-member.njk" %}
   
               </div>
             </section> 

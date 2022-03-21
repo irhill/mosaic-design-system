@@ -1,5 +1,6 @@
 ---
 title: Avatar
+layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

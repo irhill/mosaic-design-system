@@ -29,38 +29,13 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body>
+  <body class="{{ 'is-home' if '/' === page.url else 'not-home' }}" test="{{ page.url }}">
+
+    
 
     {% include "./skip-to/skip-to.njk" %}
 
-    <header class="[ mcc-navigation-header ] [  mu-position-fixed mu-top-0 mu-start-0 mu-end-0 ] [ mu-w-100 ]" aria-label="Advanced Product" role="banner">
-
-      <nav class="mcc-navigation-header__nav" style="gap: 0.25rem;">
-        <button id="drawer-toggle" class="[ mcc-navigation-header__button mcc-navigation-header__button--icon-only ]">
-          <mcc-icon name="hide_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-          <mcc-icon name="show_sidepanel" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-          <span>Toggle navigation drawer</span>
-        </button>
-
-        <span class="mu-d-lg-none mu-ml-02 mu-fw-semi-bold mu-text-default">MDS</span>
-
-        {# <a href="/" class="mu-d-none mu-d-lg-flex mu-align-items-center mu-ml-lg-03 mu-ml-xl-05">
-          <span class="mds-site-name-logo mu-d-flex mu-align-items-center mu-mr-04">{% include "./partials/logo.njk" %}</span>
-          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-        </a> #}
-
-        <a href="/" class="[ mcc-navigation-header__button ] mu-d-none mu-d-lg-flex">
-          <span class="mds-site-name-logo mu-d-flex mu-align-items-center">{% include "./partials/logo.njk" %}</span>
-          <span class="mu-fw-semi-bold mu-text-default">Mosaic Design System</span>
-        </a>
-      </nav>
-
-      <nav class="mcc-navigation-header__global">
-        {% include "./search/search-button.njk" %}
-        {% include "./theme-toggle/theme-toggle.njk" %}
-        {% include "./switch-sites/switch-sites.njk" %}
-      </nav>
-    </header>
+    {% include "./partials/header.njk" %}
 
     <div class="[ mcc-drawer-frame ] [ mcc-drawer-frame--nav-header-adjust ]">
 
@@ -80,64 +55,7 @@
 
         <main>
 
-          <article>
-
-            <header class="mcc-page-header mu-px-00 mu-py-07 mu-mb-07">
-              <div class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-                <div class="mu-py-07">
-                  <h1 class="mu-display-heading-1 mu-mb-00">{{ title }}</h1>
-                  {% if chips %}
-                    <div class="mu-d-flex mu-mt-02" style="gap: 0.5rem;">
-                      {% for chip in chips %}
-                        <span class="mcc-chip mcc-chip--primary mcc-chip--xs">{{ chip }}</span>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-                </div>
-              </div>
-            </header>
-
-            {% if tabs and tabs.length %}
-              {% include "./tab-layout/tab-layout.njk" %}
-            {% else %}
-              <section class="[ mds-container ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-08 mu-px-xl-08 ]">
-                <div class="mds-content-chunk">
-                  {% if toc == true %}
-                    {% from "./table-of-contents/table-of-contents.njk" import generateToc %}
-                    {{ generateToc(content) }}
-                  {% endif %}
-                  {{ content | safe }}
-                </div>
-              </section>
-            {% endif %}
-
-            <footer>
-      
-              {% set previous = collections.globalCollection | getPreviousCollectionItem(page) %}
-              {% set next = collections.globalCollection | getNextCollectionItem(page) %}
-
-              <div class="[ mds-container ] [ mu-d-flex mu-mb-09 mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-08 ]">
-                <div class="mcc-button-group mcc-button-group--lg" role="group" aria-label="Navigation buttons">
-                  {% if previous %}
-                    <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
-                      <mcc-icon name="left_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-                      <span class="mcc-button__label">
-                        {{ previous.data.title }}
-                      </span>
-                    </a>
-                  {% endif %}
-                  {% if next %}
-                    <a class="mcc-button mcc-button--outline" href="{{ next.url }}">
-                      <span class="mcc-button__label">{{ next.data.title }}</span>
-                      <mcc-icon name="right_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-                    </a>
-                  {% endif %}
-                </div>
-              </div>
-            
-            </footer>
-
-          </article>
+          {{ content | safe }}
 
         </main>
 

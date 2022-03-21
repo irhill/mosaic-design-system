@@ -1,5 +1,6 @@
 ---
 title: Dropdown
+layout: docs.njk
 toc: true
 navigation: button
 chips:

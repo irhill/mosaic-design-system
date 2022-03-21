@@ -1,5 +1,6 @@
 ---
 title: A pattern
+layout: docs.njk
 toc: true
 ---
 # a pattern
