@@ -461,3 +461,50 @@ collections:
         name: "bio"
         widget: "markdown"
         required: false
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "src/_data/home.json"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Strap line, name: strap_line, widget: markdown}
+          - label: "Personas"
+            name: "personas"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Overline, name: overline, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: Description, name: description, widget: markdown}
+              - label: "Button"
+                name: "button"
+                widget: object
+                fields:
+                - label: "Label"
+                  name: "label"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
+          - label: "Content cards"
+            name: "content_cards"
+            widget: "list"
+            fields:
+              - {label: Title, name: title, widget: string}
+              - {label: Icon, name: icon, widget: string}
+              - {label: Description, name: description, widget: markdown}
+              - label: "Button"
+                name: "button"
+                widget: object
+                fields:
+                - label: "Label"
+                  name: "label"
+                  widget: "string"
+                - label: "URL"
+                  name: "url"
+                  widget: "string"
+                  
+              
+        

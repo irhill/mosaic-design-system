@@ -89,7 +89,7 @@
             <div class="[ mds-container home-page-content ] [ mu-p-05 mu-p-md-06 mu-p-lg-07 mu-py-xl-07 mu-px-xl-0 ]">
               <div class="mds-content-chunk">
                 <h1 class="mu-display-heading-1 mu-mb-00">Mosaic<br>Design System</h1>
-                <p class="mu-mb-00">Mosaic is Advanced's design system: a series of design philosophies, resource libraries and UX/UI guidelines that have been built for the sole purpose of supporting software from its inception, all the way to implementation. Mosaic includes a plethora of tools, guidelines, advice and documentation that can be pieced together to create digital products that your users will love.</p>
+                <p class="mu-mb-00">{{ home.strap_line }}</p>
                 <a href="https://github.com/mosaic-design" target="_blank" class="mcc-button mcc-button--lg mcc-button--outline mcc-button--icon-only mu-mt-07" type="button">
                   <mcc-icon name="github" icon-set="fluency-filled" aria-hidden="true"></mcc-icon>
                   <span class="mcc-button__label">Find us on gitHub</span>
@@ -104,45 +104,23 @@
               lg-grid-template-columns="1fr 1fr 1fr"
               grid-template-rows="1fr"
               style="gap: 2rem;">
-              
+
+              {% for persona in home.personas %}
+
               <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08">
                 <div class="mu-mb-auto">
-                  <mcc-icon class="mu-mb-05" name="paint_palette" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
-                  <div class="mu-text-uppercase mu-text-muted mu-fs-sm mu-fw-semi-bold">For</div>
-                  <h2 class="mu-mb-05">Designers</h2>
-                  <p>Explore our component and pattern libraries, and begin designing sleek and intuitive experiences for your users.</p>
+                  <mcc-icon class="mu-mb-05" name="{{ persona.icon }}" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
+                  <div class="mu-text-uppercase mu-text-muted mu-fs-sm mu-fw-semi-bold">{{ persona.overline }}</div>
+                  <h2 class="mu-mb-05">{{ persona.title }}</h2>
+                  <p>{{ persona.description }}</p>
                 </div>
-                <a href="/designing/get-started" class="mcc-button mcc-button--outline mcc-button--sm">
-                  <span class="mcc-button__label">Start drawing</span>
+                <a href="{{ persona.button.url }}" class="mcc-button mcc-button--outline mcc-button--sm">
+                  <span class="mcc-button__label">{{ persona.button.label }}</span>
                 </a>
               </div>
 
-              <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08">
-                <div class="mu-mb-auto">
-                  <mcc-icon class="mu-mb-05" name="laptop_coding" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
-                  <div class="mu-text-uppercase mu-text-muted mu-fs-sm mu-fw-semi-bold">For</div>
-                  <h2 class="mu-mb-05">Developers</h2>
-                  <p>Take a look at the underlying code beneath Mosaic's component library, and learn how to apply them and their variants.</p>
-                </div>
-                <a href="/developing/get-started" class="mcc-button mcc-button--outline mcc-button--sm">
-                  <span class="mcc-button__label">Start coding</span>
-                </a>
-              </div>
-
-              <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08">
-                <div class="mu-mb-auto">
-                  <mcc-icon class="mu-mb-05" name="pen" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
-                  <div class="mu-text-uppercase mu-text-muted mu-fs-sm mu-fw-semi-bold">For</div>
-                  <h2 class="mu-mb-05">Writers</h2>
-                  <p>Struggling to find a voice for your product? Learn how Mosaic uses tone and voice to stand out from the crowd.</p>
-                </div>
-                <button class="mcc-button mcc-button--outline mcc-button--sm">
-                  <span class="mcc-button__label">Start writing</span>
-                </button>
-              </div>
-
+              {% endfor %}
               
-
             </mcc-grid>
           </section>
 
@@ -164,32 +142,23 @@
               lg-grid-template-columns="1fr 1fr"
               grid-template-rows="1fr"
               style="gap: 2rem;">
+
+              {% for card in home.content_cards %}
               
               <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08 mu-d-flex mu-justify-content-between mu-h-100">
                 <div class="mu-d-flex mu-align-items-start mu-flex-column mu-flex-fill">
-                  <h2 class="mu-mb-03">Components</h2>
-                  <p>Take a look at the smaller pieces that form the Mosaic Design System. Components cover the smaller pieces of functionality that come together to bring your product to life.</p>
-                  <a href="/components/overview" class="mcc-button mcc-button--outline mcc-button--sm">
-                    <span class="mcc-button__label">View</span>
+                  <h2 class="mu-mb-03">{{ card.title }}</h2>
+                  <p>{{ card.description }}</p>
+                  <a href="{{ card.button.url }}" class="mcc-button mcc-button--outline mcc-button--sm">
+                    <span class="mcc-button__label">{{ card.button.label }}</span>
                   </a>
                 </div>
                 <div class="mu-ml-07">
-                  <mcc-icon name="unit" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
+                  <mcc-icon name="{{ card.icon }}" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
                 </div>
               </div>
 
-              <div class="mu-bg-container-02 mu-radius-02 mu-border mu-p-06 mu-p-md-07 mu-p-xl-08 mu-d-flex mu-justify-content-between mu-h-100">
-                <div class="mu-d-flex mu-align-items-start mu-flex-column mu-flex-fill">
-                  <h2 class="mu-mb-03">Patterns</h2>
-                  <p>Explore the library of premade elements comprised of Mosaic Components – Patterns are ready-made pieces of functionality that can be easily dropped into a digital product.</p>
-                  <a href="/patterns/overview" class="mcc-button mcc-button--outline mcc-button--sm">
-                    <span class="mcc-button__label">View</span>
-                  </a>
-                </div>
-                <div class="mu-ml-07">
-                  <mcc-icon name="form" icon-set="fluency-color" aria-hidden="true" width="64" height="64"></mcc-icon>
-                </div>
-              </div>
+              {% endfor %}
 
             </mcc-grid>
           </section>
