@@ -126,12 +126,6 @@ html {
   }
 }
 
-.temp-cont,
-.temppos {
-  padding-top: 80px !important;
-  padding-bottom: 80px !important;
-}
-
 #drawer-toggle.drawer-is-closed mcc-icon:nth-child(1) {
   display: none;
 }
