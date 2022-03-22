@@ -1,6 +1,5 @@
 ---
 title: Radio
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

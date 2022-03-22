@@ -1,6 +1,5 @@
 ---
 title: Select
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

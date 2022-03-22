@@ -1,6 +1,5 @@
 ---
 title: Input groups
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

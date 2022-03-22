@@ -1,6 +1,5 @@
 ---
 title: Textarea
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

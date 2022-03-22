@@ -1,6 +1,5 @@
 ---
 title: Input
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

@@ -1,6 +1,5 @@
 ---
 title: What is Mosaic
-layout: docs.njk
 order: 1
 toc: true
 ---
