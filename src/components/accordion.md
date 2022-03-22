@@ -1,6 +1,5 @@
 ---
 title: Accordion
-layout: docs.njk
 toc: true
 chips:
   - HTML/CSS

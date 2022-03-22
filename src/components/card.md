@@ -1,6 +1,5 @@
 ---
 title: Card
-layout: docs.njk
 toc: true
 navigation: button
 chips:

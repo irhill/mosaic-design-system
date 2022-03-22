@@ -22,14 +22,13 @@
       {{ css | cssmin | safe }}
     </style>
 
-    <title>
-      {{title}}
-    </title>
+    <title>{% if collection %} {{ collection }} - {% endif %} {{ title }}</title>
+
     {% if description %}
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body class="{{ 'is-home' if '/' === page.url }}" test="{{ page.url }}">
+  <body class="{{ 'is-home' if '/' === page.url }}">
 
     
 

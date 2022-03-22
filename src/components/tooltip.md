@@ -1,6 +1,5 @@
 ---
 title: Tooltip
-layout: docs.njk
 toc: true
 navigation: button
 chips:

@@ -1,6 +1,5 @@
 ---
 title: Page header
-layout: docs.njk
 toc: true
 navigation: button
 chips:
