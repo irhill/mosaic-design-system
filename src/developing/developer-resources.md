@@ -1,5 +1,5 @@
 ---
-title: Developer Resources
+title: Developer resources
 order: 1
 toc: true
 ---

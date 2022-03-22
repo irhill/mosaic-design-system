@@ -8,14 +8,20 @@
       {% if previous %}
         <a class="mcc-button mcc-button--outline" href="{{ previous.url }}">
           <mcc-icon name="left_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
-          <span class="mcc-button__label">
-            {{ previous.data.title }}
-          </span>
+          <div class="mu-ml-03">
+            <div class="mu-text-muted mu-fs-sm mu-lh-sm mu-fw-semi-bold">{{ previous.data.collection }}</div>
+            <span class="mcc-button__label">
+              {{ previous.data.title }}
+            </span>
+          </div>
         </a>
       {% endif %}
       {% if next %}
         <a class="mcc-button mcc-button--outline" href="{{ next.url }}">
-          <span class="mcc-button__label">{{ next.data.title }}</span>
+          <div class="mu-mr-03">
+            <div class="mu-text-muted mu-fs-sm mu-lh-sm mu-fw-semi-bold">{{ next.data.collection }}</div>
+            <span class="mcc-button__label">{{ next.data.title }}</span>
+          </div>
           <mcc-icon name="right_arrow" icon-set="fluency-outline" aria-hidden="true"></mcc-icon>
         </a>
       {% endif %}
