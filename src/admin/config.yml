@@ -352,9 +352,9 @@ collections:
             name: "body"
             widget: "markdown"
             required: false
-  - label: "Pendo"
-    name: "pendo"
-    folder: "src/pendo"
+  - label: "In App Guidance"
+    name: "in_app_guidance"
+    folder: "src/in-app-guidance"
     create: true
     fields:
       - label: "Title"
