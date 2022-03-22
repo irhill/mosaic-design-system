@@ -3,6 +3,7 @@ title: Alert
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-alert--as-default
 tabs:
@@ -27,7 +28,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="[ mcc-alert mcc-alert--primary ] [ mu-mb-00 ]" role="alert" style="max-width: 400px; width: 100%">
+            <div class="[ mcc-alert mcc-alert--primary ] [ mu-mb-00 ]"
+            role="alert" style="max-width: 400px; width: 100%">
               <mcc-icon name="ok" aria-hidden="true"></mcc-icon>
               <div class="mu-d-flex mu-flex-column">
                 <div class="mu-fw-semi-bold">Information title</div>
@@ -57,7 +59,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mcc-alert mcc-alert--primary-solid" role="alert" style="max-width: 400px; width: 100%">
+            <div class="mcc-alert mcc-alert--primary-solid" role="alert"
+            style="max-width: 400px; width: 100%">
               <mcc-icon name="ok" aria-hidden="true"></mcc-icon>
               <div class="mu-d-flex mu-flex-column">
                 <div class="mu-fw-semi-bold">Information title</div>

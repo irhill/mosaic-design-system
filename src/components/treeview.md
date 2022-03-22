@@ -4,6 +4,7 @@ toc: true
 navigation: button
 chips:
   - HTML/CSS
+  - Web Component
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-treeview--as-default
 tabs:
@@ -28,7 +29,8 @@ code:
       - template:
           lang: html
           code: >-
-            <ul class="mcc-treeview" role="tree" aria-labelledby="treeview" style="max-width: 400px; width: 100%">
+            <ul class="mcc-treeview" role="tree" aria-labelledby="treeview"
+            style="max-width: 400px; width: 100%">
               <li>
                 <details>
                   <summary>

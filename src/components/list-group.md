@@ -4,6 +4,7 @@ toc: true
 navigation: button
 chips:
   - HTML/CSS
+  - Web Component
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-list-group--with-buttons
 tabs:
@@ -99,7 +100,7 @@ code:
             select_multiple: false
       - template:
           lang: html
-          code: >-
+          code: |-
             <ul class="mcc-list-group" style="max-width: 400px; width: 100%">
               <li>
                 <label class="mfc-checkbox-wrapper">

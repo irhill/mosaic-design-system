@@ -4,6 +4,7 @@ toc: true
 navigation: button
 chips:
   - HTML/CSS
+  - Web Component
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-pagination--with-active-button
 tabs:

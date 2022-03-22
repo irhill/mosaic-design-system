@@ -3,6 +3,7 @@ title: Accordion
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook-url: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-button--as-default
 storybook: https://tessera.oneadvanced.io/dev/components-core/?path=/docs/html-accordion--as-default
 tabs:
@@ -27,7 +28,8 @@ code:
       - template:
           lang: html
           code: >-
-            <details class="mcc-accordion" style="max-width: 400px; width: 100%">
+            <details class="mcc-accordion" style="max-width: 400px; width:
+            100%">
               <summary>
                 <span class="mcc-accordion__label">Accordion item</span>
                 <mcc-icon class="mcc-accordion__caret mu-ml-auto" name="angle_down" aria-hidden="true"></mcc-icon>
@@ -41,7 +43,8 @@ code:
       - template:
           lang: html
           code: >-
-            <details class="mcc-accordion mcc-card mcc-card--high-emphasis" style="max-width: 400px; width: 100%">
+            <details class="mcc-accordion mcc-card mcc-card--high-emphasis"
+            style="max-width: 400px; width: 100%">
               <summary>
                 <span class="mcc-accordion__label">Accordion item</span>
                 <mcc-icon class="mcc-accordion__caret mu-ml-auto" name="angle_down" aria-hidden="true"></mcc-icon>
@@ -55,7 +58,8 @@ code:
       - template:
           lang: html
           code: >-
-            <details class="mcc-accordion mcc-card" style="max-width: 400px; width: 100%">
+            <details class="mcc-accordion mcc-card" style="max-width: 400px;
+            width: 100%">
               <summary>
                 <mcc-icon name="does-not-exist" aria-hidden="true"></mcc-icon>
                 <span class="mcc-accordion__label">Accordion item</span>
