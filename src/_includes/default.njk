@@ -29,7 +29,7 @@
       <meta name="description" content="{{description}}"/>
     {% endif %}
   </head>
-  <body class="{{ 'is-home' if '/' === page.url else 'not-home' }}" test="{{ page.url }}">
+  <body class="{{ 'is-home' if '/' === page.url }}" test="{{ page.url }}">
 
     
 
@@ -39,7 +39,7 @@
 
     <div class="[ mcc-drawer-frame ] [ mcc-drawer-frame--nav-header-adjust ]">
 
-      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start mcc-drawer--open ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
+      <mcc-drawer id="site-nav-drawer" class="[ mcc-drawer mcc-drawer--start {{ 'mcc-drawer--closed' if '/' === page.url else 'mcc-drawer--open' }} ] [ mds-drawer--nav-header-adjust ]" type="dismissible">
         <div class="mu-d-flex mu-flex-column">
           
           <div class="[ mds-site-name ] [ mu-d-flex mu-d-lg-none mu-align-items-center mu-px-06 mu-border-bottom  ]">
