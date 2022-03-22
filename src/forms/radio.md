@@ -3,6 +3,7 @@ title: Radio
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-radio--default-story
 tabs:
   - title: Usage
@@ -15,7 +16,7 @@ tabs:
     body: ""
     icon: web_accessibility_1
 code:
-  example:
+  example: null
   body: >-
     ## Live demo
 
@@ -24,7 +25,7 @@ code:
     variants:
       - template:
           lang: html
-          code: >-
+          code: |-
             <fieldset class="mfc-fieldset">
               <legend>Radio input legend</legend>
               <div class="[ mfc-radio-wrapper ] [ mu-mb-03 ]">
@@ -51,7 +52,8 @@ code:
       - template:
           lang: html
           code: >-
-            <fieldset class="mfc-fieldset" style="max-width: 320px; width: 100%">
+            <fieldset class="mfc-fieldset" style="max-width: 320px; width:
+            100%">
               <legend>Radio input legend</legend>
               <div class="[ mfc-radio-button-wrapper ] [ mu-mb-03 ]">
                 <input id="radioInput4" name="radioInputGroup2" type="radio">

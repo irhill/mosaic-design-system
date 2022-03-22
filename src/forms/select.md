@@ -3,6 +3,7 @@ title: Select
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-select-examples--default-story
 tabs:
   - title: Usage
@@ -15,7 +16,7 @@ tabs:
     body: ""
     icon: web_accessibility_1
 code:
-  example:
+  example: null
   body: >-
     ## Live demo
 
@@ -25,7 +26,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mfc-select-wrapper" style="max-width: 240px; width: 100%">
+            <div class="mfc-select-wrapper" style="max-width: 240px; width:
+            100%">
               <label for="selectInput1">Select input</label>
               <select id="selectInput1" name="selectInput1">
                 <option value=""></option>

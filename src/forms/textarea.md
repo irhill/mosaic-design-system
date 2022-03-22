@@ -3,6 +3,7 @@ title: Textarea
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-textarea-examples--default-story
 tabs:
   - title: Usage
@@ -15,7 +16,7 @@ tabs:
     body: ""
     icon: web_accessibility_1
 code:
-  example:
+  example: null
   body: >-
     ## Live demo
 
@@ -25,7 +26,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mfc-textarea-wrapper" style="max-width: 240px; width: 100%">
+            <div class="mfc-textarea-wrapper" style="max-width: 240px; width:
+            100%">
               <label for="textarea1">Textarea input</label>
               <textarea id="textarea1" name="textarea1"></textarea>
               <div class="mfc-help-text">Textarea input help text</div>

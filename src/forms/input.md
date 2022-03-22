@@ -3,6 +3,7 @@ title: Input
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-text--as-default
 tabs:
   - title: Usage
@@ -15,7 +16,7 @@ tabs:
     body: ""
     icon: web_accessibility_1
 code:
-  example:
+  example: null
   body: >-
     ## Live demo
 
@@ -25,7 +26,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
+            <div class="mfc-input-wrapper" style="max-width: 240px; width:
+            100%">
               <label for="textInput1">Input</label>
               <input id="textInput1" name="textInput1" type="text">
               <div class="mfc-help-text">Input help text</div>
@@ -60,7 +62,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
+            <div class="mfc-input-wrapper" style="max-width: 240px; width:
+            100%">
               <label for="textInput2">Input</label>
               <input id="textInput2" name="textInput2" type="date">
               <div class="mfc-help-text">Input help text</div>
@@ -95,7 +98,8 @@ code:
       - template:
           lang: html
           code: >-
-            <div class="mfc-input-wrapper" style="max-width: 240px; width: 100%">
+            <div class="mfc-input-wrapper" style="max-width: 240px; width:
+            100%">
               <label for="textInput3">Input</label>
               <input id="textInput3" name="textInput3" type="number">
               <div class="mfc-help-text">Input help text</div>

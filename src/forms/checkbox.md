@@ -3,6 +3,7 @@ title: Checkbox
 toc: true
 chips:
   - HTML/CSS
+  - Web Component
 storybook: https://tessera.oneadvanced.io/dev/components-forms/?path=/docs/html-input-checkbox--default-story
 tabs:
   - title: Usage
@@ -15,7 +16,7 @@ tabs:
     body: ""
     icon: web_accessibility_1
 code:
-  example:
+  example: null
   body: >-
     ## Live demo
 
