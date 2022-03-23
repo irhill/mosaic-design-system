@@ -228,6 +228,10 @@ collections:
             name: "body"
             widget: "markdown"
             required: false
+          - label: "Status"
+            name: "status"
+            widget: "string"
+            required: false
           - label: "Preview"
             name: "preview"
             widget: "object"

@@ -71,4 +71,5 @@ code:
             </details>
         name: With icon
         modifiers: []
+  status: status-test-accordion
 ---
